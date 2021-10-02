@@ -1,0 +1,195 @@
+table, th, td{
+    border: solid 2px black;
+    border-spacing: 5px;
+    color: #312d62;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.back{
+    background-image: url("../img/pexels-caio-45917.jpg");
+}
+.navbar-brand{
+    color: #312d62;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.na{
+    color: #312d62;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.navbar{
+    border: solid 1px #312d62;
+    background-color: rgba(135, 109, 187,0.9);
+}
+.welcome{
+    font-family: 'Montserrat', sans-serif;
+    color: #312d62;
+    border: solid 2px #312d62;
+    margin-top: 15em;
+    background-color: rgba(135, 109, 187, 0.9);
+    margin-left: 20em;
+    margin-right: 20em;
+    padding: 2em;
+}
+.container-fluid.a {
+    margin-top: 12em;
+    margin-left: 42em;
+    margin-right: 42em;
+}
+div.card-head {
+    background-color: rgba(135, 109, 187, 0.9);
+    padding-top: 3em;
+    text-align: center;
+}
+div.card-head > h3{
+    color: #312d62;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+.card {
+background-color: rgba(0, 0, 0, 0);
+}
+div.card-body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(135, 109, 187, 0.9);
+    /*background-color: transparent !important;*/
+    color: #312d62;
+    font-size: 25px;
+    font-weight: bold;
+}
+#register{
+    background-color:  rgba(135, 109, 187, 1);
+    color: #312d62;
+}
+#reset{
+    background-color:  rgba(135, 109, 187, 1);
+    color: #312d62;
+}
+input[type="email"]:focus
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="password"]:focus
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="email"]
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="password"]
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="text"]
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="number"]
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="text"]:focus
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="number"]:focus
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="date"]
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input[type="date"]:focus
+{
+    background: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border: 1px solid #312d62;
+    outline: none;
+}
+input::-webkit-input-placeholder {
+    color: #312d62 !important;
+}
+.alert{
+    color: #312d62;
+    border: solid 2px #312d62;
+}
+.wel{
+    margin-left: 70em;
+}
+#searchid{
+    margin: 10em;
+}
+#searchid h2{
+    color: #312d62;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+
+}
+.top > td{
+    color: #312d62;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.top1 > td{
+    color: #312d62;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+div.div-block-4{
+    border: solid black 1px;
+}
+div.div-block{
+    margin: 10em;
+}
+img{
+    height: 200px;
+    width: auto;
+}
+.card-body.f1{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    margin-left: 10em;
+    margin-right: 15em;
+}
+.link{
+    color: #312d62;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
