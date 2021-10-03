@@ -33,3 +33,7 @@ This is a Web app developed in Java using technologies like Servelt, Jsp, Hibern
 
 ### Paybill
 ![image](https://user-images.githubusercontent.com/53346586/135725897-ea626501-2c62-4359-aa06-3235f8a55345.png)
+
+### Entity Relationship Diagram
+![image](https://user-images.githubusercontent.com/53346586/135747815-b035f503-4714-464e-ab9c-8420d8e1259c.png)
+
