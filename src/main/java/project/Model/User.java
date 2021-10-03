@@ -12,18 +12,14 @@ public class User {
     private String userPassword;
     private String userAddress;
     private String userPhone;
-    private String password;
     private int Roll_id;
 
-
-
-    public User(String userEmail, String userName, String userPassword, String userAddress, String userPhone, String password, int roll_id) {
+    public User(String userEmail, String userName, String userPassword, String userAddress, String userPhone, int roll_id) {
         this.userEmail = userEmail;
         this.userName = userName;
         this.userPassword = userPassword;
         this.userAddress = userAddress;
         this.userPhone = userPhone;
-        this.password = password;
         Roll_id = roll_id;
     }
 
@@ -77,14 +73,6 @@ public class User {
 
     public void setUserPhone(String userPhone) {
         this.userPhone = userPhone;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public int getRoll_id() {

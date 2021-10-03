@@ -3,6 +3,7 @@ package project.Controller;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Model.Bill;
+import project.Model.Transactions;
 import project.Model.User;
 import project.Model.UserDao;
 
@@ -19,15 +20,17 @@ public class BillFormServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException {
         int units = Integer.parseInt(request.getParameter("units"));
         int dues = Integer.parseInt(request.getParameter("dues"));
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-        Date date=formatter.parse(request.getParameter("date"));
 
         int id = Integer.parseInt(request.getParameter("uid"));
 
         HttpSession httpSession = request.getSession();
+
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
+        Transactions transactions = new Transactions(units*10,userDao.getUserById(id));
+
         if(userDao.getBillByUserId(id)!=null){
             //means we have the bill
+
             Session session = FactoryProvider.factory.openSession();
             Transaction tx = session.beginTransaction();
             Bill bill=userDao.getBillByUserId(id);
@@ -37,21 +40,26 @@ public class BillFormServlet extends HttpServlet {
             session.update(bill);
             tx.commit();
             session.close();
-            httpSession.setAttribute("message1","User Updated Successfully");
+            httpSession.setAttribute("message1","Bill Added Successfully");
             response.sendRedirect("BillForm.jsp");
         }
         else {
             Session session = FactoryProvider.factory.openSession();
             Transaction tx = session.beginTransaction();
-            Bill bill = new Bill(dues, units, date, units * 10);
+            Bill bill = new Bill(dues, units, units * 10);
             User user = userDao.getUserById(id);
             bill.setUser(user);
             session.save(bill);
             tx.commit();
             session.close();
-            httpSession.setAttribute("message1","User Added Successfully");
+            httpSession.setAttribute("message1","Bill Added Successfully");
             response.sendRedirect("BillForm.jsp");
         }
+        Session session = FactoryProvider.factory.openSession();
+        Transaction tx = session.beginTransaction();
+        session.save(transactions);
+        tx.commit();
+        session.close();
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

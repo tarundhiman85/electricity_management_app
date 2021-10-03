@@ -193,3 +193,12 @@ img{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+.flexi{
+    margin-top: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.flexItem{
+    flex-basis: 400px;
+}

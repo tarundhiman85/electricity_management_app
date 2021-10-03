@@ -14,5 +14,6 @@
         <property name="format_sql">true</property>
         <mapping class="project.Model.User"/>
         <mapping class="project.Model.Bill"/>
+        <mapping class="project.Model.Transactions"/>
     </session-factory>
 </hibernate-configuration>

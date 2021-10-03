@@ -8,7 +8,7 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="welcome">
-    <h3><b>Welcome to Electricity Management System</b></h3>
+    <h3><b>Welcome to Electricity Bill Management System</b></h3>
     <h3><b>Goals of the Project</b></h3>
     <h3>To let the admin to be able to see the Number of Users Registered</h3>
     <h3>To let the admin to see the Total Number of Users.</h3>

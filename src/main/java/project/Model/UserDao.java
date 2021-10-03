@@ -1,6 +1,5 @@
 package project.Model;
 
-import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -76,6 +75,19 @@ public class UserDao {
         }
         return userList;
     }
+    public List<Transactions> getAllTransactions(){
+        List<Transactions> transactionList = null;
+        try{
+            Session session = this.factory.openSession();
+            String q = "from Transactions";
+            Query query = (Query) session.createQuery(q);
+            transactionList=query.list();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return transactionList;
+    }
     public long getNumberofUsers(){
         long count=0;
         try{
@@ -88,5 +100,20 @@ public class UserDao {
             e.printStackTrace();
         }
         return count-1;
+    }
+
+    public List<Transactions> getAllTransactionsById(int id) {
+        List<Transactions> transactionList = null;
+        try{
+            Session session = this.factory.openSession();
+            String q = "from Transactions where  user.userId=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", id);
+            transactionList=query.list();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return transactionList;
     }
 }

@@ -31,7 +31,7 @@ public class RegisterServlet extends HttpServlet {
                     response.sendRedirect("login.jsp");
                 }
                 else{
-                    User user = new User(userEmail,userName,userPassword,userAddress,userPhone,userPassword,2);
+                    User user = new User(userEmail,userName,userPassword,userAddress,userPhone,2);
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();
                     int userId= (int)session.save(user);

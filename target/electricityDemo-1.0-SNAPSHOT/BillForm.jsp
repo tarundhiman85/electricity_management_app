@@ -34,10 +34,6 @@
                             <label for="name">Any Dues</label>
                             <input name="dues" required class="form-control" type="text" placeholder="Enter Any Dues">
                         </div>
-                        <div class="form-group">
-                            <label for="name">Date</label>
-                            <input name="date" required class="form-control" type="date" placeholder="Enter Any Dues">
-                        </div>
                         <input type="hidden" name="uid" value="<%=user.getUserId()%>">
                         <div class="container text-center">
                             <button id="register">Calculate Bill</button>

@@ -10,16 +10,23 @@ public class Bill {
     private int billID;
     private int dues;
     private int units;
+    @Temporal(value = TemporalType.TIMESTAMP)
+    @Column(nullable = false)
     private Date date;
     private int amount;
+
     @OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
 
-    public Bill(int dues, int units, Date date, int amount) {
+    @PrePersist
+    void onCreate(){
+        date = new Date();
+    }
+
+    public Bill(int dues, int units, int amount) {
         this.dues = dues;
         this.units = units;
-        this.date = date;
         this.amount = amount;
     }
 
@@ -49,14 +56,6 @@ public class Bill {
 
     public void setUnits(int units) {
         this.units = units;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public int getAmount() {
