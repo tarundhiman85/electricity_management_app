@@ -5,7 +5,6 @@ table, th, td{
     padding: 15px;
     font-family: 'Montserrat', sans-serif;
 }
-
 .back{
     background-image: url("../img/pexels-caio-45917.jpg");
 }
@@ -25,14 +24,74 @@ table, th, td{
     border: solid 1px #312d62;
     background-color: rgba(135, 109, 187,0.9);
 }
+.checkbt{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px) {
+    .navbar-brand{
+        color: #312d62;
+        font-size: 23px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+    .na{
+        color: #312d62;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+    }
+}
+@media (max-width: 858px) {
+    .checkbt{
+        display: block;
+        color: #312d62;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        background: rgba(135, 109, 187,1);
+        text-align: center;
+        transition: all .5s
+    }
+    .nav-item{
+        display: block;
+    }
+    .nav-item a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #312d62;;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+.parent_div{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
 .welcome{
     font-family: 'Montserrat', sans-serif;
     color: #312d62;
+    flex-direction: column;
+    width: 50%;
+    font-size: 30px;
     border: solid 2px #312d62;
-    margin-top: 15em;
     background-color: rgba(135, 109, 187, 0.9);
-    margin-left: 20em;
-    margin-right: 20em;
     padding: 2em;
 }
 .container-fluid.a {
@@ -202,3 +261,4 @@ img{
 .flexItem{
     flex-basis: 400px;
 }
+

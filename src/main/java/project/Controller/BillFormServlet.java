@@ -18,19 +18,17 @@ import java.util.Date;
 @WebServlet(name = "BillFormServlet", value = "/BillFormServlet")
 public class BillFormServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException {
+
         int units = Integer.parseInt(request.getParameter("units"));
         int dues = Integer.parseInt(request.getParameter("dues"));
-
         int id = Integer.parseInt(request.getParameter("uid"));
 
         HttpSession httpSession = request.getSession();
-
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
         Transactions transactions = new Transactions(units*10,userDao.getUserById(id));
 
         if(userDao.getBillByUserId(id)!=null){
             //means we have the bill
-
             Session session = FactoryProvider.factory.openSession();
             Transaction tx = session.beginTransaction();
             Bill bill=userDao.getBillByUserId(id);
@@ -40,7 +38,7 @@ public class BillFormServlet extends HttpServlet {
             session.update(bill);
             tx.commit();
             session.close();
-            httpSession.setAttribute("message1","Bill Added Successfully");
+            httpSession.setAttribute("message1","Bill Updated Successfully");
             response.sendRedirect("BillForm.jsp");
         }
         else {

@@ -24,15 +24,14 @@ public class PayBillServlet extends HttpServlet {
 
             int due = Integer.parseInt(request.getParameter("due"));
             int billA = Integer.parseInt(request.getParameter("billA"));
+
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("current-User");
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
 
             //getting the bill
             Bill billByUserId = userDao.getBillByUserId(user.getUserId());
-
             HttpSession httpSession = request.getSession();
-
             int currentDue=billByUserId.getDues();
             int currentAmount=billByUserId.getAmount();
 
