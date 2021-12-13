@@ -2,12 +2,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>User</title>
     <%@include file="/common_css_js.jsp"%>
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
-<div class="flexi">
+    <div class="flexi">
         <%--    first col--%>
             <div class="flexItem">
                 <div class="card-body text-center">
@@ -34,8 +34,8 @@
                         <img style="height: 190px;margin-top: 10px" src="./img/pay.png" alt="">
                     </div>
                     <a href="PayBill.jsp" class="button-4 w-button link"><br><br><strong>Pay Bill</strong></a>
+                 </div>
+            </div>
     </div>
-</div>
-</div>
-</body>
-</html>
+    </body>
+    </html>

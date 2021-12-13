@@ -8,28 +8,29 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "SearchServlet", value = "/SearchServlet")
-public class SearchServlet extends HttpServlet {
+@WebServlet(name = "TransactionServlet", value = "/TransactionServlet")
+public class TransactionServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        int id = Integer.parseInt(request.getParameter("id"));
+        int transId = Integer.parseInt(request.getParameter("trans"));
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
-        User user = userDao.getUserById(id);
+        User user = userDao.getUserById(transId);
         HttpSession httpSession = request.getSession();
-            if (user == null) {
-                httpSession.setAttribute("message1", "No Record Found");
-                response.sendRedirect("viewUser.jsp");
-            } else {
-                httpSession.setAttribute("message", user);
-                response.sendRedirect("viewUser.jsp");
-            }
+        if (user == null) {
+            httpSession.setAttribute("message1", "No Record Found");
+            response.sendRedirect("viewTransaction.jsp");
+        } else {
+            httpSession.setAttribute("message", user);
+            response.sendRedirect("viewTransaction.jsp");
+        }
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
+            processRequest(request,response);
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
+            processRequest(request, response);
     }
 }

@@ -22,7 +22,5 @@
         <input type="submit" value="Search" id="register">
     </form>
 </div>
-
-
 </body>
 </html>

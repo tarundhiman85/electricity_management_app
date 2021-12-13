@@ -28,14 +28,12 @@ public class LoginServlet extends HttpServlet {
             }
             else if(user.getRoll_id()==2){
                 httpSession.setAttribute("current-User", user);
-//                httpSession.setAttribute("current-id",user.getUserId());
                 response.sendRedirect("user.jsp");
             }
             else {
                 //user exists
                 //then redirect to page and display information
                 httpSession.setAttribute("current-User", user);
-//                httpSession.setAttribute("current-id",user.getUserId());
                 response.sendRedirect("admin.jsp");
             }
         }

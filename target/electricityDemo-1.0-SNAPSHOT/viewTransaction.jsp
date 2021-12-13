@@ -12,7 +12,7 @@
 <%@include file="navbar.jsp"%>
 <div id="searchid">
     <h2>Search the User by Id</h2>
-    <form action="SearchServlet" method="post">
+    <form action="TransactionServlet" method="post">
         <input type="text" id="id" placeholder="Enter the Id" name="id">
         <input id="register" type="submit" value="Search">
         <input type="hidden" name="trans" value="1">
