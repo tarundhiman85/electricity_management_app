@@ -45,3 +45,27 @@ This is a Web app developed in Java using technologies like Servelt, Jsp, Hibern
 ![image](https://user-images.githubusercontent.com/53346586/135760987-c07b9d98-7681-471b-b6f1-c9cadeb0f218.png)
 
 
+help section --> navbar element
+
+how to pay bill
+how to see pending bills
+how to see bill slip
+
+
+backend purpose
+
+request for new connection -->navbar
+
+name
+phone
+email
+Applied Load Details	capacity
+address proof
+* other coonection with same nam
+*  type of connection
+
+-->update neccessary in future   -->doucuments upload
+
+--> compaints section navbar
+
+
