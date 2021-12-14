@@ -1,0 +1,62 @@
+.headi{
+    background-color: transparent !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-family: monospace !important;
+}
+.btn-link{
+    color: black;
+    font-family: monospace;
+    font-size: 1em;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 90%;
+    margin: 5%;
+}
+.right{
+    margin: auto;
+}
+.form-control{
+    background-color: transparent;
+}
+.section img{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: 60%;
+}
+.top{
+    display: flex;
+    justify-content: center;
+}
+.top img{
+    width: 10%;
+}
+.faqnav{
+}
+.faqnav ul{
+    list-style: none;
+}
+.faqnav li{
+    padding: 5%;
+    border:1px solid white;
+    background-color: lightblue;
+color: black;
+    font-size: 1.2em;
+    font-family: monospace;
+}
+.faqnav li:hover{
+    background-color: burlywood;
+}
+#accordion{
+    border:2px solid black;
+    background-color: white;
+}
+.card{
+    color: azure;
+    background-color:white ;
+}
+
