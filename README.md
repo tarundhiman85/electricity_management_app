@@ -2,7 +2,7 @@
 This is a Web app developed in Java using technologies like Servelt, Jsp, Hibernate. 
 
 ### Features of Project:
--	It is a web app that has in which electricity bills are handled
+-	It is a web app in which electricity bills are handled
 -	Admin will be able to add user and calculate bill as demand.
 -	User will Be able to see his Amount left and Dues Left and pay Bill.
 - Admin will be able to update the user details and delete the use.
@@ -51,21 +51,18 @@ how to pay bill
 how to see pending bills
 how to see bill slip
 
-
-backend purpose
-
 request for new connection -->navbar
 
-name
-phone
-email
+Name
+Phone
+Email
 Applied Load Details	capacity
 address proof
 * other coonection with same nam
 *  type of connection
 
--->update neccessary in future   -->doucuments upload
+-->update neccessary in future   -->documents upload
 
---> compaints section navbar
+-->complaints section navbar
 
 
