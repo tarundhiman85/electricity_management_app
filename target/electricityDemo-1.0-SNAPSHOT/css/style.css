@@ -14,6 +14,13 @@ table, th, td{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+.navbar-nav li{
+margin:10px;
+}
 .na{
     color: #312d62;
     font-size: 20px;
@@ -23,6 +30,10 @@ table, th, td{
 .navbar{
     border: solid 1px #312d62;
     background-color: rgba(135, 109, 187,0.9);
+}
+.navimg img{
+width: 30%;
+    height: 30%;
 }
 .checkbt{
     font-size: 30px;
@@ -68,8 +79,13 @@ table, th, td{
     .nav-item{
         display: block;
     }
+
     .nav-item a{
         font-size: 20px;
+    }
+    .rightnav{
+        display: flex;
+
     }
     a:hover, a.active{
         background: none;
@@ -78,6 +94,9 @@ table, th, td{
     #check:checked ~ ul{
         left: 0;
     }
+}
+.rightnav ul{
+    display: flex;
 }
 .parent_div{
     height: 100vh;
