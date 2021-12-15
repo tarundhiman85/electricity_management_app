@@ -68,7 +68,16 @@
                 </div>
             </div>
         </div>
-
+    <div class="flexItem">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="container">
+                    <img src="img/resolve.png" alt="">
+                </div>
+                <a href="ResolveIsue.jsp" class="button-4 w-button link"><br><br><strong>Resolve User Issue</strong></a>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

@@ -27,13 +27,22 @@
                 </div>
             </div>
 
-        <%--    first col--%>
+        <%--    third col--%>
             <div class="flexItem">
                 <div class="card-body text-center">
                     <div class="container">
                         <img style="height: 190px;margin-top: 10px" src="./img/pay.png" alt="">
                     </div>
                     <a href="PayBill.jsp" class="button-4 w-button link"><br><br><strong>Pay Bill</strong></a>
+                 </div>
+            </div>
+            <%--    4th col--%>
+            <div class="flexItem">
+                <div class="card-body text-center">
+                    <div class="container">
+                        <img style="height: 190px;margin-top: 10px" src="./img/yourResolved.png" alt="">
+                    </div>
+                    <a href="UserResolved.jsp" class="button-4 w-button link"><br><br><strong>Check Resolved Issues</strong></a>
                  </div>
             </div>
     </div>
