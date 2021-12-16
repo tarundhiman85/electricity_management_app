@@ -23,61 +23,42 @@
 %>
 <body class="back">
 <%@include file="navbar.jsp"%>
-<div class="flexi">
-        <div class="flexItem">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="container" style="margin-bottom: 45px; margin-top: 10px">
-                        <img src="img/user.png" alt="">
-                    </div>
-                    <strong  class="button-4 w-button link">Number of Users : <%=count%></strong><br>
-                </div>
-            </div>
-        </div>
-        <%--    first col--%>
-        <div class="flexItem">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="container">
-                        <img src="img/profile.png" alt="">
-                    </div>
-                    <a href="viewUser.jsp" class="button-4 w-button link"><br><br><strong>View User</strong></a>
-                </div>
-            </div>
-<%--    </div>--%>
-    </div>
-<%--    <div class="row mt-3">--%>
 
-        <div class="flexItem">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="container">
-                        <img src="img/bill.png" alt="">
-                    </div>
-                    <a href="calculateBill.jsp" class="button-4 w-button link"><br><br><strong>Calculate Bill</strong></a>
-                </div>
+<div class="container">
+    <div class="rowindex">
+        <div class="colindex spcol">
+            <div class="card">
+                <img class="card-img-top" src="img/user.png" alt="Users">
             </div>
+            <br><br><strong class="link">Number of Users : <%=count%></strong>
         </div>
-            <div class="flexItem">
-            <div class="card text-center">
-                <div class="card-body">
-                    <div class="container">
-                        <img src="img/add-friend.png" alt="">
-                    </div>
-                    <a href="register.jsp" class="button-4 w-button link"><br><br><strong>Add User</strong></a>
-                </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
             </div>
+            <a class="link" href="viewUser.jsp"><br><br><strong>View User</strong></a>
         </div>
-    <div class="flexItem">
-        <div class="card text-center">
-            <div class="card-body">
-                <div class="container">
-                    <img src="img/resolve.png" alt="">
-                </div>
-                <a href="ResolveIsue.jsp" class="button-4 w-button link"><br><br><strong>Resolve User Issue</strong></a>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="img/bill.png" alt="Calculate Bill">
             </div>
+            <a class="link" href="calculateBill.jsp"><br><br><strong>Calculate Bill</strong></a>
+        </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/add-friend.png" alt="Add User">
+            </div>
+            <a class="link" href="register.jsp"><br><br><strong>Add User</strong></a>
+        </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/resolve.png" alt="Resolve User Issues">
+            </div>
+            <a class="link" href="ResolveIsue.jsp"><br><br><strong>Resolve User Issues</strong></a>
         </div>
     </div>
 </div>
+
+
 </body>
 </html>
