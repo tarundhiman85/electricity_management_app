@@ -13,7 +13,7 @@
     <h2>Search the User by Id</h2>
     <form action="SearchServlet" method="post">
     <input type="text" id="id" placeholder="Enter the Id" name="id">
-    <input id="register" type="submit" value="Search">
+    <input class="registerbtn" id="register" type="submit" value="Search">
     </form>
 </div>
 <%
