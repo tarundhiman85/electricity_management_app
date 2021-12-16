@@ -19,6 +19,9 @@
     </label>
         <ul class="navbar-nav log_cursor">
             <li class="nav-item">
+                <a class="nav-link na" href="help.jsp">New Connection</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link na" href="help.jsp">Help</a>
             </li>
             <li class="nav-item">
@@ -35,7 +38,7 @@
     <%
     } else if(user1.getRoll_id()==2){
     %>
-<div class="wel">
+<div class="ml-auto">
     <ul class="navbar-nav">
         <li class="nav-item">
             <a class="nav-link na" href="help.jsp" style="cursor: pointer;">Help</a>
@@ -44,14 +47,14 @@
             <a class="nav-link na" href="faq.jsp" style="cursor: pointer;">FAQ</a>
         </li>
         <li class="nav-item">
-            <img class="navbarimg" style="width: 3em; height: auto" src="./img/userprofile.png" alt="" srcset="">
+            <img class="navbarimg" style="width: 2.5em; height: auto" src="./img/userprofile.png" alt="" srcset="">
         </li>
         <li class="nav-item">
             <a class="nav-link na" href="user.jsp" style="cursor: pointer;">Welcome <%=user1.getUserName()%></a>
         </li>
         <li class="nav-item">
             <a class="nav-link na" href="LogoutServlet" style="cursor: pointer;">
-                <img class="navbarimg" style="width: 3em; height: auto" src="./img/logout.png" alt="" srcset="">
+                <img class="navbarimg" style="width: 2em; margin: -5px; height: auto" src="./img/logout.png" alt="" srcset="">
             </a>
         </li>
     </ul>
@@ -63,17 +66,17 @@
     } else {
 %>
 
-<div class="wel">
+<div class="ml-auto">
 <ul class="navbar-nav" >
     <li class="nav-item">
-        <img class="navbarimg" style="width: 3em; height: auto" src="./img/userprofile.png" alt="" srcset="">
+        <img class="navbarimg" style="width: 2.5em; height: auto" src="./img/userprofile.png" alt="" srcset="">
     </li>
     <li class="nav-item">
         <a class="nav-link na" href="admin.jsp" style="cursor: pointer;">Welcome <%=user1.getUserName()%></a>
     </li>
     <li class="nav-item">
         <a class="nav-link na" href="LogoutServlet" style="cursor: pointer;">
-            <img class="navbarimg" style="width: 3em; height: auto" src="./img/logout.png" alt="" srcset="">
+            <img class="navbarimg" style="width: 2em; margin: -5px; height: auto" src="./img/logout.png" alt="" srcset="">
         </a>
     </li>
 </ul>

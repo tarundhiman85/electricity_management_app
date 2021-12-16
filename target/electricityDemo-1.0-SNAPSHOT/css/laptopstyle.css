@@ -1,0 +1,44 @@
+html{
+    font-size: 12px;
+}
+.link{
+    color:gold;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.initial{
+    display: flex;
+    max-width: 60rem;
+    margin: auto;
+}
+.initial img{
+    width: 6em;
+    margin: 3rem;
+    height: auto;
+}
+
+.dishead{
+    margin: 4rem;
+    align-items: center;
+}
+.rowindex{
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.colindex{
+    margin: 5rem;
+    align-items: center;
+}
+.card {
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    width:18rem;
+}
+.card img{
+    width: 15rem;
+}
