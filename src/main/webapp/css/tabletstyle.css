@@ -1,0 +1,64 @@
+.navbar{
+    flex-wrap: nowrap;
+}
+.link{
+    color:gold;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.initial{
+
+    margin: auto;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+}
+.initial img{
+    display: flex;
+
+    width: 6em;
+    margin: auto;
+    height: auto;
+}
+.initial h4{
+
+    text-align: center;
+}
+.initial h1{
+
+    text-align: center;
+}
+.rowindex{
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.colindex{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    align-items: center;
+}
+.spcol{
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    background-color: transparent;
+    border-color: transparent;
+    width:18rem;
+}
+.card img{
+    width: 15rem;
+}
+.dishead{
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
