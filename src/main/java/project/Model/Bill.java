@@ -33,8 +33,7 @@ public class Bill {
     public Bill() {
 
     }
-   //insert into
-    //
+
     public int getBillID() {
         return billID;
     }

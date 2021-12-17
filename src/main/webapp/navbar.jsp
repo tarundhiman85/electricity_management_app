@@ -5,8 +5,6 @@
     <div class="navimg">
         <a href="index.jsp"><img  src="./img/ReBS.png" alt="" srcset=""></a>
 
-
-
     <%--<a class="navbar-brand"  href="index.jsp">Electricity Bill Management</a>--%>
     </div>
     <%

@@ -1,9 +1,12 @@
-package project.Model;
+package project.Dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import project.Controller.FactoryProvider;
+import project.Helper.FactoryProvider;
+import project.Model.Bill;
+import project.Model.Transactions;
+import project.Model.User;
 
 import java.util.List;
 
@@ -76,19 +79,6 @@ public class UserDao {
         }
         return userList;
     }
-    public List<Transactions> getAllTransactions(){
-        List<Transactions> transactionList = null;
-        try{
-            Session session = this.factory.openSession();
-            String q = "from Transactions";
-            Query query = (Query) session.createQuery(q);
-            transactionList=query.list();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        return transactionList;
-    }
     public long getNumberofUsers(){
         long count=0;
         try{
@@ -101,50 +91,5 @@ public class UserDao {
             e.printStackTrace();
         }
         return count-1;
-    }
-    public List<Transactions> getAllTransactionsById(int id) {
-        List<Transactions> transactionList = null;
-        try{
-            Session session = this.factory.openSession();
-            String q = "from Transactions where  user.userId=:i";
-            Query query = session.createQuery(q);
-            query.setParameter("i", id);
-            transactionList=query.list();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        return transactionList;
-    }
-
-    public List<project.Model.Query> getAllQueries() {
-        List<project.Model.Query> queryList =null;
-        try {
-            Session session = FactoryProvider.getFactory().openSession();
-            String q = "from Query";
-            Query query = session.createQuery(q);
-            queryList=query.list();
-            session.close();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        return queryList;
-    }
-    public project.Model.Query getQueriesById(int id) {
-        project.Model.Query qu = null;
-        try {
-            //validation if the query exists
-            Session session = FactoryProvider.getFactory().openSession();
-            String q = "from Query where queryId=:i";
-            Query query = (Query) session.createQuery(q);
-            query.setParameter("i", id);
-            qu = (project.Model.Query) query.uniqueResult();
-            session.close();
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-        return qu;
     }
 }
