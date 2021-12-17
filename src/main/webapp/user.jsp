@@ -5,6 +5,15 @@
     <title>User</title>
     <%@include file="/common_css_js.jsp"%>
 </head>
+<%
+    User user = (User)session.getAttribute("current-User");
+    if(user==null){
+        session.setAttribute("message1","You are not logged in!!");
+        response.sendRedirect("login.jsp");
+        return;
+    }
+    else {%>
+
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container">
@@ -36,4 +45,5 @@
     </div>
 </div>
     </body>
-    </html>
+<%}%>
+</html>
