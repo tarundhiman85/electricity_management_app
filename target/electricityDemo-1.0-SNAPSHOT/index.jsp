@@ -14,9 +14,7 @@
             <h1>Welcome! KEBS Electricity Board </h1>
             <h4 style="margin-top: 2rem; font-size: 2rem; color: gold">Complete Solution for Electricity Bill Management</h4>
         </div>
-
     </div>
-
 </div>
 <div class="container">
     <div class="rowindex">
@@ -24,23 +22,22 @@
             <div class="card">
                 <img class="card-img-top" src="./img/new connection.png" alt="New Connection">
             </div>
-            <a class="link" href="viewInfo.jsp"><br><br><strong>New Connection Request</strong></a>
+            <a class="link" href="newConnection.jsp"><br><br><strong>New Connection Request</strong></a>
         </div>
         <div class="colindex">
             <div class="card">
                 <img class="card-img-top" src="./img/pngaaa.com-1119855.png" alt="New Connection">
             </div>
-            <a class="link" href="viewInfo.jsp"><br><br><strong>Need Help?</strong></a>
+            <a class="link" href="help.jsp"><br><br><strong>Need Help?</strong></a>
         </div>
         <div class="colindex">
             <div class="card">
                 <img class="card-img-top" src="./img/new connection.png" alt="New Connection">
             </div>
-            <a class="link" href="services.jsp"><br><br><strong>Our Services</strong></a>
+            <a class="link" href="user.jsp"><br><br><strong>Our Services</strong></a>
         </div>
     </div>
 </div>
-
    <%-- <div class="parent_div">
         <div class="welcome">
             <strong>Welcome to Electricity Bill Management System</strong><br>

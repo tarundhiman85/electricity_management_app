@@ -3,7 +3,14 @@ html{
 }
 .table{
     max-width: 80rem;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-spacing: 0px;
+
+}
+.table tr{
+    color: white;
 }
 table, th, td{
     border: solid 2px black;
@@ -161,13 +168,18 @@ div.card-body {
     font-weight: bold;
 }
 #register{
+    background-color: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border-radius: 2rem;
+
+}
+.registerbtn{
     background-color: lightblue;
     color: #312d62;
     margin: 0.5rem;
     padding: 0.5rem;
     width: 6rem;
     border-radius: 2rem;
-
 }
 #id{
     border-radius: 2rem;

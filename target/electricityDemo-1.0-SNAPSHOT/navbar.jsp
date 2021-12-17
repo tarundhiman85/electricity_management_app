@@ -19,7 +19,7 @@
     </label>
         <ul class="navbar-nav log_cursor">
             <li class="nav-item">
-                <a class="nav-link na" href="help.jsp">New Connection</a>
+                <a class="nav-link na" href="newConnection.jsp">New Connection</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link na" href="help.jsp">Help</a>

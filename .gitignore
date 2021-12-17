@@ -1,0 +1,4 @@
+src/main/resources/hibernate.cfg.xml
+webContexts.xml
+misc.xml
+target/
