@@ -59,3 +59,33 @@ html{
     flex-direction: column;
     justify-content: center;
 }
+.formcard{
+    width: 60%;
+    margin: auto;
+}
+.cardbody{
+    width: 95%;
+    border-radius: 6rem;
+}
+.formbody{
+    width: 95%;
+    margin: auto;
+}
+.formbody label{
+    font-size: 1.3rem;
+}
+.formbtn{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: auto;
+    font-size: 2rem;
+}
+.formbtn button{
+    padding: 0.4rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    width: 16rem;
+}
+
+

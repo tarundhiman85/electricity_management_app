@@ -3,7 +3,14 @@ html{
 }
 .table{
     max-width: 80rem;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-spacing: 0px;
+
+}
+.table tr{
+    color: white;
 }
 table, th, td{
     border: solid 2px black;
@@ -160,14 +167,20 @@ div.card-body {
     font-size: 25px;
     font-weight: bold;
 }
+
 #register{
+    background-color: rgba(135, 109, 187, 0.9);
+    color: #312d62;
+    border-radius: 2rem;
+
+}
+.registerbtn{
     background-color: lightblue;
     color: #312d62;
     margin: 0.5rem;
     padding: 0.5rem;
     width: 6rem;
     border-radius: 2rem;
-
 }
 #id{
     border-radius: 2rem;
@@ -348,6 +361,34 @@ img{
 .dishead{
     margin: 4rem;
     align-items: center;
+}
+.formcard{
+    width: 60%;
+    margin: auto;
+}
+.cardbody{
+    width: 95%;
+    border-radius: 6rem;
+}
+.formbody{
+    width: 95%;
+    margin: auto;
+}
+.formbody label{
+    font-size: 1.3rem;
+}
+.formbtn{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: auto;
+    font-size: 2rem;
+}
+.formbtn button{
+    padding: 0.4rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    width: 16rem;
 }
 
 
