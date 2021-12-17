@@ -9,11 +9,12 @@
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <mapping class="project.Model.User"/>
         <mapping class="project.Model.Bill"/>
         <mapping class="project.Model.Transactions"/>
+        <mapping class="project.Model.Query"/>
     </session-factory>
 </hibernate-configuration>

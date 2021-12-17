@@ -1,0 +1,61 @@
+html{
+    font-size: 10px;
+}
+.navbar{
+    flex-wrap: nowrap;
+}
+.link{
+    color:gold;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+.initial{
+    margin: auto;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+}
+.initial h1{
+
+    text-align: center;
+}
+.initial h4{
+
+    text-align: center;
+
+}
+.initial img{
+    display: flex;
+    width: 6em;
+    margin: auto;
+    height: auto;
+}
+.rowindex{
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+.colindex{
+    margin: 3rem;
+}
+.card {
+    background-color: transparent;
+    border-color: transparent;
+    width:18rem;
+    margin: auto;
+    align-items: center;
+}
+.card img{
+    width: 18rem;
+}
+.dishead{
+    margin: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

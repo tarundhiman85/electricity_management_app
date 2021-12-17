@@ -7,35 +7,33 @@
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
-    <div class="flexi">
-        <%--    first col--%>
-            <div class="flexItem">
-                <div class="card-body text-center">
-                    <div class="container">
-                        <img class="img-fluid" style="height: 190px; margin-top: 10px" src="./img/profile.png"  alt="user_icon">
-                    </div>
-                    <a class="link" href="viewInfo.jsp"><br><br><strong>View Profile and Bill</strong></a>
+<div class="container">
+    <div class="rowindex">
+        <div class="colindex spcol">
+            <div class="card">
+                <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
             </div>
+            <a class="link" href="viewInfo.jsp"><br><br><strong>pay.png</strong></a>
         </div>
-        <%--    2nd  col--%>
-            <div class="flexItem">
-                <div class="card-body text-center">
-                    <div class="container">
-                        <img class="img-fluid" style="height: 190px; margin-top: 10px" src="./img/money-transfer.png"  alt="">
-                    </div>
-                    <a class="link" href="viewTransaction.jsp"><br><br><strong>View Transactions</strong></a>
-                </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/money-transfer.png" alt="View Transaction">
             </div>
-
-        <%--    first col--%>
-            <div class="flexItem">
-                <div class="card-body text-center">
-                    <div class="container">
-                        <img style="height: 190px;margin-top: 10px" src="./img/pay.png" alt="">
-                    </div>
-                    <a href="PayBill.jsp" class="button-4 w-button link"><br><br><strong>Pay Bill</strong></a>
-                 </div>
+            <a class="link" href="viewTransaction.jsp"><br><br><strong>View Transaction</strong></a>
+        </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/pay.png" alt="Pay Bill">
             </div>
+            <a class="link" href="PayBill.jsp"><br><br><strong>Pay Bill</strong></a>
+        </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/yourResolved.png" alt="Resolve Issue">
+            </div>
+            <a class="link" href="UserResolved.jsp"><br><br><strong>Check Resolved Issues</strong></a>
+        </div>
     </div>
+</div>
     </body>
     </html>
