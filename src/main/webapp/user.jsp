@@ -13,7 +13,7 @@
             <div class="card">
                 <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
             </div>
-            <a class="link" href="viewInfo.jsp"><br><br><strong>pay.png</strong></a>
+            <a class="link" href="viewInfo.jsp"><br><br><strong>View Bill & Profile</strong></a>
         </div>
         <div class="colindex">
             <div class="card">

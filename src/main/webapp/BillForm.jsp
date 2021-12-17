@@ -10,6 +10,7 @@
     HttpSession httpSession = request.getSession();
         User user = (User) session.getAttribute("message");
 %>
+
 <div class="container-fluid">
     <div class="row mt-5">
         <div class="col-md-4 offset-md-4">
