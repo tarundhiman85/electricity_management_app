@@ -1,6 +1,6 @@
 <%@ page import="project.Model.Query" %>
 <%@ page import="java.util.List" %>
-<%@ page import="project.Model.UserDao" %>
+<%@ page import="project.Dao.QueryDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -20,7 +20,7 @@
             <td>Action</td>
         </tr>
         <%
-            List<Query> queryList = new UserDao().getAllQueries();
+            List<Query> queryList = new QueryDao().getAllQueries();
             for (Query q : queryList){
                 if(q.getResolve().equals("No")){
         %>

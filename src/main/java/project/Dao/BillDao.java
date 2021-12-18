@@ -12,7 +12,6 @@ public class BillDao {
     }
     public BillDao() {
     }
-
     public boolean updateBill(int due, int amount, int units, Bill bill){
         boolean f=false;
         try {
@@ -31,8 +30,4 @@ public class BillDao {
         }
         return f;
     }
-//    public boolean saveNewBill(int due, int amount, int units, Bill bill){
-//        Session session = this.factory.openSession();
-//        Transaction tx = session.beginTransaction();
-//    }
 }

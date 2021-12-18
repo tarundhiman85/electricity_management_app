@@ -1,4 +1,4 @@
-<%@ page import="project.Controller.FactoryProvider" %>
+<%@ page import="project.Helper.FactoryProvider" %>
 <%@ page import="org.hibernate.Session" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

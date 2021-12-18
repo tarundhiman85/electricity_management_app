@@ -2,9 +2,10 @@ package project.Controller;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import project.Dao.QueryDao;
+import project.Helper.FactoryProvider;
 import project.Model.Query;
-import project.Model.User;
-import project.Model.UserDao;
+import project.Dao.UserDao;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -18,7 +19,7 @@ public class ResolveServlet extends HttpServlet {
         //db logic
         Session session = FactoryProvider.getFactory().openSession();
         Transaction tx = session.beginTransaction();
-        Query q = new UserDao().getQueriesById(qId);
+        Query q = new QueryDao().getQueriesById(qId);
         q.setResolve("Yes");
         session.update(q);
         tx.commit();

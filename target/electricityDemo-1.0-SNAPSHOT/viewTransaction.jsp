@@ -1,7 +1,8 @@
 <%@ page import="java.util.List" %>
-<%@ page import="project.Model.UserDao" %>
-<%@ page import="project.Controller.FactoryProvider" %>
+<%@ page import="project.Dao.UserDao" %>
+<%@ page import="project.Helper.FactoryProvider" %>
 <%@ page import="project.Model.Transactions" %>
+<%@ page import="project.Dao.TransactionDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -28,8 +29,7 @@
 else{
     User user = (User) session.getAttribute("message");
     if(user==null){
-        UserDao userDao = new UserDao(FactoryProvider.getFactory());
-        List<Transactions> transactionList =  userDao.getAllTransactions();
+        List<Transactions> transactionList =  new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
         if(transactionList==null)
         {
             HttpSession httpSession = request.getSession();
@@ -71,8 +71,7 @@ else{
         else{
             %>
             <%
-                UserDao userDao = new UserDao(FactoryProvider.getFactory());
-                List<Transactions> transactionList =  userDao.getAllTransactionsById(user.getUserId());
+                List<Transactions> transactionList =  new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
                 if(transactionList==null){
                     HttpSession httpSession = request.getSession();
                     httpSession.setAttribute("message1","No Record Found");
@@ -96,9 +95,7 @@ else{
                             <td><%=t.getAmount()%></td>
                             <td><%=t.getTime()%></td>
                         </tr>
-
                         <%}%>
-
                     </table>
                 </div>
                     <%

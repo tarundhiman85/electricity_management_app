@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="project.Model.UserDao" %>
-<%@ page import="project.Controller.FactoryProvider" %>
+<%@ page import="project.Dao.UserDao" %>
+<%@ page import="project.Helper.FactoryProvider" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -79,10 +79,6 @@
 <% } }
 
 %>
-
-
-
-
             <%if(session.getAttribute("message")!=null){
                     session.removeAttribute("message");
                 }}

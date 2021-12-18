@@ -1,7 +1,7 @@
 <%@ page import="org.hibernate.Session" %>
-<%@ page import="project.Controller.FactoryProvider" %>
+<%@ page import="project.Helper.FactoryProvider" %>
 <%@ page import="project.Model.Bill" %>
-<%@ page import="project.Model.UserDao" %>
+<%@ page import="project.Dao.UserDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

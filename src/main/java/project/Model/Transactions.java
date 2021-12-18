@@ -24,6 +24,7 @@ public class Transactions {
     void onCreate(){
         Time = new Date();
     }
+
     public Transactions() {
     }
 

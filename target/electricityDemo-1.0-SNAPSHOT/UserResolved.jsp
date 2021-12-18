@@ -1,7 +1,8 @@
 <%@ page import="project.Model.Query" %>
-<%@ page import="project.Model.UserDao" %>
 <%@ page import="java.util.List" %>
 <%@ page import="project.Model.User" %>
+<%@ page import="project.Dao.QueryDao" %>
+<%@ page import="project.Helper.FactoryProvider" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,7 +19,7 @@
         </tr>
         <tr class="top">
             <%
-            List<Query> queryList = new UserDao().getAllQueries();
+            List<Query> queryList = new QueryDao(FactoryProvider.getFactory()).getAllQueries();
             User current = (User)request.getSession().getAttribute("current-User");
             for (Query q : queryList){
                 if (q.getUser().getUserId()==current.getUserId() && q.getResolve().equals("Yes")){
