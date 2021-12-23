@@ -12,6 +12,7 @@ public class User {
     private String userPassword;
     private String userAddress;
     private String userPhone;
+    private String boardType;
     private int Roll_id;
 
     public User(String userEmail, String userName, String userPassword, String userAddress, String userPhone, int roll_id) {
@@ -21,6 +22,24 @@ public class User {
         this.userAddress = userAddress;
         this.userPhone = userPhone;
         Roll_id = roll_id;
+    }
+
+    public User(String userEmail, String userName, String userPassword, String userAddress, String userPhone, String boardType, int roll_id) {
+        this.userEmail = userEmail;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userAddress = userAddress;
+        this.userPhone = userPhone;
+        this.boardType = boardType;
+        Roll_id = roll_id;
+    }
+
+    public String getBoardType() {
+        return boardType;
+    }
+
+    public void setBoardType(String boardType) {
+        this.boardType = boardType;
     }
 
     public User() {

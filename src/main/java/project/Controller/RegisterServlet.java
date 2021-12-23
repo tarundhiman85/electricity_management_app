@@ -24,15 +24,18 @@ public class RegisterServlet extends HttpServlet {
                 String userPassword=request.getParameter("user_password");
                 String userPhone=request.getParameter("user_phone");
                 String userAddress=request.getParameter("user_address");
+                String boardType=request.getParameter("board");
 
                 HttpSession httpSession=request.getSession();
                 //validation
-                if(userName==null){
+                if(userName==null)
+                {
                     httpSession.setAttribute("message1", "User Name Cannot be Null");
                     response.sendRedirect("login.jsp");
                 }
                 else{
                     User user = new User(userEmail,userName,userPassword,userAddress,userPhone,2);
+                    user.setBoardType(boardType);
                     Session session = FactoryProvider.getFactory().openSession();
                     Transaction transaction = session.beginTransaction();
                     int userId= (int)session.save(user);

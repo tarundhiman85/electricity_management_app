@@ -16,7 +16,7 @@
             <div class="card">
                 <div class="card-body px-5">
                     <%@include file="message.jsp"%>
-                    <h3 style="color: #312d62; font-weight: bolder" class="text-center my-3">Enter Bill Information</h3>
+                    <h3 style="color: #312d62; font-weight: bolder" class="text-center my-3">Enter <%=user.getBoardType().toUpperCase()%> Bill Information</h3>
                     <form action="BillFormServlet" method="post">
                         <div class="form-group">
                             <label for="name">User Name</label>

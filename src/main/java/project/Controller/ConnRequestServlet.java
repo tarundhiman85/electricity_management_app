@@ -21,11 +21,12 @@ public class ConnRequestServlet extends HttpServlet {
             String userPhone = request.getParameter("user_phone");
             String userAddress = request.getParameter("user_address");
             String connType = request.getParameter("conn_Type");
-
+            String board = request.getParameter("board");
             HttpSession httpSession = request.getSession();
 
             //db logic
             ConnRequest connRequest = new ConnRequest(userName,userEmail,userAddress,userPhone,connType);
+            connRequest.setBoardType(board);
             Session session = FactoryProvider.getFactory().openSession();
             Transaction tx = session.beginTransaction();
             session.save(connRequest);

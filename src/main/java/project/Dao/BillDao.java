@@ -12,13 +12,14 @@ public class BillDao {
     }
     public BillDao() {
     }
-    public boolean updateBill(int due, int amount, int units, Bill bill){
+    public boolean updateBill(int due, int amount, int units, Bill bill, String Board){
         boolean f=false;
         try {
             Session session = this.factory.openSession();
             Transaction tx = session.beginTransaction();
             bill.setAmount(amount);
             bill.setDues(due);
+            bill.setBoardT(Board);
             bill.setUnits(units);
             session.update(bill);
             tx.commit();
