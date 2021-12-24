@@ -35,7 +35,15 @@
                         <div class="form-group">
                             <label for="phone">User Address</label>
                             <input name="user_address" type="text" required class="form-control" placeholder="Enter your Address">
-
+                        </div>
+                        <div class="form-group">
+                            <label for="board">Choose a Electricity Board</label>
+                            <select name="board" id="board">
+                                <option value="derc">Delhi Electricity Regulatory Commission</option>
+                                <option value="uhbvn">Uttar Haryana Bijli Vitran Nigam</option>
+                                <option value="dhbvn">Dakshin Haryana Bijli Vitran Nigam</option>
+                                <option value="pspcl">Punjab State Power Corporation Limited</option>
+                            </select>
                         </div>
                         <a href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>
                         <div class="container text-center">

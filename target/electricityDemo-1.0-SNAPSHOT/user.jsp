@@ -6,6 +6,8 @@
     <%@include file="/common_css_js.jsp"%>
 </head>
 <%
+    //check reminder of bill
+
     User user = (User)session.getAttribute("current-User");
     if(user==null){
         session.setAttribute("message1","You are not logged in!!");

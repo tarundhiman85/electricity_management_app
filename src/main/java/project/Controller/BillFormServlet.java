@@ -2,6 +2,7 @@ package project.Controller;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import project.Dao.BillDao;
 import project.Helper.FactoryProvider;
 import project.Model.Bill;
 import project.Model.Transactions;
@@ -24,7 +25,6 @@ public class BillFormServlet extends HttpServlet {
 
         HttpSession httpSession = request.getSession();
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
-        Transactions transactions = new Transactions(units*10,userDao.getUserById(id));
 
         if(userDao.getBillByUserId(id)!=null){
             //means we have the bill
@@ -43,20 +43,14 @@ public class BillFormServlet extends HttpServlet {
         else {
             Session session = FactoryProvider.factory.openSession();
             Transaction tx = session.beginTransaction();
-            Bill bill = new Bill(dues, units, units * 10);
-            User user = userDao.getUserById(id);
-            bill.setUser(user);
+            User user1 = userDao.getUserById(id);
+            Bill bill = new Bill(dues,units*10,user1.getBoardType(),units*10,user1);
             session.save(bill);
             tx.commit();
             session.close();
             httpSession.setAttribute("message1","Bill Added Successfully");
             response.sendRedirect("BillForm.jsp");
         }
-        Session session = FactoryProvider.factory.openSession();
-        Transaction tx = session.beginTransaction();
-        session.save(transactions);
-        tx.commit();
-        session.close();
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

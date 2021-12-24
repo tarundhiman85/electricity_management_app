@@ -13,6 +13,9 @@ public class ConnRequest {
     private String Address;
     private String Phone;
     private String connType;
+    private String boardType;
+
+
 
     public ConnRequest(String name, String email, String address, String phone, String connType) {
         Name = name;
@@ -20,6 +23,14 @@ public class ConnRequest {
         Address = address;
         Phone = phone;
         this.connType = connType;
+    }
+
+    public String getBoardType() {
+        return boardType;
+    }
+
+    public void setBoardType(String boardType) {
+        this.boardType = boardType;
     }
 
     public String getPhone() {

@@ -7,7 +7,7 @@
 </head>
 <body class="back">
 <%@include file="navbar.jsp"%>
-<div class="container-fluid">
+<div class="container">
     <%@include file="message.jsp"%>
     <div class="row mt-5">
         <div class="col">
@@ -37,6 +37,15 @@
                             <select name="conn_Type">
                                 <option value="domestic">Domestic</option>
                                 <option value="commercial">Commercial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="board">Choose a Electricity Board</label>
+                            <select name="board" id="board">
+                                <option value="derc">Delhi Electricity Regulatory Commission</option>
+                                <option value="uhbvn">Uttar Haryana Bijli Vitran Nigam</option>
+                                <option value="dhbvn">Dakshin Haryana Bijli Vitran Nigam</option>
+                                <option value="pspcl">Punjab State Power Corporation Limited</option>
                             </select>
                         </div>
                         <div class="container formbtn text-center">

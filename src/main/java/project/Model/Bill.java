@@ -13,6 +13,7 @@ public class Bill {
     @Temporal(value = TemporalType.TIMESTAMP)
     @Column(nullable = false)
     private Date date;
+    private String boardT;
     private int amount;
 
     @OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
@@ -24,11 +25,30 @@ public class Bill {
         date = new Date();
     }
 
-    public Bill(int dues, int units, int amount) {
+    public Bill(int dues, int units, String boardT, int amount, User user) {
         this.dues = dues;
         this.units = units;
+        this.boardT = boardT;
         this.amount = amount;
+        this.user = user;
     }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getBoardT() {
+        return boardT;
+    }
+
+    public void setBoardT(String boardT) {
+        this.boardT = boardT;
+    }
+
 
     public Bill() {
 
