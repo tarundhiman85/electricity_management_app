@@ -17,5 +17,6 @@
         <mapping class="project.Model.Transactions"/>
         <mapping class="project.Model.Query"/>
         <mapping class="project.Model.ConnRequest"/>
+        <mapping class="project.Model.Balance"/>
     </session-factory>
 </hibernate-configuration>

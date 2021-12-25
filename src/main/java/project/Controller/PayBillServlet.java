@@ -32,23 +32,21 @@ public class PayBillServlet extends HttpServlet {
             //getting the bill
             Bill billByUserId = userDao.getBillByUserId(user.getUserId());
             HttpSession httpSession = request.getSession();
+
             int currentDue=billByUserId.getDues();
             int currentAmount=billByUserId.getAmount();
 
-            if(currentAmount>=billA && currentDue>=due)
+            if(currentAmount==billA && currentDue==due)
             {
-                billByUserId.setDues(currentDue-due);
-                billByUserId.setAmount(currentAmount-billA);
                 billByUserId.setUnits(billByUserId.getAmount()/10);
 
                 //Saving to the database
                 Session session1 = FactoryProvider.getFactory().openSession();
                 Transaction tx= session1.beginTransaction();
-
-                session1.update(billByUserId);
-
+                session1.delete(billByUserId);
                 tx.commit();
                 session1.close();
+
                 httpSession.setAttribute("message1","Bill Paid Successfully");
                 response.sendRedirect("PayBill.jsp");
             }
@@ -57,6 +55,7 @@ public class PayBillServlet extends HttpServlet {
                 response.sendRedirect("PayBill.jsp");
             }
             Transactions transactions = new Transactions(billA,userDao.getUserById(user.getUserId()));
+            transactions.setActionDone("Paid Bill");
             Session session1 = FactoryProvider.factory.openSession();
             Transaction tx = session1.beginTransaction();
             session1.save(transactions);
