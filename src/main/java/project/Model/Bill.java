@@ -16,7 +16,7 @@ public class Bill {
     private String boardT;
     private int amount;
 
-    @OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.PERSIST)
     @JoinColumn(name = "user_id")
     private User user;
 

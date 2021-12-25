@@ -2,6 +2,7 @@ package project.Controller;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import project.Dao.UserDao;
 import project.Helper.FactoryProvider;
 import project.Model.User;
 
@@ -28,10 +29,23 @@ public class RegisterServlet extends HttpServlet {
 
                 HttpSession httpSession=request.getSession();
                 //validation
+                UserDao userDao = new UserDao(FactoryProvider.getFactory());
                 if(userName==null)
                 {
                     httpSession.setAttribute("message1", "User Name Cannot be Null");
                     response.sendRedirect("login.jsp");
+                }
+                else if(!userDao.validateUserRegistrationEmail(userEmail)){
+                    httpSession.setAttribute("message1","This email is already registered with us choose another");
+                    response.sendRedirect("register.jsp");
+                }
+                else if(!userDao.validateUserRegistrationUserName(userName)){
+                    httpSession.setAttribute("message1","This UserName is already available choose another");
+                    response.sendRedirect("register.jsp");
+                }
+                else if(!userDao.authenticatePassword(userPassword)){
+                    httpSession.setAttribute("message1","Please follow instruction of password");
+                    response.sendRedirect("register.jsp");
                 }
                 else{
                     User user = new User(userEmail,userName,userPassword,userAddress,userPhone,2);

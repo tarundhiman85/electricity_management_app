@@ -44,8 +44,14 @@
             </div>
             <a class="link" href="UserResolved.jsp"><br><br><strong>Check Resolved Issues</strong></a>
         </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/wallet.png" alt="Resolve Issue">
+            </div>
+            <a class="link" href="wallet.jsp"><br><br><strong>Wallet</strong></a>
+        </div>
     </div>
 </div>
-    </body>
+</body>
 <%}%>
 </html>

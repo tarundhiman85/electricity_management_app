@@ -15,7 +15,7 @@ public class Transactions {
     @Temporal(value = TemporalType.TIMESTAMP)
     @Column(name = "Date_Time", nullable = false)
     private Date Time;
-
+    private String ActionDone;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
@@ -26,6 +26,14 @@ public class Transactions {
     }
 
     public Transactions() {
+    }
+
+    public String getActionDone() {
+        return ActionDone;
+    }
+
+    public void setActionDone(String actionDone) {
+        ActionDone = actionDone;
     }
 
     public int getTransId() {
