@@ -8,7 +8,7 @@
             <a href="index.jsp">   <img style="width: 2rem" src="./img/electricity.png" alt="" srcset=""></a>
         </div>
         <div class="navtitle">
-            <h2>ElectroBill</h2>
+            <h2 style="font-size: 1.5rem">ElectroBill</h2>
         </div>
     </div>
 

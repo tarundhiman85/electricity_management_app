@@ -35,6 +35,14 @@ body{
 .navtitle{
     color: black;
 }
+.navtitle h2{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0rem;
+    font-weight: 600;
+    line-height: 0;
+}
+
 .navlogo img{
 
 }

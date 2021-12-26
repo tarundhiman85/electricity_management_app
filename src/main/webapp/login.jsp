@@ -17,7 +17,7 @@
 
 <div class="formsection">
     <h1>Login</h1>
-    <img id="formimg" style="width: 3rem; padding:2rem" src="./img/hand (1).png" alt="" srcset="">
+    <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
     <%@include file="message.jsp"%>
     <form style="width: 75%;" action="LoginServlet" method="post">
         <div class="formcol">
@@ -37,22 +37,20 @@
 
         </div>
         <div class="formsectionbtn">
-            <a style="margin-right:1rem ;" >
+            <button type="submit"  style="margin-right:1rem ;" >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-                <input type="submit" value="submit"/>
-
-            </a>
-            <a type="reset" >
+Submit
+            </button>
+            <button type="reset" >
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-                <input type="reset" value="reset"/>
-
-            </a>
+Reset
+            </button>
         </div>
 
 

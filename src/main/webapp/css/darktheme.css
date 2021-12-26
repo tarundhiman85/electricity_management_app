@@ -37,6 +37,13 @@ body{
 .navtitle{
     color: white;
 }
+.navtitle h2{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0rem;
+    font-weight: 600;
+    line-height: 0;
+}
 .navlogo img{
 
 }
@@ -99,11 +106,13 @@ body{
     flex-direction: column;
     align-items: center;
     margin: 1.5rem;
-    font-size: 1rem;
     color: gold;
     transition: all 1s;
     transform:scale(1.2);
 
+}
+.headerpara h3{
+    font-size: 1.3rem;
 }
 .headerpara:hover{
     transform:scale(0.8);
@@ -125,7 +134,7 @@ body{
     margin-top: 1.2rem;
     border:2px solid rgb(197, 193, 193);
     padding: 0.4rem;
-    width: 15rem;
+    width: 16rem;
     border-radius: 1.6rem;
     cursor: pointer;
     animation: movetext 4s ease-in-out 5s 1 both;
@@ -286,7 +295,7 @@ body{
     margin-top: 1.2rem;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 75%;
     border-radius: 2rem;
     font-size: 1rem;
     background-color: cadetblue;
@@ -306,7 +315,7 @@ body{
     display: flex;
     background:linear-gradient(45deg,black,transparent);
     border: 2px solid white;
-    height: 30rem;
+    height: 40rem;
     width: 35rem;
     border-radius:3rem ;
     padding-top: 2rem;
@@ -332,11 +341,12 @@ body{
 .formlevel label{
     font-size: 1.1rem;
 }
-.formsection form a {
+.formsectionbtn button {
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 15px;
     color: #03e9f4;
+    background-color: transparent;
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -346,7 +356,7 @@ body{
     letter-spacing: 4px
 }
 
-.formsection a:hover {
+.formsectionbtn button:hover {
     background: #03e9f4;
     color: #fff;
     border-radius: 5px;
@@ -356,12 +366,12 @@ body{
     0 0 100px #03e9f4;
 }
 
-.formsection a span {
+.formsectionbtn button span {
     position: absolute;
     display: block;
 }
 
-.formsection a span:nth-child(1) {
+.formsectionbtn button span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -379,7 +389,7 @@ body{
     }
 }
 
-.formsection a span:nth-child(2) {
+.formsection button span:nth-child(2) {
     top: -100%;
     right: 0;
     width: 2px;
@@ -398,7 +408,7 @@ body{
     }
 }
 
-.formsection a span:nth-child(3) {
+.formsection button span:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
@@ -417,7 +427,7 @@ body{
     }
 }
 
-.formsection a span:nth-child(4) {
+.formsection button span:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
@@ -436,5 +446,10 @@ body{
     }
 }
 
-
-
+.alert-warning{
+    color: white;
+    background: linear-gradient(45deg,black,transparent);
+}
+.btn-close{
+    background: url("/img/cancel.png");
+}
