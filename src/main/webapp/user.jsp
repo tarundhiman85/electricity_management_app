@@ -7,7 +7,6 @@
 </head>
 <%
     //check reminder of bill
-
     User user = (User)session.getAttribute("current-User");
     if(user==null){
         session.setAttribute("message1","You are not logged in!!");
@@ -24,7 +23,7 @@
             <div class="card">
                 <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
             </div>
-            <a class="link" href="viewInfo.jsp"><br><br><strong>pay.png</strong></a>
+            <a class="link" href="viewInfo.jsp"><br><br><strong>View Profile and Bill</strong></a>
         </div>
         <div class="colindex">
             <div class="card">
