@@ -6,15 +6,13 @@
     <%@include file="/common_css_js1.jsp"%>
 </head>
 <body>
+<video autoplay muted loop class="myVideo">
+    <source src="./img/Black - 13495.mp4" type="video/mp4">
+</video>
 
 <%@include file="navbar.jsp"%>
 
-<video autoplay muted loop class="myVideo">
-    <source src="./img/Black - 13495.mp4" type="video/mp4">
-</video>
-<video autoplay muted loop class="myVideo">
-    <source src="./img/Black - 13495.mp4" type="video/mp4">
-</video>
+
 
 <div class="headersection">
     <div class="headertitle">

@@ -62,9 +62,6 @@ body{
     transition: all 5s;
     transition-timing-function: linear;
 }
-
-
-
 .headersection{
     position: absolute;
     display: flex;
@@ -78,7 +75,7 @@ body{
 }
 .headertitle{
     font-size: 1rem;
-    animation: movetext 5s ease-in-out 2s 1 both;
+    animation: movetext 3s ease-in-out 1s 1 both;
 
     transition: all 3s;
     transform:scale(1.2);
@@ -111,15 +108,15 @@ body{
     transform:scale(0.8);
 }
 .col1{
-    animation: movetext 7s ease-in-out 5s 1 both;
+    animation: movetext 3s ease-in-out 2s 1 both;
 
 }
 .col2{
-    animation: movetext 9s ease-in-out 7s 1 both;
+    animation: movetext 3s ease-in-out 3s 1 both;
 
 }
 .col3{
-    animation: movetext 11s ease-in-out 9s 1 both;
+    animation: movetext 3s ease-in-out 4s 1 both;
 
 }
 
@@ -130,7 +127,7 @@ body{
     width: 15rem;
     border-radius: 1.6rem;
     cursor: pointer;
-    animation: movetext 4s ease-in-out 13s 1 both;
+    animation: movetext 3s ease-in-out 5s 1 both;
     transition: all 4s;
 }
 

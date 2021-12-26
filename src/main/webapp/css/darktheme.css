@@ -76,7 +76,7 @@ body{
 }
 .headertitle{
     font-size: 1rem;
-    animation: movetext 5s ease-in-out 2s 1 both;
+    animation: movetext 3s ease-in-out 1s 1 both;
 
     transition: all 3s;
     transform:scale(1.2);
@@ -109,15 +109,15 @@ body{
     transform:scale(0.8);
 }
 .col1{
-    animation: movetext 7s ease-in-out 5s 1 both;
+    animation: movetext 3s ease-in-out 2s 1 both;
 
 }
 .col2{
-    animation: movetext 9s ease-in-out 7s 1 both;
+    animation: movetext 3s ease-in-out 3s 1 both;
 
 }
 .col3{
-    animation: movetext 11s ease-in-out 9s 1 both;
+    animation: movetext 3s ease-in-out 4s 1 both;
 
 }
 
@@ -128,7 +128,7 @@ body{
     width: 15rem;
     border-radius: 1.6rem;
     cursor: pointer;
-    animation: movetext 4s ease-in-out 13s 1 both;
+    animation: movetext 4s ease-in-out 5s 1 both;
     transition: all 4s;
 }
 
@@ -295,6 +295,145 @@ body{
     background-color:cyan;
     transition: all 5s;
     transform:translate(15px,15px);
+}
+.formsection{
+    position: absolute;
+    top:8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left:10rem;
+    display: flex;
+    background:linear-gradient(45deg,black,transparent);
+    border: 2px solid white;
+    height: 30rem;
+    width: 35rem;
+    border-radius:3rem ;
+    padding-top: 2rem;
+}
+.formsection h1{
+    font-size: 2rem;
+    padding: 1.5rem;
+    animation: movetext 4s ease-in-out 2s infinite both;
+
+}
+#formimg{
+    animation: updown 4s ease-in-out 2s infinite both;
+}
+.formcol{
+    display: flex;
+    flex-direction: column;
+}
+.formlevel{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.formlevel label{
+    font-size: 1.1rem;
+}
+.formsection form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 1rem;
+    letter-spacing: 4px
+}
+
+.formsection a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.formsection a span {
+    position: absolute;
+    display: block;
+}
+
+.formsection a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.formsection a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.formsection a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.formsection a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
 }
 
 

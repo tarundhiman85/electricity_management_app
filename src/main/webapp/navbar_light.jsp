@@ -2,10 +2,6 @@
     User user1 = (User) session.getAttribute("current-User");
 %>
 
-<video autoplay muted loop class="myVideo">
-    <source src="./img/Network - 45961.mp4" type="video/mp4">
-
-</video>
 
 <div class="navigation">
     <div class="navleft">

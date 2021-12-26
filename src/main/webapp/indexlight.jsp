@@ -7,7 +7,11 @@
 
 </head>
 <body>
+<video autoplay muted loop class="myVideo">
+    <source src="./img/Network - 45961.mp4" type="video/mp4">
+</video>
 <%@include file="navbar_light.jsp"%>
+
 
 <video autoplay muted loop class="myVideo">
     <source src="./img/Network - 45961.mp4" type="video/mp4">
