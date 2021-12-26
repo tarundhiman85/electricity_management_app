@@ -1,11 +1,86 @@
 <%@ page import="project.Model.User" %><%
     User user1 = (User) session.getAttribute("current-User");
 %>
+
+<video autoplay muted loop class="myVideo">
+    <source src="./img/Black - 13495.mp4" type="video/mp4">
+
+</video>
+<hr>
+<div class="navigation">
+    <div class="navleft">
+        <div class="navlogo">
+            <a href="index.jsp">   <img style="width: 2rem" src="./img/electricity.png" alt="" srcset=""></a>
+        </div>
+        <div class="navtitle">
+            <h2>ElectroBill</h2>
+        </div>
+    </div>
+
+    <%
+        if(user1==null){
+    %>
+
+    <div class="navright">
+        <ul>
+            <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
+            <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
+            <li class="navitem"><a href="newConnection.jsp">New Connection Request</a></li>
+            <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+            <li class="navitem"><a href="">Login</a> </li>
+            <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/sunny.png" alt="" srcset=""></li>
+            <li class="navitem"><a href="indexlight.jsp">Light Mode</a> </li>
+        </ul>
+    </div>
+</div>
+    <%
+    } else if(user1.getRoll_id()==2){
+    %>
+<div class="navright">
+    <ul>
+        <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
+        <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
+        <li class="navitem"><a href="viewUser.jsp">Profile</a></li>
+        <li class="navitem"><a href="help.jsp">Help</a></li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li class="navitem"><a href="user.jsp">Welcome <%=user1.getUserName()%></a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li class="navitem"><a href="/LoginServlet">Logout</a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/sunny.png" alt="" srcset=""></li>
+        <li class="navitem"><a href="indexlight.jsp">Light Mode</a> </li>
+    </ul>
+</div>
+</div>
+
+<%
+} else {
+%>
+<div class="navright">
+    <ul>
+        <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
+        <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li class="navitem"><a href="admin.jsp">Welcome <%=user1.getUserName()%></a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li class="navitem"><a href="/LoginServlet">Logout</a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/sunny.png" alt="" srcset=""></li>
+        <li class="navitem"><a href="indexlight.jsp">Light Mode</a> </li>
+    </ul>
+</div>
+</div>
+<%
+    }
+%>
+
+
+
+
+<%--
 <nav class="navbar navbar-sticky-top">
     <div class="navimg">
         <a href="index.jsp"><img  src="./img/ReBS.png" alt="" srcset=""></a>
 
-    <%--<a class="navbar-brand"  href="index.jsp">Electricity Bill Management</a>--%>
+    <a class="navbar-brand"  href="index.jsp">Electricity Bill Management</a>
     </div>
     <%
         if(user1==null){
@@ -88,3 +163,4 @@
 <%
     }
 %>
+--%>
