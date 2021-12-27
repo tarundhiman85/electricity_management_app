@@ -12,7 +12,7 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div id="searchid">
-    <h2>Search the User by Id</h2>
+    <h2>Search the Transaction by Id</h2>
     <form action="TransactionServlet" method="post">
         <input type="text" id="id" placeholder="Enter the Id" name="id">
         <input id="register" type="submit" value="Search">
@@ -28,12 +28,12 @@
 <%    }
 else{
     User user = (User) session.getAttribute("message");
-    if(user==null){
-        List<Transactions> transactionList =  new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
-        if(transactionList==null)
-        {
+    if(user==null) {
+        List<Transactions> transactionList = new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
+        if (transactionList == null) {
             HttpSession httpSession = request.getSession();
-            httpSession.setAttribute("message1","No Record Found");
+            httpSession.setAttribute("message1", "No Record Found");
+
 %>
 
 <div>
@@ -50,6 +50,7 @@ else{
             <td>Transaction Id</td>
             <td>Transaction Paid Amount</td>
             <td>Transaction Date and Time</td>
+            <td>Transaction Action Done</td>
         </tr>
 
         <%
@@ -60,6 +61,7 @@ else{
             <td><%=t.getTransId()%></td>
             <td><%=t.getAmount()%></td>
             <td><%=t.getTime()%></td>
+            <td><%=t.getActionDone()%></td>
         </tr>
 
         <%}%>
@@ -84,6 +86,7 @@ else{
                             <td>Transaction Id</td>
                             <td>Transaction Paid Amount</td>
                             <td>Transaction Date and Time</td>
+                            <td>Transaction Action Done</td>
                         </tr>
 
                         <%
@@ -94,6 +97,7 @@ else{
                             <td><%=t.getTransId()%></td>
                             <td><%=t.getAmount()%></td>
                             <td><%=t.getTime()%></td>
+                            <td><%=t.getActionDone()%></td>
                         </tr>
                         <%}%>
                     </table>

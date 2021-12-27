@@ -7,13 +7,13 @@
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container-fluid">
+    <%@include file="message.jsp"%>
     <div class="row mt-5">
         <div class="col-md-4 offset-md-4">
             <div class="card">
                 <div class="card-body px-5">
                     <h2 class="text-center my-3"><strong>Add User Here</strong></h2>
                     <form action="RegisterServlet" method="post">
-
                         <div class="form-group">
                             <label for="email">User Email</label>
                             <input name="user_email" required type="email" class="form-control" id="email" placeholder="Enter your email here" aria-describedby="emailHelp" >
@@ -21,17 +21,16 @@
                         <div class="form-group">
                             <label for="name">User Name</label>
                             <input name="user_name" required type="text" class="form-control" id="name" placeholder="Enter your name here" aria-describedby="emailHelp" >
-
                         </div>
                         <div class="form-group">
                             <label for="password" >User Password</label>
+                            <h6 style="font-size: xx-small;">Password must have atleast 1 capital letter and number and small case letter</h6>
                             <input name="user_password" type="password" required class="form-control" id="password" placeholder="Enter your password" aria-describedby="emailHelp" >
                         </div>
                         <div class="form-group">
                             <label for="phone" >User Phone</label>
                             <input name="user_phone" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
                         </div>
-
                         <div class="form-group">
                             <label for="phone">User Address</label>
                             <input name="user_address" type="text" required class="form-control" placeholder="Enter your Address">

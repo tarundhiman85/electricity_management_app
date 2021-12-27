@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:monospace;
+    color: white;
+    background-color: black;
+}
+
+.myVideo{
+    width: 100%;
+    background-position: center;
+}
+.navigation{
+    position: absolute;
+    top:0px;
+    left:0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.5rem;
+    margin-top: 1.3rem;
+
+    width: 100%;
+}
+.navleft{
+    display: flex;
+    align-items: center;
+}
+.navright{
+    display: flex;
+}
+.navlogo{
+    padding-right: 1rem;
+}
+.navtitle{
+    color: white;
+}
+.navtitle h2{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0rem;
+    font-weight: 600;
+    line-height: 0;
+}
+.navlogo img{
+
+}
+.navright ul{
+    display: flex;
+}
+.navright ul li{
+    list-style: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.navright ul li:hover{
+    transform: scale(1.1);
+    border-bottom: 1px solid white;
+    transition: all 3s;
+    transition-timing-function: linear;
+}
+.navright ul li a{
+    color: white;
+    text-decoration: none;
+}
+.navright ul li a:hover{
+    color:skyblue;
+
+
+}
+.headersection{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 15rem;
+    width: 100%;
+
+}
+.headertitle{
+    font-size: 1rem;
+    animation: movetext 3s ease-in-out 1s 1 both;
+
+    transition: all 3s;
+    transform:scale(1.2);
+
+}
+.headertitle:hover{
+    transform:scale(0.8);
+}
+@keyframes movetext {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.headerpara{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+    color: gold;
+    transition: all 1s;
+    transform:scale(1.2);
+
+}
+.headerpara h3{
+    font-size: 1.3rem;
+}
+.headerpara:hover{
+    transform:scale(0.8);
+}
+.col1{
+    animation: movetext 3s ease-in-out 2s 1 both;
+
+}
+.col2{
+    animation: movetext 3s ease-in-out 3s 1 both;
+
+}
+.col3{
+    animation: movetext 3s ease-in-out 4s 1 both;
+
+}
+
+.headerbutton{
+    margin-top: 1.2rem;
+    border:2px solid rgb(197, 193, 193);
+    padding: 0.4rem;
+    width: 16rem;
+    border-radius: 1.6rem;
+    cursor: pointer;
+    animation: movetext 4s ease-in-out 5s 1 both;
+    transition: all 4s;
+}
+
+.headerbutton:hover{
+    transform: scale(0.8);
+    border:2px solid white;
+
+}
+.connectionbtn a{
+    text-decoration: none;
+}
+.downarrow{
+    animation: updown 4s ease-in-out 2s infinite both;
+}
+@keyframes updown {
+    0%{
+        transition: all 5s;
+        transform: translateY(0px);
+    }
+    25%{
+        transition: all 5s;
+        transform: translateY(30px);
+
+    }
+    50%{
+        transition: all 5s;
+        transform: translateY(0px);
+
+    }
+    75%{
+        transition: all 5s;
+        transform: translateY(-30px);
+
+    }
+    100%{
+        transition: all 5s;
+        transform: translateY(0px);
+
+    }
+}
+
+.servicesection{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    top: 60rem;
+    width: 80%;
+}
+.serviceheader{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 50rem;
+    width: 100%;
+
+
+}
+.serviceheader h1{
+    font-size: 2.2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid gold;
+    animation: movex 5s ease-in-out 4s infinite both;
+}
+
+
+@keyframes movex {
+    0%{ transition: all 5s;
+        transform: translateX(0px);
+    }
+    25%{transition: all 5s;
+        transform: translateX(-40px);
+    }
+    50%{transition: all 5s;
+        transform: translateX(0px);
+
+    }
+    75%{
+        transition: all 5s;
+        transform: translateX(40px);
+    }
+    100%{transition: all 5s;
+        transform: translateX(0px);
+
+    }
+}
+.card1{
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid white;
+    border-radius: 4rem;
+    margin-bottom: 3rem;
+    transition: all 5s;
+}
+.cardbody a{
+    text-decoration: none;
+}
+
+#cardfirst{
+    animation:grow 4s ease-in-out 1s 3 both;
+
+}
+
+#cardsecond{
+    animation:grow 4s ease-in-out 6s 3 both;
+
+}
+#cardthird{
+    animation:grow 4s ease-in-out 11s 3 both;
+
+}
+#cardfourth{
+    animation:grow 4s ease-in-out 16s 3 both;
+
+}
+#cardfive{
+    animation:grow 4s ease-in-out 21s 3 both;
+
+}
+@keyframes grow {
+    0%{ transition: all 5s;
+        transform: scale(1);
+    }
+    25%{transition: all 5s;
+        transform: scale(0.9);
+    }
+    50%{transition: all 5s;
+        transform: scale(0.8);
+
+    }
+    75%{transition: all 5s;
+        transform: scale(0.9);
+
+    }
+    100%{transition: all 5s;
+        transform: scale(1);
+
+    }
+}
+.card1 img{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12rem;
+    display: flex;
+    transition: all 4s;
+}
+.card1 img:hover{
+    transform: skew(30deg);
+}
+.cardbtn{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-radius: 2rem;
+    font-size: 1rem;
+    background-color: cadetblue;
+}
+.cardbtn:hover{
+    background-color:cyan;
+    transition: all 5s;
+    transform:translate(15px,15px);
+}
+.formsection{
+    position: absolute;
+    top:8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left:10rem;
+    display: flex;
+    background:linear-gradient(45deg,black,transparent);
+    border: 2px solid white;
+    height: 40rem;
+    width: 35rem;
+    border-radius:3rem ;
+    padding-top: 2rem;
+}
+.formsection h1{
+    font-size: 2rem;
+    padding: 1.5rem;
+    animation: movetext 4s ease-in-out 2s infinite both;
+
+}
+#formimg{
+    animation: updown 4s ease-in-out 2s infinite both;
+}
+.formcol{
+    display: flex;
+    flex-direction: column;
+}
+.formlevel{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.formlevel label{
+    font-size: 1.1rem;
+}
+.formsectionbtn button {
+    position: relative;
+    display: inline-block;
+    padding: 8px 15px;
+    color: #03e9f4;
+    background-color: transparent;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 1rem;
+    letter-spacing: 4px
+}
+
+.formsectionbtn button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.formsectionbtn button span {
+    position: absolute;
+    display: block;
+}
+
+.formsectionbtn button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.formsection button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.formsection button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.formsection button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+.alert-warning{
+    color: white;
+    background: linear-gradient(45deg,black,transparent);
+}
+.btn-close{
+    background: url("/img/cancel.png");
+}
