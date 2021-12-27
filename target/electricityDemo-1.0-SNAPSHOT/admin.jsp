@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Admin</title>
-    <%@include file="/common_css_js.jsp"%>
+    <%@include file="/common_css_js1.jsp"%>
 </head>
 <%
     User user = (User)session.getAttribute("current-User");
@@ -21,8 +21,53 @@
     UserDao userDao = new UserDao(FactoryProvider.getFactory());
     long count=userDao.getNumberofUsers();
 %>
-<body class="back">
+<body>
+
+
+<video autoplay muted loop class="myVideo">
+    <source src="./img/Electricity - 11578.mp4" type="video/mp4">
+</video>
 <%@include file="navbar.jsp"%>
+
+
+<div style="top:10rem" class="serviceheader">
+    <h1>Admin Authenticate Services</h1>
+</div>
+
+<div style="top:18rem" class="servicesection">
+
+    <div  id="cardfirst" class="card1">
+        <img  src="./img/add-friend.png" alt="" srcset="">
+        <div class="cardbody">
+        <a href="register.jsp"><button class="cardbtn">Add New Connection</button></a>
+        </div>
+
+    </div>
+    <div id="cardsecond" class="card1">
+        <img  src="./img/profile.png" alt="" srcset="">
+        <div class="cardbody">
+            <a href="viewUser.jsp"> <button class="cardbtn">View User</button></a>
+        </div>
+    </div>
+    <div id="cardthird" class="card1">
+        <img src="./img/bill.png" alt="" srcset="">
+        <div class="cardbody">
+            <a href="calculateBill.jsp"> <button class="cardbtn">Calculate Bill</button></a>
+        </div>
+
+    </div>
+    <div id="cardfourth" class="card1">
+        <img  src="./img/resolve.png" alt="" srcset="">
+        <div class="cardbody">
+          <a href="ResolveIsue.jsp">  <button class="cardbtn">View & Resolve Issue</button></a>
+        </div>
+
+    </div>
+</div>
+
+
+
+<%--
 
 <div class="container">
     <div class="rowindex">
@@ -58,7 +103,7 @@
         </div>
     </div>
 </div>
-
+--%>
 
 </body>
 </html>

@@ -27,7 +27,7 @@
 <%@include file="message.jsp"%>
 <%    }
 else{
-    User user = (User) session.getAttribute("message");
+    User user = (User) session.getAttribute("message1");
     if(user==null) {
         List<Transactions> transactionList = new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
         if (transactionList == null) {
