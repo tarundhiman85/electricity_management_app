@@ -15,7 +15,7 @@ public class Bill {
     private Date date;
     private String boardT;
     private int amount;
-    private int reminder;
+    private String reminder;
 
     @OneToOne(fetch = FetchType.EAGER, cascade=CascadeType.PERSIST)
     @JoinColumn(name = "user_id")
@@ -71,21 +71,39 @@ public class Bill {
         }
 
         //handling next days
+        StringBuilder stringBuilder = new StringBuilder();
         if(date.getDate()+20>number_Of_DaysInMonth){
-            //setting reminder based on number of days
-            reminder = (date.getDate()+20)%number_Of_DaysInMonth;
-            if(reminder==0) reminder=number_Of_DaysInMonth;
+
+            stringBuilder.append(((date.getDate()+20)%number_Of_DaysInMonth)+1);
+            int next_month = ((date.getMonth()+1)%12)+1;
+            if(next_month<date.getMonth()+1){
+                int next_year = (date.getYear()+1900)+1;
+
+                stringBuilder.append('-');
+                String nextMonthIfLess = '0'+String.valueOf(next_month);
+                if(next_month<10) stringBuilder.append(nextMonthIfLess);
+                else stringBuilder.append(String.valueOf(next_month));
+                stringBuilder.append('-');
+                stringBuilder.append(String.valueOf(next_year));
+            }
         }
         else{
-            reminder = date.getDay()+20;
+           stringBuilder.append(String.valueOf(date.getDate()+20));
+           stringBuilder.append('-');
+            String monthIfLess = '0'+String.valueOf(date.getMonth()+1);
+            if(date.getMonth()+1<10) stringBuilder.append(String.valueOf(monthIfLess));
+            else stringBuilder.append(date.getMonth()+1);
+           stringBuilder.append('-');
+           stringBuilder.append(String.valueOf(date.getYear()+1900));
         }
+        reminder = stringBuilder.toString();
     }
 
-    public int getReminder() {
+    public String getReminder() {
         return reminder;
     }
 
-    public void setReminder(int reminder) {
+    public void setReminder(String reminder) {
         this.reminder = reminder;
     }
 

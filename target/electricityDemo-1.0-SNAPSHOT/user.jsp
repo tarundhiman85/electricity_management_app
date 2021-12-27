@@ -1,4 +1,6 @@
-
+<%@ page import="project.Dao.BillDao" %>
+<%@ page import="project.Helper.FactoryProvider" %>
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -51,6 +53,23 @@
         </div>
     </div>
 </div>
+<%
+    if(new BillDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
+        %>
+<p id="checkReminder" hidden>1</p>
+<%
+    }else{
+        %>
+<p id="checkReminder" hidden>0</p>
 </body>
-<%}%>
+<%}
+}%>
+<script>
+    $(function(){
+        let val = parseInt(document.getElementById("checkReminder").innerText);
+        if(val===1) {
+            alert("You Have to Pay the Bill Now")
+        }
+    })
+</script>
 </html>
