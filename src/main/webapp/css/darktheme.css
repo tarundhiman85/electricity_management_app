@@ -317,14 +317,40 @@ body{
     flex-direction: column;
     align-items: center;
     left:10rem;
-    display: flex;
     background:linear-gradient(45deg,black,transparent);
     border: 2px solid white;
-    height: 40rem;
+    height: 30rem;
     width: 35rem;
     border-radius:3rem ;
-    padding-top: 2rem;
+    transition: all 5s;
+    transform: skew(10deg);
 }
+.formsection:hover{
+    animation: formmove 5s ease-in-out infinite;
+
+}
+@keyframes formmove {
+    0%{transition: all 5s;
+        transform: translateX(0px);
+    }
+    25%{transition: all 5s;
+
+        transform: translateX(25px);
+    }
+    50%{transition: all 5s;
+
+        transform: translateX(50px);
+    }
+    75%{transition: all 5s;
+
+        transform: translateX(25px);
+    }
+    100%{transition: all 5s;
+
+        transform: translateX(0px);
+    }
+}
+
 .formsection h1{
     font-size: 2rem;
     padding: 1.5rem;
@@ -345,6 +371,7 @@ body{
 }
 .formlevel label{
     font-size: 1.1rem;
+
 }
 .formsectionbtn button {
     position: relative;
@@ -450,7 +477,9 @@ body{
         bottom: 100%;
     }
 }
-
+.formrows{
+    display: flex;
+}
 .alert-warning{
     color: white;
     background: linear-gradient(45deg,black,transparent);

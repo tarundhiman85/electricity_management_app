@@ -25,7 +25,7 @@
 
 
 <video autoplay muted loop class="myVideo">
-    <source src="./img/Black - 13495.mp4" type="video/mp4">
+    <source src="./img/Electricity - 11578.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
 
