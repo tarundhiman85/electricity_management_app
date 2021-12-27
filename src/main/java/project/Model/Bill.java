@@ -88,13 +88,13 @@ public class Bill {
             }
         }
         else{
-           stringBuilder.append(String.valueOf(date.getDate()+20));
-           stringBuilder.append('-');
+            stringBuilder.append(String.valueOf(date.getDate()+20));
+            stringBuilder.append('-');
             String monthIfLess = '0'+String.valueOf(date.getMonth()+1);
             if(date.getMonth()+1<10) stringBuilder.append(String.valueOf(monthIfLess));
             else stringBuilder.append(date.getMonth()+1);
-           stringBuilder.append('-');
-           stringBuilder.append(String.valueOf(date.getYear()+1900));
+            stringBuilder.append('-');
+            stringBuilder.append(String.valueOf(date.getYear()+1900));
         }
         reminder = stringBuilder.toString();
     }

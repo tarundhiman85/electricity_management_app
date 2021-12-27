@@ -5,10 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import project.Helper.FactoryProvider;
-import project.Model.Balance;
-import project.Model.Bill;
-import project.Model.Transactions;
-import project.Model.User;
+import project.Model.*;
 
 import java.util.List;
 
@@ -79,6 +76,7 @@ public class UserDao {
             String q = "from User";
             Query query = (Query) session.createQuery(q);
             userList=query.list();
+            session.close();
         }
         catch (Exception e){
             e.printStackTrace();
@@ -165,5 +163,36 @@ public class UserDao {
             return true;
         }
         return false;
+    }
+
+    public ConnRequest getConnectionRequestByReferenceN(int referenceNumber) {
+      ConnRequest connRequest =null;
+      try{
+          Session session = this.factory.openSession();
+          String q = "from ConnRequest where requestNumber=:i";
+          Query query = (Query) session.createQuery(q);
+          query.setParameter("i", referenceNumber);
+          connRequest = (ConnRequest) query.uniqueResult();
+          session.close();
+      }
+      catch (Exception e){
+          e.printStackTrace();
+      }
+      return connRequest;
+    }
+
+    public List<ConnRequest> getAllConnectionRequests() {
+        List<ConnRequest> connRequestList = null;
+        try{
+            String q = "from ConnRequest";
+            Session session = this.factory.openSession();
+            Query query = (Query) session.createQuery(q);
+            connRequestList=query.list();
+            session.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        return connRequestList;
     }
 }
