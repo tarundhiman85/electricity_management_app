@@ -146,6 +146,9 @@ body{
     border:2px solid white;
 
 }
+.connectionbtn a{
+    text-decoration: none;
+}
 .downarrow{
     animation: updown 4s ease-in-out 2s infinite both;
 }
@@ -234,7 +237,9 @@ body{
     margin-bottom: 3rem;
     transition: all 5s;
 }
-
+.cardbody a{
+    text-decoration: none;
+}
 
 #cardfirst{
     animation:grow 4s ease-in-out 1s 3 both;

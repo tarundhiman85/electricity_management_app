@@ -138,6 +138,9 @@ body{
     animation: movetext 3s ease-in-out 5s 1 both;
     transition: all 4s;
 }
+.connectionbtn a{
+    text-decoration: none;
+}
 
 .headerbutton:hover{
     transform: scale(0.8);
@@ -233,6 +236,9 @@ body{
     transition: all 5s;
 }
 
+.cardbody a{
+    text-decoration: none;
+}
 
 #cardfirst{
     animation:grow 4s ease-in-out 1s 3 both;
