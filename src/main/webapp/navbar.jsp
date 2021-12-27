@@ -40,7 +40,7 @@
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="user.jsp">Welcome <%=user1.getUserName()%></a> </li>
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
-        <li class="navitem"><a href="/LogoutServlet">Logout</a> </li>
+        <li class="navitem"><a href="LogoutServlet">Logout</a> </li>
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/sunny.png" alt="" srcset=""></li>
         <li class="navitem"><a href="indexlight.jsp">Light Mode</a> </li>
     </ul>
@@ -57,7 +57,7 @@
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="admin.jsp">Welcome <%=user1.getUserName()%></a> </li>
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
-        <li class="navitem"><a href="/LogoutServlet">Logout</a> </li>
+        <li class="navitem"><a href="LogoutServlet">Logout</a> </li>
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/sunny.png" alt="" srcset=""></li>
         <li class="navitem"><a href="indexlight.jsp">Light Mode</a> </li>
     </ul>
