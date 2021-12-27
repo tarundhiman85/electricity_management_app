@@ -14,9 +14,8 @@
 <div id="searchid">
     <h2>Search the Transaction by Id</h2>
     <form action="TransactionServlet" method="post">
-        <input type="text" id="id" placeholder="Enter the Id" name="id">
+        <input type="text" id="id" placeholder="Enter the Id" name="trans">
         <input id="register" type="submit" value="Search">
-        <input type="hidden" name="trans" value="1">
     </form>
 </div>
 <%
@@ -27,13 +26,12 @@
 <%@include file="message.jsp"%>
 <%    }
 else{
-    User user = (User) session.getAttribute("message");
-    if(user==null) {
+    Transactions transactions=(Transactions) session.getAttribute("message");
+    if(transactions==null) {
         List<Transactions> transactionList = new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
         if (transactionList == null) {
             HttpSession httpSession = request.getSession();
             httpSession.setAttribute("message1", "No Record Found");
-
 %>
 
 <div>
@@ -72,14 +70,6 @@ else{
 }
         else{
             %>
-            <%
-                List<Transactions> transactionList =  new TransactionDao(FactoryProvider.getFactory()).getAllTransactions();
-                if(transactionList==null){
-                    HttpSession httpSession = request.getSession();
-                    httpSession.setAttribute("message1","No Record Found");
-                }
-                else{
-                    %>
                 <div class="card-body">
                     <table>
                         <tr class="top">
@@ -88,24 +78,17 @@ else{
                             <td>Transaction Date and Time</td>
                             <td>Transaction Action Done</td>
                         </tr>
-
-                        <%
-                            for (Transactions t : transactionList){
-                        %>
-
                         <tr class="top">
-                            <td><%=t.getTransId()%></td>
-                            <td><%=t.getAmount()%></td>
-                            <td><%=t.getTime()%></td>
-                            <td><%=t.getActionDone()%></td>
+                            <td><%=transactions.getTransId()%></td>
+                            <td><%=transactions.getAmount()%></td>
+                            <td><%=transactions.getTime()%></td>
+                            <td><%=transactions.getActionDone()%></td>
                         </tr>
                         <%}%>
                     </table>
                 </div>
                     <%
                 }
-         }
-}
     %>
 </body>
 </html>

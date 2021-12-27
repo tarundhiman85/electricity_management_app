@@ -1,6 +1,9 @@
 package project.Controller;
 
+import org.hibernate.Transaction;
+import project.Dao.TransactionDao;
 import project.Helper.FactoryProvider;
+import project.Model.Transactions;
 import project.Model.User;
 import project.Dao.UserDao;
 
@@ -11,16 +14,17 @@ import java.io.IOException;
 
 @WebServlet(name = "TransactionServlet", value = "/TransactionServlet")
 public class TransactionServlet extends HttpServlet {
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         int transId = Integer.parseInt(request.getParameter("trans"));
-        UserDao userDao = new UserDao(FactoryProvider.getFactory());
-        User user = userDao.getUserById(transId);
+        TransactionDao transactionDao = new TransactionDao(FactoryProvider.getFactory());
+        Transactions transactions = transactionDao.getTransactionById(transId);
         HttpSession httpSession = request.getSession();
-        if (user == null) {
+        if (transactions == null) {
             httpSession.setAttribute("message1", "No Record Found");
             response.sendRedirect("viewTransaction.jsp");
         } else {
-            httpSession.setAttribute("message", user);
+            httpSession.setAttribute("message", transactions);
             response.sendRedirect("viewTransaction.jsp");
         }
     }
