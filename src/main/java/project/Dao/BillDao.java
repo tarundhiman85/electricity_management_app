@@ -43,10 +43,13 @@ public class BillDao {
         query.setParameter("e",userId);
         Bill bill = (Bill) query.uniqueResult();
         session.close();
-        String reminder = bill.getReminder();
-        if(date.getMonth()+1==Integer.parseInt(reminder.substring(3,5))){
-            if(date.getDate()+1>Integer.parseInt(reminder.substring(0,2))){
-                return true;
+        if(bill==null)  return false;
+        else {
+            String reminder = bill.getReminder();
+            if(date.getMonth()+1==Integer.parseInt(reminder.substring(3,5))){
+                if(date.getDate()+1>Integer.parseInt(reminder.substring(0,2))){
+                    return true;
+                }
             }
         }
         return false;
