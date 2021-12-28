@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family:monospace;
+    color: black;
+
+}
+#myVideo{
+    width: 100%;
+    background-position: center;
+}
+.navigation{
+position: absolute;
+top:0px;
+left:0px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 2.5rem;
+margin-top: 1.3rem;
+
+width: 100%;
+}
+.navleft{
+display: flex;
+align-items: center;
+}
+.navright{
+display: flex;
+}
+.navlogo{
+padding-right: 1rem;
+}
+.navtitle{
+    color: black;
+}
+.navlogo img{
+
+}
+.navright ul{
+display: flex;
+}
+.navright ul li{
+list-style: none;
+padding: 0.5rem;
+font-size: 1rem;
+}
+.navright ul li:hover{
+    transform: scale(1.1);
+    border-bottom: 1px solid red;
+    transition: all 3s;
+transition-timing-function: linear;
+    }
+.navright ul li a{
+color: black;
+text-decoration: none;
+}
+.navright ul li a:hover{
+    color: blue;
+    
+transition: all 5s;
+transition-timing-function: linear;
+}
+
+
+
+.headersection{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 15rem;
+    width: 100%; 
+
+}
+.headertitle{
+font-size: 1rem;
+animation: movetext 5s ease-in-out 2s 1 both;
+
+transition: all 3s;
+transform:scale(1.2);
+
+}
+.headertitle:hover{
+    transform:scale(0.8);
+}
+@keyframes movetext {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.headerpara{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+    font-size: 1rem;
+    color: blue;
+    transition: all 3s;
+transform:scale(1.2);
+    
+}
+.headerpara:hover{
+    transform:scale(0.8);
+}
+.col1{
+    animation: movetext 7s ease-in-out 5s 1 both;
+
+}
+.col2{
+    animation: movetext 9s ease-in-out 7s 1 both;
+
+}
+.col3{
+    animation: movetext 11s ease-in-out 9s 1 both;
+
+}
+
+.headerbutton{
+margin-top: 1.2rem;
+border:2px solid black;
+padding: 0.4rem;
+width: 15rem;
+border-radius: 1.6rem;
+cursor: pointer;
+animation: movetext 4s ease-in-out 13s 1 both;
+transition: all 4s;
+}
+    
+.headerbutton:hover{
+transform: scale(0.8);
+border:2px solid blue;
+
+}
+.downarrow{
+    animation: updown 4s ease-in-out 2s infinite both;  
+}
+@keyframes updown {
+    0%{
+        transition: all 5s;
+     transform: translateY(0px);
+    }
+    25%{
+        transition: all 5s;
+        transform: translateY(30px);
+
+    }
+    50%{
+        transition: all 5s;
+        transform: translateY(0px);
+
+    }
+    75%{
+        transition: all 5s;
+        transform: translateY(-30px);
+
+    }
+    100%{
+        transition: all 5s;
+        transform: translateY(0px);
+
+    }
+}
+
+.servicesection{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    top: 60rem;
+   width: 80%;
+}
+.serviceheader{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 50rem;
+   width: 100%;
+   
+
+}
+.serviceheader h1{
+    font-size: 2.2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid gold;
+animation: movex 5s ease-in-out 4s infinite both; 
+}
+
+
+@keyframes movex {
+    0%{ transition: all 5s;
+        transform: translateX(0px);
+    }
+    25%{transition: all 5s;
+        transform: translateX(-40px);
+    }
+    50%{transition: all 5s;
+        transform: translateX(0px);
+
+    }
+    75%{
+        transition: all 5s;
+        transform: translateX(40px); 
+    }
+    100%{transition: all 5s;
+        transform: translateX(0px);
+
+    }
+}
+.card1{
+width: 20rem;
+height: 20rem;
+border: 2px solid black;
+border-radius: 4rem;
+margin-bottom: 3rem;
+transition: all 5s;
+}
+
+
+#cardfirst{
+ animation:grow 4s ease-in-out 1s 3 both;
+
+}
+
+#cardsecond{
+    animation:grow 4s ease-in-out 6s 3 both;
+
+}
+#cardthird{
+    animation:grow 4s ease-in-out 11s 3 both;
+
+}
+#cardfourth{
+    animation:grow 4s ease-in-out 16s 3 both;
+
+}
+#cardfive{
+    animation:grow 4s ease-in-out 21s 3 both;
+
+}
+@keyframes grow {
+    0%{ transition: all 5s;
+        transform: scale(1);
+    }
+    25%{transition: all 5s;
+        transform: scale(0.9);
+    }
+    50%{transition: all 5s;
+        transform: scale(0.8);
+
+    }
+    75%{transition: all 5s;
+        transform: scale(0.9);
+
+    }
+    100%{transition: all 5s;
+        transform: scale(1);
+
+    }
+}
+.card1 img{
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12rem;
+    display: flex;
+    transition: all 4s;
+}
+.card1 img:hover{
+transform: skew(30deg);
+}
+.cardbtn{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+     width: 70%;
+     border-radius: 2rem;
+     font-size: 1rem;
+     background-color: cadetblue;
+}
+.cardbtn:hover{
+    background-color:cyan;
+    transition: all 5s;
+    transform:translate(15px,15px);
+}
+
+
+
