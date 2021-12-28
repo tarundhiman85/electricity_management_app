@@ -63,8 +63,14 @@
         </div>
 
     </div>
-</div>
+    <div id="cardfive" class="card1">
+        <img src="./img/resolve.png" alt="Resolve User Issues">
+        <div class="cardbody">
+            <a href="viewConnRequests.jsp"><button class="cardbtn">View Connection Requests</button></a>
+        </div>
+    </div>
 
+</div>
 
 
 <%--

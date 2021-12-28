@@ -32,7 +32,7 @@
     <div id="cardfirst" class="card1">
         <img src="./img/resume.png" alt="" srcset="">
         <div class="cardbody">
-            <a href="viewUser.jsp"> <button class="cardbtn">View Bill and Profile</button></a>
+            <a href="viewInfo.jsp"> <button class="cardbtn">View Bill and Profile</button></a>
         </div>
 
     </div>
@@ -66,17 +66,17 @@
         </div>
     </div>
 </div>
-        <%
+<%
     if(new BillDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
-        %>
-    <p id="checkReminder" hidden>1</p>
-        <%
-    }else{
 %>
-    <p id="checkReminder" hidden>0</p>
+<p id="checkReminder" hidden>1</p>
+<%
+}else{
+%>
+<p id="checkReminder" hidden>0</p>
 </body>
-    <%
-    }
+<%
+        }
     }
 %>
 <script>
@@ -87,44 +87,4 @@
         }
     })
 </script>
-
-
-<%--
-<div class="container">
-    <div class="rowindex">
-        <div class="colindex spcol">
-            <div class="card">
-                <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
-            </div>
-            <a class="link" href="viewInfo.jsp"><br><br><strong>View Profile and Bill</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/money-transfer.png" alt="View Transaction">
-            </div>
-            <a class="link" href="viewTransaction.jsp"><br><br><strong>View Transaction</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/pay.png" alt="Pay Bill">
-            </div>
-            <a class="link" href="PayBill.jsp"><br><br><strong>Pay Bill</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/yourResolved.png" alt="Resolve Issue">
-            </div>
-            <a class="link" href="UserResolved.jsp"><br><br><strong>Check Resolved Issues</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/wallet.png" alt="Resolve Issue">
-            </div>
-            <a class="link" href="wallet.jsp"><br><br><strong>Wallet</strong></a>
-        </div>
-    </div>
-</div>
-</div>--%>
-
-
 </html>
