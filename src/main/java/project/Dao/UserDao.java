@@ -11,14 +11,16 @@ import java.util.List;
 
 public class UserDao {
     private SessionFactory factory;
+
     //we need to give Session factory to dao
-    public UserDao(SessionFactory factory){
-        this.factory=factory;
+    public UserDao(SessionFactory factory) {
+        this.factory = factory;
     }
+
     public UserDao() {
     }
 
-    public User getUserByEmailandPassword(String email, String password){
+    public User getUserByEmailandPassword(String email, String password) {
         User user = null;
         try {
             //validation if the user exists
@@ -29,30 +31,28 @@ public class UserDao {
             query.setParameter("p", password);
             user = (User) query.uniqueResult();
             session.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return user;
     }
 
-    public Bill getBillByUserId(int id){
+    public Bill getBillByUserId(int id) {
         Bill bill = null;
-        try{
+        try {
             Session session = this.factory.openSession();
             String q = "from Bill where user.userId=:i";
             Query query = (Query) session.createQuery(q);
             query.setParameter("i", id);
             bill = (Bill) query.uniqueResult();
             session.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return bill;
     }
 
-    public User getUserById(int id){
+    public User getUserById(int id) {
         User user = null;
         try {
             //validation if the user exists
@@ -62,60 +62,56 @@ public class UserDao {
             query.setParameter("i", id);
             user = (User) query.uniqueResult();
             session.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return user;
     }
 
-    public List<User> getAllUsers(){
-        List<User> userList=null;
-        try{
+    public List<User> getAllUsers() {
+        List<User> userList = null;
+        try {
             Session session = this.factory.openSession();
             String q = "from User";
             Query query = (Query) session.createQuery(q);
-            userList=query.list();
+            userList = query.list();
             session.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return userList;
     }
 
-    public long getNumberofUsers(){
-        long count=0;
-        try{
+    public long getNumberofUsers() {
+        long count = 0;
+        try {
             Session session = this.factory.openSession();
             String q = "Select count(*) from User";
             Query query = (Query) session.createQuery(q);
-            count =(long)query.list().get(0);
-        }
-        catch (Exception e){
+            count = (long) query.list().get(0);
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return count-1;
+        return count - 1;
     }
 
-    public Balance getBalanceByUserId(int id, User user){
+    public Balance getBalanceByUserId(int id, User user) {
         Balance balance = null;
         try {
             String query = "from Balance where user.userId=: e";
-            Session session=this.factory.openSession();
-            Query q= session.createQuery(query);
-            q.setParameter("e",id);
+            Session session = this.factory.openSession();
+            Query q = session.createQuery(query);
+            q.setParameter("e", id);
             balance = (Balance) q.uniqueResult();
             session.close();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        if(balance==null){
+        if (balance == null) {
             Balance balance1 = new Balance();
             balance1.setAvailBalance(0);
             balance1.setUser(user);
-            Session session=this.factory.openSession();
+            Session session = this.factory.openSession();
             Transaction tx = session.beginTransaction();
             session.save(balance1);
             tx.commit();
@@ -126,73 +122,103 @@ public class UserDao {
     }
 
     public boolean validateUserRegistrationEmail(String userEmail) {
-        String q="From User where userEmail=:e";
-        Session session=this.factory.openSession();
-        Query qu= session.createQuery(q);
-        qu.setParameter("e",userEmail);
-        if(qu.uniqueResult()==null) return true;
+        String q = "From User where userEmail=:e";
+        Session session = this.factory.openSession();
+        Query qu = session.createQuery(q);
+        qu.setParameter("e", userEmail);
+        if (qu.uniqueResult() == null) return true;
         return false;
     }
 
     public boolean validateUserRegistrationUserName(String userName) {
-        String q="From User where userName=:e";
-        Session session=this.factory.openSession();
-        Query qu= session.createQuery(q);
-        qu.setParameter("e",userName);
-        if(qu.uniqueResult()==null) return true;
+        String q = "From User where userName=:e";
+        Session session = this.factory.openSession();
+        Query qu = session.createQuery(q);
+        qu.setParameter("e", userName);
+        if (qu.uniqueResult() == null) return true;
         return false;
     }
 
     public boolean authenticatePassword(String userPassword) {
-        boolean capitalLetterFlag=false;
-        boolean smallLetterFlag=false;
-        boolean numberFlag=false;
-        for(int i=0; i< userPassword.length(); i++){
+        boolean capitalLetterFlag = false;
+        boolean smallLetterFlag = false;
+        boolean numberFlag = false;
+        for (int i = 0; i < userPassword.length(); i++) {
             int val = userPassword.charAt(i);
-            if(65<=val && val<=90){
-                capitalLetterFlag=true;
+            if (65 <= val && val <= 90) {
+                capitalLetterFlag = true;
             }
-            if(97<=val && val<=122){
-                smallLetterFlag=true;
+            if (97 <= val && val <= 122) {
+                smallLetterFlag = true;
             }
-            if(48<=val && val<=57){
-                numberFlag=true;
+            if (48 <= val && val <= 57) {
+                numberFlag = true;
             }
         }
-        if(capitalLetterFlag && smallLetterFlag && numberFlag){
+        if (capitalLetterFlag && smallLetterFlag && numberFlag) {
             return true;
         }
         return false;
     }
 
     public ConnRequest getConnectionRequestByReferenceN(int referenceNumber) {
-      ConnRequest connRequest =null;
-      try{
-          Session session = this.factory.openSession();
-          String q = "from ConnRequest where requestNumber=:i";
-          Query query = (Query) session.createQuery(q);
-          query.setParameter("i", referenceNumber);
-          connRequest = (ConnRequest) query.uniqueResult();
-          session.close();
-      }
-      catch (Exception e){
-          e.printStackTrace();
-      }
-      return connRequest;
+        ConnRequest connRequest = null;
+        try {
+            Session session = this.factory.openSession();
+            String q = "from ConnRequest where requestNumber=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", referenceNumber);
+            connRequest = (ConnRequest) query.uniqueResult();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return connRequest;
     }
 
     public List<ConnRequest> getAllConnectionRequests() {
         List<ConnRequest> connRequestList = null;
-        try{
+        try {
             String q = "from ConnRequest";
             Session session = this.factory.openSession();
             Query query = (Query) session.createQuery(q);
-            connRequestList=query.list();
+            connRequestList = query.list();
             session.close();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return connRequestList;
+    }
+
+
+    public ConnRequest getConnectionRequestByConnId(int getConnId) {
+        ConnRequest connRequest = null;
+        try {
+            Session session = this.factory.openSession();
+            String q = "from ConnRequest where id=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", getConnId);
+            connRequest = (ConnRequest) query.uniqueResult();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return connRequest;
+    }
+
+    public User getUserByEmail(String email) {
+        User user = null;
+        try {
+            //validation if the user exists
+            Session session = this.factory.openSession();
+            String q = "from User where userEmail=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", email);
+            user = (User) query.uniqueResult();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
     }
 }

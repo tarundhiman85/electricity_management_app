@@ -16,7 +16,6 @@
         return;
     }
     else {%>
-
 <body class="back">
 <%@include file="navbar.jsp"%>
 <div class="container">
@@ -59,11 +58,13 @@
 <p id="checkReminder" hidden>1</p>
 <%
     }else{
-        %>
+%>
 <p id="checkReminder" hidden>0</p>
 </body>
-<%}
-}%>
+<%
+    }
+    }
+%>
 <script>
     $(function(){
         let val = parseInt(document.getElementById("checkReminder").innerText);

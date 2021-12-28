@@ -56,6 +56,12 @@
             </div>
             <a class="link" href="ResolveIsue.jsp"><br><br><strong>Resolve User Issues</strong></a>
         </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/resolve.png" alt="Resolve User Issues">
+            </div>
+            <a class="link" href="viewConnRequests.jsp"><br><br><strong>View Connection Requests</strong></a>
+        </div>
     </div>
 </div>
 

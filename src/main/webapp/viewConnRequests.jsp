@@ -10,14 +10,6 @@
 </head>
 <body>
 <%@include file="navbar.jsp"%>
-<%--
-To Do:
-first create a card in admin page that is view requests
-first check the conn request table(first run a new connection request so that new table will be created)
-then create a html table and display all the information by first getting a list of requests
-for refrence check viewTransactions
-display all the information which we get by that table
---%>
 <div class="container">
     <%@include file="message.jsp"%>
     <%
@@ -37,6 +29,7 @@ display all the information which we get by that table
                 <td>User Address</td>
                 <td>User Phone</td>
                 <td>User Board Type</td>
+                <td>Status</td>
                 <td>Action</td>
             </tr>
             <tr class="top">
@@ -45,13 +38,21 @@ display all the information which we get by that table
                 <td><%=connRequest.getAddress()%></td>
                 <td><%=connRequest.getPhone()%></td>
                 <td><%=connRequest.getBoardType()%></td>
+                <td><%=connRequest.getStatus()%></td>
                 <td>
-                    <form action="RegisterServlet" method="post">
+                    <%
+                        if(connRequest.getStatus().equals("Approved")){
+                    %>
+                    Request Approved
+                    <%}else{%>
+                    <form action="CreateUserServlet" method="post">
                         <input type="hidden" name="user_password" value=" ">
-                        <input type="hidden" name="user_name" value="<%=connRequest.getEmail()%>">
+                        <input type="hidden" name="user_name" value="<%=connRequest.getName()%>">
                         <input type="hidden" name="user_email" value="<%=connRequest.getEmail()%>">
                         <input type="hidden" name="user_address" value="<%=connRequest.getAddress()%>">
+                        <input type="hidden" name="user_phone" value="<%=connRequest.getPhone()%>">
                         <input type="hidden" name="board" value="<%=connRequest.getBoardType()%>">
+                        <input type="hidden" name="connId" value="<%=connRequest.getRequestNumber()%>">
                         <input type="submit" value="Approve">
                     </form>
                     <form action="DisapproveServlet" method="post">
@@ -60,11 +61,10 @@ display all the information which we get by that table
                     </form>
                 </td>
             </tr>
-
             <%}%>
         </table>
     </div>
-    <%}%>
+    <%}}%>
 </div>
 </body>
 </html>
