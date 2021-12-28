@@ -1,4 +1,6 @@
-
+<%@ page import="project.Dao.BillDao" %>
+<%@ page import="project.Helper.FactoryProvider" %>
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,7 +9,6 @@
 </head>
 <%
     //check reminder of bill
-
     User user = (User)session.getAttribute("current-User");
     if(user==null){
         session.setAttribute("message1","You are not logged in!!");
@@ -65,6 +66,28 @@
         </div>
     </div>
 </div>
+        <%
+    if(new BillDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
+        %>
+    <p id="checkReminder" hidden>1</p>
+        <%
+    }else{
+%>
+    <p id="checkReminder" hidden>0</p>
+</body>
+    <%
+    }
+    }
+%>
+<script>
+    $(function(){
+        let val = parseInt(document.getElementById("checkReminder").innerText);
+        if(val===1) {
+            alert("You Have to Pay the Bill Now")
+        }
+    })
+</script>
+
 
 <%--
 <div class="container">
@@ -73,7 +96,7 @@
             <div class="card">
                 <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
             </div>
-            <a class="link" href="viewInfo.jsp"><br><br><strong>pay.png</strong></a>
+            <a class="link" href="viewInfo.jsp"><br><br><strong>View Profile and Bill</strong></a>
         </div>
         <div class="colindex">
             <div class="card">
@@ -100,7 +123,8 @@
             <a class="link" href="wallet.jsp"><br><br><strong>Wallet</strong></a>
         </div>
     </div>
+</div>
 </div>--%>
-</body>
-<%}%>
+
+
 </html>

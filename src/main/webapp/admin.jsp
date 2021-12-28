@@ -63,8 +63,14 @@
         </div>
 
     </div>
-</div>
+    <div id="cardfive" class="card1">
+        <img src="./img/resolve.png" alt="Resolve User Issues">
+        <div class="cardbody">
+            <a href="viewConnRequests.jsp"><button class="cardbtn">View Connection Requests</button></a>
+        </div>
+    </div>
 
+</div>
 
 
 <%--
@@ -100,6 +106,12 @@
                 <img class="card-img-top" src="./img/resolve.png" alt="Resolve User Issues">
             </div>
             <a class="link" href="ResolveIsue.jsp"><br><br><strong>Resolve User Issues</strong></a>
+        </div>
+        <div class="colindex">
+            <div class="card">
+                <img class="card-img-top" src="./img/resolve.png" alt="Resolve User Issues">
+            </div>
+            <a class="link" href="viewConnRequests.jsp"><br><br><strong>View Connection Requests</strong></a>
         </div>
     </div>
 </div>

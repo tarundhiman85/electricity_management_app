@@ -1,6 +1,7 @@
 package project.Model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class ConnRequest {
@@ -14,8 +15,31 @@ public class ConnRequest {
     private String Phone;
     private String connType;
     private String boardType;
+    private int requestNumber;
+    private Date Time;
+    private String Status;
 
+    @PrePersist
+    void onCreate(){
+        Time = new Date();
+        Status = "Pending";
+    }
 
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
+    }
+
+    public int getRequestNumber() {
+        return requestNumber;
+    }
+
+    public void setRequestNumber(int requestNumber) {
+        this.requestNumber = requestNumber;
+    }
 
     public ConnRequest(String name, String email, String address, String phone, String connType) {
         Name = name;

@@ -36,10 +36,10 @@
         </div>
     </div>
     <div class="headerbutton">
-        <div style="display: flex; align-items: center;" class="connectionbtn">
+        <a href="newConnection.jsp" style="text-decoration: none"><div style="display: flex; align-items: center;" class="connectionbtn">
             <img style="padding-right: 0.6rem; width: 2rem" src="img/add.png" alt="" srcset="">
             <h4  style="color: skyblue; font-size: 1rem;">New Connection Request</h4>
-        </div>
+        </div></a>
     </div>
     <div style="margin-top: 5rem;" class="downarrow">
         <img style=" width: 3rem" src="./img/down-arrow.png" alt="" srcset="">
