@@ -64,17 +64,15 @@ public class PayBillWithWalletServlet extends HttpServlet {
                     session2.close();
 
                     httpSession.setAttribute("message1","Bill Paid Successfully");
-                    response.sendRedirect("wallet.jsp");
                 }
                 else{
                     httpSession.setAttribute("message1","You don't have enough balance");
-                    response.sendRedirect("wallet.jsp");
                 }
             }
             else{
                 httpSession.setAttribute("message1","Please Enter the Amount and Details under Limits");
-                response.sendRedirect("wallet.jsp");
             }
+            response.sendRedirect("wallet.jsp");
         }
     }
         @Override

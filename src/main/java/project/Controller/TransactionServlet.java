@@ -22,11 +22,10 @@ public class TransactionServlet extends HttpServlet {
         HttpSession httpSession = request.getSession();
         if (transactions == null) {
             httpSession.setAttribute("message1", "No Record Found");
-            response.sendRedirect("viewTransaction.jsp");
         } else {
             httpSession.setAttribute("message", transactions);
-            response.sendRedirect("viewTransaction.jsp");
         }
+        response.sendRedirect("viewTransaction.jsp");
     }
 
     @Override
