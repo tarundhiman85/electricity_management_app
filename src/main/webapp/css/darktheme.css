@@ -325,10 +325,7 @@ body{
     transition: all 5s;
     transform: skew(10deg);
 }
-.formsection:hover{
-    animation: formmove 5s ease-in-out infinite;
 
-}
 @keyframes formmove {
     0%{transition: all 5s;
         transform: translateX(0px);
@@ -485,5 +482,84 @@ body{
     background: linear-gradient(45deg,black,transparent);
 }
 .btn-close{
-    background: url("/img/cancel.png");
+    background: url("../img/cancel.png");
+}
+.cardinner{
+    height: 16rem;
+    width: 16rem;
+    border:2px solid white;
+    border-radius: 4rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    animation: moveall 4s ease-in-out 1s infinite  both;
+}
+@keyframes moveall {
+    0%{transition: all 3s;
+        transform: translateY(2rem);
+    }
+    33%{transition: all 3s;
+        transform: translateX(-2rem);
+    }
+    66%{transition: all 3s;
+        transform: translateY(-2rem);
+    }
+    100%{transition: all 3s;
+        transform: translateX(2rem);
+    }
+}
+.cardouter{
+    animation:moveall 4s ease-in-out 1s infinite both;
+
+}
+.tablesection{
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 20%;
+    width: 60%;
+    top:35rem;
+}
+.tableform{
+    margin-bottom:1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchform{
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    display: flex;
+    margin-right: 1rem;
+}
+input[type="text"]{
+    background:linear-gradient(45deg, black, transparent);
+    border-color: white;
+    color:white
+}
+input[type="email"]{
+    background:linear-gradient(45deg, black, transparent);
+    border-color: white;
+    color:white
+}
+input[type="password"]{
+    background:linear-gradient(45deg, black, transparent);
+    border-color: white;
+    color:white
+}
+input[type="number"]{
+    background:linear-gradient(45deg, black, transparent);
+    border-color: white;
+    color:white
+}
+.boximage{
+    padding-right: 0.5rem;
+    border-right: 2px solid white;
+}
+.table{
+    color: white;
+}
+.table:hover{
+    color: skyblue;
+    background: linear-gradient(45deg, grey,transparent);
 }
