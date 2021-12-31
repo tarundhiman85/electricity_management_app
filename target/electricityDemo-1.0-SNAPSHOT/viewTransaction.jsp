@@ -130,7 +130,8 @@
         <input type="text" id="id" placeholder="Enter the Id" name="trans">
         <input id="register" type="submit" value="Search">
     </form>
-</div>
+</div>--%>
+<%--
 <%
     if(session.getAttribute("message1")!=null){
         HttpSession httpSession = request.getSession();
