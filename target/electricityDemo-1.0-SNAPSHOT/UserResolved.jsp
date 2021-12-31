@@ -7,10 +7,60 @@
 <html>
 <head>
     <title>Your Resolved Issue</title>
-    <%@include file="/common_css_js.jsp"%>
+    <%@include file="/common_css_js1.jsp"%>
 </head>
-<body class="back">
+<body>
+<video autoplay muted loop class="myVideo">
+    <source src="./img/World - 1992.mp4" type="video/mp4">
+</video>
 <%@include file="navbar.jsp"%>
+
+<div style="top:10rem" class="tablesection">
+    <div class="tableform">
+        <h2>User Query Status</h2>
+    </div>
+
+    <table style="background:linear-gradient(45deg, black, transparent) " class="table">
+        <thead>
+        <tr>
+            <th scope="col">Query ID</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%
+            List<Query> queryList = new QueryDao().getAllQueries();
+            for (Query q : queryList){
+                if(q.getResolve().equals("No")){
+        %>
+
+        <tr>
+
+            <%
+                List<Query> queryList = new QueryDao(FactoryProvider.getFactory()).getAllQueries();
+                User current = (User)request.getSession().getAttribute("current-User");
+                for (Query q : queryList){
+                    if (q.getUser().getUserId()==current.getUserId() && q.getResolve().equals("Yes")){
+            %>
+            <th scope="row"><%=q.getQueryId()%></th>
+            <td>"<%=q.getMsg()%>" Your Query is Resolved by Admin</td>
+            <%}else{
+            %>
+            <th scope="row"><%=q.getQueryId()%></th>
+            <td>"<%=q.getMsg()%>" is not resolved Yet Wait for Admin Reply</td>
+            <%}}%>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+<%--
 <div class="card-body mt-5">
     <table>
         <tr class="top">
@@ -33,6 +83,6 @@
             <%}}%>
         </tr>
     </table>
-</div>
+</div>--%>
 </body>
 </html>

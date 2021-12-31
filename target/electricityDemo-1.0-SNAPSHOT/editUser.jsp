@@ -17,9 +17,9 @@
     User user = s.get(User.class,userId);
 %>
 
-<div style="height: 55rem; width: 40rem " class="formsection">
+<div style="height: 40rem; width: 40rem " class="formsection">
 
-    <h2>Update User Profile</h2>
+    <h2 style="margin-top:1rem">Update User Profile</h2>
     <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
     <%@include file="message.jsp"%>
     <form style="width: 80%;" action="UpdateUserServlet" method="post">
