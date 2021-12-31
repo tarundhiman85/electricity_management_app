@@ -78,12 +78,12 @@
             <img style="width: 2rem; margin-right:1rem ;" src="./img/home (2).png" alt="" srcset="">
             <label>Residential Address</label>
         </div>
-        <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Resedential Address">
+        <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Residential Address">
 
     </div>
 
 
-    <a style="text-decoration: none" href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>
+<%--    <a style="text-decoration: none" href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>--%>
         <div style="display: flex; justify-content: center;" class="formsectionbtn">
             <button style="margin:1rem ;" type="submit">
                 <span></span>

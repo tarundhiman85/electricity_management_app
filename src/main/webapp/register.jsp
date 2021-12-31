@@ -50,7 +50,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/call.png" alt="" srcset="">
                     <label>Phone Number</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_phone" type="number" class="form-control" placeholder="Enter Phoneo">
+                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_phone" type="number" class="form-control" placeholder="Enter Phone Number">
 
             </div>
         </div>
@@ -58,11 +58,12 @@
             <div style="width: 40%; margin: auto;" class="formcol">
                 <div class="formlevel">
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/home (2).png" alt="" srcset="">
-                    <label>Resedential Address</label>
+                    <label>Residential Address</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Resedential Address">
+                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Residential Address">
 
             </div>
+
             <div style="width: 40%; margin: auto;" class="formcol">
                 <div class="formlevel">
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/fuse-box.png" alt="" srcset="">
@@ -77,7 +78,7 @@
 
             </div>
         </div>
-        <a style="text-decoration: none" href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>
+<%--        <a style="text-decoration: none" href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>--%>
         <div style="display: flex; justify-content: center" class="formsectionbtn">
             <button type="submit"  style="margin-right:1rem ;" >
                 <span></span>

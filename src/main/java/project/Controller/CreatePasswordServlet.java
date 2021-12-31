@@ -31,11 +31,11 @@ public class CreatePasswordServlet extends HttpServlet {
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
         if(!userDao.authenticatePassword(userPassword)){
             httpSession.setAttribute("message","Please follow instruction of password");
-            response.sendRedirect("register.jsp");
+            response.sendRedirect("createPassword.jsp");
         }
         else if(!confirmPassword.equals(userPassword)){
             httpSession.setAttribute("message","Password don't match Please Retype it");
-            response.sendRedirect("register.jsp");
+            response.sendRedirect("createPassword.jsp");
         }
         else{
             User user = userDao.getUserByEmail(connRequest.getEmail());
@@ -47,7 +47,7 @@ public class CreatePasswordServlet extends HttpServlet {
             tx.commit();
             session.close();
             httpSession.setAttribute("message","Password Created Successfully you can login now");
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("createPassword.jsp");
        }
     }
 }
