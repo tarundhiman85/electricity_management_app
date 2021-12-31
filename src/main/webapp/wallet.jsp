@@ -89,7 +89,7 @@
                 <h3 class="modal-title" id="exampleModalLabel">Add Balance</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
+            <img style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
             <form style="width:80%" action="AddBalanceServlet" method="post">
                 <div class="formcol">
                     <div style="margin: 0.3rem" class="formlevel">
