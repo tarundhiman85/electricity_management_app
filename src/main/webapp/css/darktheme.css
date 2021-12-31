@@ -262,6 +262,14 @@ body{
     animation:grow 4s ease-in-out 21s 3 both;
 
 }
+#cardsix{
+    animation:grow 4s ease-in-out 26s 3 both;
+
+}
+#cardsix{
+    animation:grow 4s ease-in-out 31s 3 both;
+
+}
 @keyframes grow {
     0%{ transition: all 5s;
         transform: scale(1);
@@ -562,4 +570,7 @@ input[type="number"]{
 .table:hover{
     color: skyblue;
     background: linear-gradient(45deg, grey,transparent);
+}
+.modal-body{
+    width:80%
 }

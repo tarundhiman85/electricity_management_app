@@ -3,9 +3,12 @@
 <html>
 <head>
     <title>Help - Electricity Bill Management</title>
-    <%@include file="common_css_js.jsp"%>
+    <%@include file="common_css_js1.jsp"%>
 </head>
-<body class="back">
+<body>
+<video autoplay muted loop class="myVideo">
+    <source src="./img/Electricity - 11578.mp4" type="video/mp4">
+</video>
 <%@include file="navbar.jsp"%>
 <%
     User user = (User)session.getAttribute("current-User");
@@ -16,24 +19,32 @@
     }
     else{
 %>
-<div class="container row my-2">
+<div style="height: 38rem; width: 150rem" class="container row my-2 formsection">
     <div class="section col-md-7">
         <%@include file="message.jsp"%>
         <form class="row g-3" action="QueryServlet" method="post">
-            <h1>Hi, We can Help You?</h1>
+            <h1 style="color: white">Hi, We can Help You?</h1>
             <hr>
             <div class="form-floating col-12 my-2">
                 <%--@declare id="inputquery"--%><label for="inputQuery" class="form-label">Query</label>
                 <textarea name="query" class="form-control" placeholder="Say Your Query Here" id="floatingTextarea2"
-                          style="height: 100px"></textarea>
+                          style="height: 100px; background: transparent; color: white"></textarea>
             </div>
             <div class="col-12 my-2">
-                <button type="submit" class="btn btn-primary">Need Help</button>
+                <div class="formsectionbtn">
+                    <button type="submit"  style="margin-right:1rem ;" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Need Help?
+                    </button>
+                </div>
             </div>
         </form>
     </div>
     <div class="section right col-md-5">
-        <img src="./img/pngaaa.com-1119855.png" alt="" srcset="">
+        <img style="width: 15rem" src="./img/help (3).png" alt="" srcset="">
     </div>
 </div>
 <hr>

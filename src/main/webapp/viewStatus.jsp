@@ -20,7 +20,7 @@
 
     <div class="tableform">
         <h2>Search the Transaction by Id</h2>
-        <form style="display: flex; margin: 1rem;" action="SearchServlet" method="post">
+        <form style="display: flex; margin: 1rem;" action="RequestServlet" method="post">
             <div style="margin-right:1rem" class="searchform">
                 <div  class="boximage">
                     <img style="width:2rem" src="./img/loupe.png" alt="" srcset="">

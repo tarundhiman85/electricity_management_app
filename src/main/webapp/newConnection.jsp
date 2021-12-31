@@ -12,6 +12,7 @@
 <%@include file="navbar.jsp"%>
 
 
+<div style="height: 55rem; width: 40rem " class="formsection">
 
 <h1>Request for New Connection</h1>
 <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">

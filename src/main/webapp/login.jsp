@@ -16,7 +16,7 @@
 
 
 <div class="formsection">
-    <h1>Login</h1>
+    <h2>Login</h2>
     <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
     <%@include file="message.jsp"%>
     <form style="width: 75%;" action="LoginServlet" method="post">
