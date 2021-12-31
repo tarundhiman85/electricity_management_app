@@ -103,6 +103,9 @@
             <th scope="col">User ID</th>
             <th scope="col">User Name</th>
             <th scope="col">User Email</th>
+            <th scope="col">User Board</th>
+            <th scope="col">User Bill No</th>
+            <th scope="col">User Conn Type</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -116,6 +119,9 @@
             <th scope="row"><%=users.getUserId()%></th>
             <td><%=users.getUserName()%></td>
             <td><%=users.getUserEmail()%></td>
+            <td><%=users.getBoardType().toUpperCase()%></td>
+            <td><%=users.getBillNo()%></td>
+            <td><%=users.getConnType()%></td>
             <td>
                 <a href="viewInfo.jsp?user_id=<%=users.getUserId()%>" style="font-size: 17px; text-decoration: none;" class="link">Select</a>
                 <a href="editUser.jsp?user_id=<%=users.getUserId()%>" style="font-size: 17px; text-decoration: none" class="link">Update</a>

@@ -33,7 +33,7 @@ public class RegisterServlet extends HttpServlet {
                 if(userName==null)
                 {
                     httpSession.setAttribute("message1", "User Name Cannot be Null");
-                    response.sendRedirect("login.jsp");
+                    response.sendRedirect("register.jsp");
                 }
                 else if(!userDao.validateUserRegistrationEmail(userEmail)){
                     httpSession.setAttribute("message1","This email is already registered with us choose another");
@@ -55,8 +55,8 @@ public class RegisterServlet extends HttpServlet {
                     int userId= (int)session.save(user);
                     transaction.commit();
                     session.close();
-                    httpSession.setAttribute("current-User",user);
-                    response.sendRedirect("index.jsp");
+                    httpSession.setAttribute("message1","User Created Successfully");
+                    response.sendRedirect("register.jsp");
                 }
             }
             catch (Exception e){
