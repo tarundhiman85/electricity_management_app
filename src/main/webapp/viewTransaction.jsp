@@ -89,6 +89,7 @@ else{
                 </div>
                     <%
                 }
+        session.removeAttribute("message");
     %>
 </body>
 </html>

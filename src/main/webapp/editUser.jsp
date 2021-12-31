@@ -14,13 +14,13 @@
     User user = s.get(User.class,userId);
 %>
 <div class="container-fluid">
+    <%@include file="message.jsp"%>
     <div class="row mt-5">
         <div class="col-md-4 offset-md-4">
             <div class="card">
                 <div class="card-body px-5">
                     <h4 class="text-center my-3">Edit User Here</h4>
                     <form action="UpdateUserServlet" method="post">
-
                         <div class="form-group">
                             <label for="email">User Email</label>
                             <input name="user_email" value="<%=user.getUserEmail()%>" required type="email" class="form-control" id="email" placeholder="Enter your email here" aria-describedby="emailHelp" >
@@ -37,7 +37,7 @@
                             <label for="phone" >User Phone</label>
                             <input name="user_phone" value="<%=user.getUserPhone()%>" required type="number" class="form-control" id="phone" placeholder="Enter your phone" aria-describedby="emailHelp" >
                         </div>
-
+                        <input type="hidden" name="user_id" value="<%=userId%>">
                         <div class="form-group">
                             <label for="phone">User Address</label>
                             <input name="user_address" value="<%=user.getUserAddress()%>" class="form-control" placeholder="Enter your Address">

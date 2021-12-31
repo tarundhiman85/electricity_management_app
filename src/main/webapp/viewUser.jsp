@@ -215,8 +215,38 @@
 </div>
 <% } }
 
+else{
 %>
-            <%if(session.getAttribute("message")!=null){
+<div class="card-body">
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Email</th>
+            <th scope="col">User Phone</th>
+            <th scope="col">User Address</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"><%=user.getUserId()%></th>
+            <td><%=user.getUserName()%></td>
+            <td id="useremail"><%=user.getUserEmail()%></td>
+            <td><%=user.getUserPhone()%></td>
+            <td><%=user.getUserAddress()%></td>
+            <td id="useraction">
+                <a href="editUser.jsp?user_id=<%=user.getUserId()%>" style="font-size: 17px;" class="link">Update</a>
+                <a href="DeleteUserServlet?user_id=<%=user.getUserId()%>" style="font-size: 17px;" class="link">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+        <%}%>
+    </table>
+</div>
+
+            <% if(session.getAttribute("message")!=null){
                     session.removeAttribute("message");
                 }}
                 if(session.getAttribute("message1")!=null) {

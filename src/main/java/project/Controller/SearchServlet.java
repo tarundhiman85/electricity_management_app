@@ -19,11 +19,10 @@ public class SearchServlet extends HttpServlet {
         HttpSession httpSession = request.getSession();
             if (user == null) {
                 httpSession.setAttribute("message1", "No Record Found");
-                response.sendRedirect("viewUser.jsp");
             } else {
                 httpSession.setAttribute("message", user);
-                response.sendRedirect("viewUser.jsp");
             }
+        response.sendRedirect("viewUser.jsp");
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
