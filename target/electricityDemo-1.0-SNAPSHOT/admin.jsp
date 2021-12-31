@@ -57,14 +57,20 @@
 
     </div>
     <div id="cardfourth" class="card1">
-        <img  src="./img/resolve.png" alt="" srcset="">
+        <img  src="./img/solved.png" alt="" srcset="">
         <div class="cardbody">
           <a href="ResolveIsue.jsp">  <button class="cardbtn">View & Resolve Issue</button></a>
         </div>
 
     </div>
-</div>
+    <div id="cardfive" class="card1">
+        <img src="./img/friend-request.png" alt="Resolve User Issues">
+        <div class="cardbody">
+            <a href="viewConnRequests.jsp"><button style="width: 16rem" class="cardbtn">View Connection Requests</button></a>
+        </div>
+    </div>
 
+</div>
 
 
 <%--

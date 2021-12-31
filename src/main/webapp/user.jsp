@@ -59,9 +59,9 @@
     </div>
 
     <div id="cardfive" class="card1">
-        <img  src="./img/yourResolved.png" alt="" srcset="">
+        <img  src="./img/check.png" alt="" srcset="">
         <div class="cardbody">
-            <a href="UserResolved.jsp"><button class="cardbtn">View Resolved Issue</button></a>
+            <a href="UserResolved.jsp"><button class="cardbtn">Check Issue Status</button></a>
         </div>
     </div>
 </div>

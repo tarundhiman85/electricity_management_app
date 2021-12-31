@@ -21,6 +21,7 @@
             <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
             <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
             <li class="navitem"><a href="newConnection.jsp">New Connection Request</a></li>
+            <li class="navitem"><a href="viewStatus.jsp">View Status</a></li>
             <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
             <li class="navitem"><a href="login.jsp">Login</a> </li>
             <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/sunny.png" alt="" srcset=""></li>
@@ -35,7 +36,7 @@
     <ul>
         <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
         <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
-        <li class="navitem"><a href="viewUser.jsp">Profile</a></li>
+        <li class="navitem"><a href="viewInfo.jsp">Profile</a></li>
         <li class="navitem"><a href="help.jsp">Help</a></li>
         <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="user.jsp">Welcome <%=user1.getUserName()%></a> </li>
