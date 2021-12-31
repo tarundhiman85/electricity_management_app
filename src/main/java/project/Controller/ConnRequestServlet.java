@@ -23,7 +23,25 @@ public class ConnRequestServlet extends HttpServlet {
             String userAddress = request.getParameter("user_address");
             String connType = request.getParameter("conn_Type");
             String board = request.getParameter("board");
+
+            //validation
             HttpSession httpSession = request.getSession();
+            UserDao userDao = new UserDao(FactoryProvider.getFactory());
+            if(userName==null)
+            {
+                httpSession.setAttribute("message1", "User Name Cannot be Null");
+                response.sendRedirect("newConnection.jsp");
+            }
+            else if(!userDao.validateUserRegistrationEmail(userEmail)){
+                httpSession.setAttribute("message1","This email is already registered with us choose another");
+                response.sendRedirect("newConnection.jsp");
+            }
+            else if(!userDao.validateUserRegistrationUserName(userName)){
+                httpSession.setAttribute("message1","This UserName is already available choose another");
+                response.sendRedirect("newConnection.jsp");
+            }
+
+
             int randomNumber = (int)(Math.random()*1000);
             //db logic
             ConnRequest connRequest = new ConnRequest(userName,userEmail,userAddress,userPhone,connType);

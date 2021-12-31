@@ -20,20 +20,21 @@ public class UpdateUserServlet extends HttpServlet {
             String userPassword=request.getParameter("user_password");
             String userPhone=request.getParameter("user_phone");
             String userAddress=request.getParameter("user_address");
-
+            HttpSession httpSession = request.getSession();
             Session s= FactoryProvider.getFactory().openSession();
-            int userId=Integer.parseInt(request.getParameter("user_id").trim());
+            int userId=Integer.parseInt(request.getParameter("user_id"));
             Transaction tx=s.beginTransaction();
             User user = s.get(User.class,userId);
-            user.setUserEmail(userName);
+            user.setUserEmail(userEmail);
+            user.setUserName(userName);
             user.setUserAddress(userAddress);
             user.setUserPassword(userPassword);
             user.setUserPhone(userPhone);
-            tx.commit();
             s.update(user);
+            tx.commit();
             s.close();
-            response.sendRedirect("viewUser.jsp");
-
+            httpSession.setAttribute("message","User Updated Successfully");
+            response.sendRedirect("editUser.jsp?user_id="+user.getUserId());
         }
         catch (Exception e){
             e.printStackTrace();

@@ -1,6 +1,7 @@
 package project.Model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class User {
@@ -12,8 +13,31 @@ public class User {
     private String userPassword;
     private String userAddress;
     private String userPhone;
+    private String ConnType;
     private String boardType;
+    private int BillNo;
     private int Roll_id;
+
+
+
+    @PrePersist
+    void onCreate(){
+        BillNo = (int)(Math.random()*1000000);
+    }
+    public int getBillNo() {
+        return BillNo;
+    }
+
+    public void setBillNo(int billNo) {
+        BillNo = billNo;
+    }
+    public String getConnType() {
+        return ConnType;
+    }
+
+    public void setConnType(String connType) {
+        ConnType = connType;
+    }
 
     public User(String userEmail, String userName, String userPassword, String userAddress, String userPhone, int roll_id) {
         this.userEmail = userEmail;

@@ -73,6 +73,7 @@
 
 <%--
 <form action="CreatePasswordServlet" method="post">
+    <%@include file="message.jsp"%>
     <div class="form-group">
         <h6 style="font-size: xx-small;">Password must have atleast 1 capital letter and number and small case letter</h6>
         <input name="user_password" type="password" required class="form-control"  placeholder="Enter your password" aria-describedby="emailHelp" >

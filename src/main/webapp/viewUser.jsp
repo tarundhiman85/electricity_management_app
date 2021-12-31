@@ -103,6 +103,9 @@
             <th scope="col">User ID</th>
             <th scope="col">User Name</th>
             <th scope="col">User Email</th>
+            <th scope="col">User Board</th>
+            <th scope="col">User Bill No</th>
+            <th scope="col">User Conn Type</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -116,6 +119,9 @@
             <th scope="row"><%=users.getUserId()%></th>
             <td><%=users.getUserName()%></td>
             <td><%=users.getUserEmail()%></td>
+            <td><%=users.getBoardType().toUpperCase()%></td>
+            <td><%=users.getBillNo()%></td>
+            <td><%=users.getConnType()%></td>
             <td>
                 <a href="viewInfo.jsp?user_id=<%=users.getUserId()%>" style="font-size: 17px; text-decoration: none;" class="link">Select</a>
                 <a href="editUser.jsp?user_id=<%=users.getUserId()%>" style="font-size: 17px; text-decoration: none" class="link">Update</a>
@@ -215,8 +221,38 @@
 </div>
 <% } }
 
+else{
 %>
-            <%if(session.getAttribute("message")!=null){
+<div class="card-body">
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Email</th>
+            <th scope="col">User Phone</th>
+            <th scope="col">User Address</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"><%=user.getUserId()%></th>
+            <td><%=user.getUserName()%></td>
+            <td id="useremail"><%=user.getUserEmail()%></td>
+            <td><%=user.getUserPhone()%></td>
+            <td><%=user.getUserAddress()%></td>
+            <td id="useraction">
+                <a href="editUser.jsp?user_id=<%=user.getUserId()%>" style="font-size: 17px;" class="link">Update</a>
+                <a href="DeleteUserServlet?user_id=<%=user.getUserId()%>" style="font-size: 17px;" class="link">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+        <%}%>
+    </table>
+</div>
+
+            <% if(session.getAttribute("message")!=null){
                     session.removeAttribute("message");
                 }}
                 if(session.getAttribute("message1")!=null) {
