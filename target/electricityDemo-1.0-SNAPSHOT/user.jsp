@@ -56,7 +56,6 @@
         <div class="cardbody">
             <a href="PayBill.jsp"> <button class="cardbtn"> Bill Payment</button></a>
         </div>
-
     </div>
 
     <div id="cardfive" class="card1">

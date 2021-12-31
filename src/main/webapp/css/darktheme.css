@@ -331,7 +331,6 @@ body{
     width: 35rem;
     border-radius:3rem ;
     transition: all 5s;
-    transform: skew(10deg);
 }
 
 @keyframes formmove {
@@ -543,22 +542,27 @@ body{
 input[type="text"]{
     background:linear-gradient(45deg, black, transparent);
     border-color: white;
-    color:white
+    color:white;
 }
 input[type="email"]{
     background:linear-gradient(45deg, black, transparent);
     border-color: white;
-    color:white
+    color:white;
 }
 input[type="password"]{
     background:linear-gradient(45deg, black, transparent);
     border-color: white;
-    color:white
+    color:white;
 }
 input[type="number"]{
     background:linear-gradient(45deg, black, transparent);
     border-color: white;
-    color:white
+    color:white;
+}
+select{
+    background:linear-gradient(45deg, black, transparent);
+    border-color: white;
+    color:white;
 }
 .boximage{
     padding-right: 0.5rem;
