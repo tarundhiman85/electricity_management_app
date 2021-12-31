@@ -65,6 +65,13 @@
             <a href="UserResolved.jsp"><button class="cardbtn">Check Issue Status</button></a>
         </div>
     </div>
+    <div id="cardsix" class="card1">
+        <img  src="./img/help (1).png" alt="" srcset="">
+        <div class="cardbody">
+            <a href="help.jsp">  <button class="cardbtn">Need Help?</button></a>
+        </div>
+    </div>
+
 </div>
 <%
     if(new BillDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){

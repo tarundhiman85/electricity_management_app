@@ -571,3 +571,6 @@ input[type="number"]{
     color: skyblue;
     background: linear-gradient(45deg, grey,transparent);
 }
+.modal-body{
+    width:80%
+}
