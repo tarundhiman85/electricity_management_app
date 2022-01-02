@@ -592,13 +592,7 @@ body{
 .formrows{
     display: flex;
 }
-.alert-warning{
-    color: white;
-    background: linear-gradient(45deg,black,transparent);
-}
-.btn-close{
-    background: url("../img/cancel.png");
-}
+
 .cardinner{
     height: 16rem;
     width: 16rem;

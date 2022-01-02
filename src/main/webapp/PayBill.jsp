@@ -73,7 +73,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/pin-number.png" alt="" srcset="">
                         <label>Card Number</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
                            type="text" class="form-control card-number-input" placeholder="Enter Card Number">
 
                 </div>
@@ -82,7 +82,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/user (2).png" alt="" srcset="">
                         <label>Card Holder Name</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
                            type="text" class="form-control card-holder-input" placeholder="Enter Card Holder Name">
 
 
@@ -94,7 +94,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/cvv.png" alt="" srcset="">
                         <label>CVV</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
                            type="text" class="form-control cvv-input" placeholder="Enter CVV Code">
 
 
@@ -105,7 +105,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/calendar.png" alt="" srcset="">
                         <label>Card Expiry Date</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
                            type="text" class="form-control expiry-input" placeholder="Enter Expiry Date">
 
                 </div>
@@ -117,7 +117,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/account.png" alt="" srcset="">
                         <label>Due Ammount</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
                            type="text" class="form-control" placeholder="Enter <%=bill.getDues()%>" name="due">
 
                 </div>
@@ -126,7 +126,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/pay (1).png" alt="" srcset="">
                         <label>Pay Ammount</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;"
                            type="text" class="form-control" placeholder="Enter <%=bill.getAmount()%>" name="billA">
 
                 </div>

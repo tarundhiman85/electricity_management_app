@@ -24,7 +24,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/email.png" alt="" srcset="">
                     <label>Email Address</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_email" type="email" class="form-control" placeholder="Enter email">
+                <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_email" type="email" class="form-control" placeholder="Enter email">
 
             </div>
             <div style="width: 40%; margin: auto;" class="formcol">
@@ -32,7 +32,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/lock (1).png" alt="" srcset="">
                     <label>Password</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" class="form-control" placeholder="Enter Password">
+                <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" class="form-control" placeholder="Enter Password">
 
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/user (2).png" alt="" srcset="">
                     <label>User Name</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_name" type="text" class="form-control" placeholder="Enter Name">
+                <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_name" type="text" class="form-control" placeholder="Enter Name">
 
             </div>
             <div style="width: 40%; margin: auto;" class="formcol">
@@ -50,7 +50,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/call.png" alt="" srcset="">
                     <label>Phone Number</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_phone" type="number" class="form-control" placeholder="Enter Phone Number">
+                <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_phone" type="number" class="form-control" placeholder="Enter Phone Number">
 
             </div>
         </div>
@@ -60,7 +60,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/home (2).png" alt="" srcset="">
                     <label>Residential Address</label>
                 </div>
-                <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Residential Address">
+                <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Residential Address">
 
             </div>
 
@@ -69,7 +69,7 @@
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/fuse-box.png" alt="" srcset="">
                     <label>Choose Electricity Board</label>
                 </div>
-                <select style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="board" id="board">
+                <select style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="board" id="board">
                     <option value="derc">Delhi Electricity Regulatory Commission</option>
                     <option value="uhbvn">Uttar Haryana Bijli Vitran Nigam</option>
                     <option value="dhbvn">Dakshin Haryana Bijli Vitran Nigam</option>

@@ -63,11 +63,27 @@
                     <input type="hidden" name="user_phone" value="<%=connRequest.getPhone()%>">
                     <input type="hidden" name="board" value="<%=connRequest.getBoardType()%>">
                     <input type="hidden" name="connId" value="<%=connRequest.getRequestNumber()%>">
-                    <input type="submit" value="Approve">
+                    <div style="display: flex; " class="formsectionbtn">
+                        <button style="top:0rem; padding: 3px 15px" type="submit">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Approve
+                        </button>
+                    </div>
                 </form>
                 <form action="DisapproveServlet" method="post">
                     <input type="hidden" name="connId" value="<%=connRequest.getId()%>">
-                    <input type="submit" value="Disapprove">
+                    <div style="display: flex; " class="formsectionbtn">
+                        <button style="top:0rem; padding: 3px 15px" type="submit">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            DisApprove
+                        </button>
+                    </div>
                 </form>
             </td>
         </tr>

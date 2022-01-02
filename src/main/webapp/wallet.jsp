@@ -97,7 +97,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/credit-card.png" alt="" srcset="">
                         <label style="font-size: 1rem">Card Number</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required type="text" class="form-control" placeholder="Enter Card Number">
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required type="text" class="form-control" placeholder="Enter Card Number">
 
                 </div>
                 <div class="formcol">
@@ -105,7 +105,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/credit-card (1).png" alt="" srcset="">
                         <label style="font-size: 1rem">CVV Number</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required type="text" class="form-control" placeholder="Enter CVV Number">
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required type="text" class="form-control" placeholder="Enter CVV Number">
 
                 </div>
                 <div class="formcol">
@@ -113,7 +113,7 @@
                         <img style="width: 2rem; margin-right:1rem ;" src="./img/money.png" alt="" srcset="">
                         <label style="font-size: 1rem">Balance</label>
                     </div>
-                    <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="balance" required type="text" class="form-control" placeholder="Enter Balance">
+                    <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="balance" required type="text" class="form-control" placeholder="Enter Balance">
 
                 </div>
                 <div class="formsectionbtn">
@@ -158,7 +158,7 @@
                             <img style="width: 2rem; margin-right:1rem ;" src="./img/account.png" alt="" srcset="">
                             <label style="font-size: 1rem">Bill Dues Ammount </label>
                         </div>
-                        <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required name="due" type="text" class="form-control" placeholder="Dues Ammount  RS.<%=bill.getDues()%>">
+                        <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required name="due" type="text" class="form-control" placeholder="Dues Ammount  RS.<%=bill.getDues()%>">
 
                     </div>
                     <div class="formcol">
@@ -166,7 +166,7 @@
                             <img style="width: 2rem; margin-right:1rem ;" src="./img/pay (1).png" alt="" srcset="">
                             <label style="font-size: 1rem">Bill Pay Ammount</label>
                         </div>
-                        <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required name="billA" type="text" class="form-control" placeholder="Pay Ammount  RS.<%=bill.getAmount()%>">
+                        <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required name="billA" type="text" class="form-control" placeholder="Pay Ammount  RS.<%=bill.getAmount()%>">
 
                     </div>
 

@@ -42,7 +42,7 @@
                 <img style="width: 2rem; margin-right:1rem ;" src="./img/lock (1).png" alt="" srcset="">
                 <label>Enter Password</label>
             </div>
-            <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" required class="form-control" placeholder="Enter Your Password">
+            <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" required class="form-control" placeholder="Enter Your Password">
 
         </div>
         <div class="formcol">
@@ -50,7 +50,7 @@
                 <img style="width: 2rem; margin-right:1rem ;" src="./img/lock (1).png" alt="" srcset="">
                 <label>Confirm Password</label>
             </div>
-            <input style="padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="confirm_password" type="password" required class="form-control" placeholder="Confirm Your Password">
+            <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="confirm_password" type="password" required class="form-control" placeholder="Confirm Your Password">
 
         </div>
         <div class="formsectionbtn">
