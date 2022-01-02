@@ -57,7 +57,7 @@
     </div>
 
     <div id="cardsix" class="card1">
-        <img  src="./img/status.png" alt="" srcset="">
+        <img  src="./img/transaction (1).png" alt="" srcset="">
         <div class="cardbody">
             <a href="login.jsp"><button class="cardbtn">View Transaction</button></a>
         </div>
