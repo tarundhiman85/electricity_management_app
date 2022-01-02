@@ -9,6 +9,7 @@
 </head>
 <%
     //check reminder of bill
+    session.setAttribute("message",null);
     User user = (User)session.getAttribute("current-User");
     if(user==null){
         session.setAttribute("message1","You are not logged in!!");

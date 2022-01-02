@@ -38,12 +38,13 @@
 
     <form style="width: 75%;" action="CreatePasswordServlet" method="post">
         <%@include file="message.jsp"%>
-        <h5><strong>*Password </strong> must have atleast 1 capital letter and number and small case letter</h5>
+        <h5><strong>Password </strong> must have atleast 1 capital letter and number and small case letter</h5>
         <div class="formcol">
             <div class="formlevel">
                 <img style="width: 2rem; margin-right:1rem ;" src="./img/lock (1).png" alt="" srcset="">
                 <label>Enter Password</label>
             </div>
+            <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" required class="form-control" placeholder="Enter Your Password">
         </div>
         <div class="formcol">
             <div class="formlevel">
@@ -51,7 +52,6 @@
                 <label>Confirm Password</label>
             </div>
             <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="confirm_password" type="password" required class="form-control" placeholder="Confirm Your Password">
-
         </div>
         <div class="formsectionbtn">
             <button type="submit"  style="margin-right:1rem ;" >

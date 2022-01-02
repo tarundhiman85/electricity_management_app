@@ -22,7 +22,7 @@
 
 <div class="headersection">
     <div class="headertitle">
-        <h1>Welcome in ElectroBill Limited</h1>
+        <h1>Welcome to ElectroBill Limited</h1>
     </div>
     <div class="headerpara">
         <div class="col1">

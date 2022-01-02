@@ -29,6 +29,7 @@ public class AddBalanceServlet extends HttpServlet {
             Transactions transactions = new Transactions();
             transactions.setActionDone("Added Balance");
             transactions.setAmount(balanceToAdd);
+            transactions.setUser(user);
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
                 Balance balance = userDao.getBalanceByUserId(user.getUserId(), user);
                 balance.setAvailBalance(balance.getAvailBalance()+balanceToAdd);
@@ -38,7 +39,7 @@ public class AddBalanceServlet extends HttpServlet {
                 session.save(transactions);
                 tx.commit();
                 session.close();
-            httpSession.setAttribute("message","Amount added Successfully");
+            httpSession.setAttribute("message1","Amount added Successfully");
             response.sendRedirect("wallet.jsp");
     }
 

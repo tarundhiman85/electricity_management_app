@@ -25,7 +25,7 @@
                 <div  class="boximage">
                     <img style="width:2rem" src="./img/loupe.png" alt="" srcset="">
                 </div>
-                <input style="background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the User ID" name="referenceN">
+                <input style="background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the Request No" name="referenceN">
             </div>
 
             <input style="color: white; background-color: rgb(155, 216, 216); border-radius: 0.6rem; width: 6rem;" type="submit" value="Search">
@@ -62,8 +62,8 @@
         <tr>
             <th scope="col">User Name</th>
             <th scope="col">Request Reference Number</th>
-            <th scope="col">Reqested Board </th>
-            <th scope="col">Reqest Status </th>
+            <th scope="col">Requested Board </th>
+            <th scope="col">Request Status </th>
             <th scope="col">Actions</th>
         </tr>
         </thead>

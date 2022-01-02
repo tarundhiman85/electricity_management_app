@@ -13,7 +13,11 @@
 </video>
 
 <%@include file="navbar.jsp"%>
-
+<%
+    //getting total users
+    UserDao userDao = new UserDao(FactoryProvider.getFactory());
+    List<User> allUsers = userDao.getAllUsers();
+%>
 <div style="top:8rem" class="servicesection">
 
     <div style="width:18rem; height: 16rem;" class="card1 cardouter">
@@ -21,39 +25,11 @@
             <img style="width: 8rem; margin-top: 1rem; margin-bottom: 1rem;" src="./img/teamwork.png" alt="" srcset="">
             <div style="text-align: center;" class="cardbody">
                 <h2 style="font-size: 1.3rem;">Total Users</h2>
-                <h2 style="font-size: 1.3rem;">1300</h2>
+                <h2 style="font-size: 1.3rem;"><%=allUsers.size()%></h2>
             </div>
         </div>
 
-
-
     </div>
-
-    <div style="width:18rem; height: 16rem;" class="card1 cardouter">
-        <div class="cardinner">
-            <img style="width: 8rem; margin-top: 1rem; margin-bottom: 1rem;" src="./img/electrical-panel.png" alt="" srcset="">
-            <div style="text-align: center;" class="cardbody">
-                <h2 style="font-size: 1.3rem;">Electricity Board</h2>
-                <h2 style="font-size: 1.3rem;">1300</h2>
-            </div>
-        </div>
-
-
-
-    </div>
-    <div style="width:18rem; height: 16rem;" class="card1 cardouter">
-        <div class="cardinner">
-            <img style="width: 8rem; margin-top: 1rem; margin-bottom: 1rem;" src="./img/approved.png" alt="" srcset="">
-            <div style="text-align: center;" class="cardbody">
-                <h2 style="font-size: 1.3rem;">Actice Users</h2>
-                <h2 style="font-size: 1.3rem;">1300</h2>
-            </div>
-        </div>
-
-
-
-    </div>
-
 </div>
 <div class="tablesection">
 
@@ -81,7 +57,7 @@
     else{
         User user = (User) session.getAttribute("message");
         if(user==null){
-            UserDao userDao = new UserDao(FactoryProvider.getFactory());
+            userDao = new UserDao(FactoryProvider.getFactory());
             List<User> userList =  userDao.getAllUsers();
             if(userList==null)
             {
@@ -132,16 +108,46 @@
                 }}%>
         </tbody>
     </table>
-    <% } }
-
-    %>
-    <%if(session.getAttribute("message")!=null){
-        session.removeAttribute("message");
-    }}
-        if(session.getAttribute("message1")!=null) {
-            session.removeAttribute("message1");
-        }
-    %>
+    <% } }else{%>
+    <table style="background:linear-gradient(45deg, black, transparent) " class="table">
+        <thead>
+        <tr>
+            <th scope="col">User ID</th>
+            <th scope="col">User Name</th>
+            <th scope="col">User Email</th>
+            <th scope="col">User Board</th>
+            <th scope="col">User Bill No</th>
+            <th scope="col">User Conn Type</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row"><%=user.getUserId()%></th>
+            <td><%=user.getUserName()%></td>
+            <td><%=user.getUserEmail()%></td>
+            <td><%=user.getBoardType().toUpperCase()%></td>
+            <td><%=user.getBillNo()%></td>
+            <td><%=user.getConnType()%></td>
+            <td>
+                <a href="viewInfo.jsp?user_id=<%=user.getUserId()%>" style="font-size: 17px; text-decoration: none;" class="link">Select</a>
+                <a href="editUser.jsp?user_id=<%=user.getUserId()%>" style="font-size: 17px; text-decoration: none" class="link">Update</a>
+                <a href="DeleteUserServlet?user_id=<%=user.getUserId()%>" style="font-size: 17px; text-decoration: none" class="link">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        <%
+    }
+    }
+%>
+<%--    <%if(session.getAttribute("message")!=null){--%>
+<%--        session.removeAttribute("message");--%>
+<%--    }}--%>
+<%--        if(session.getAttribute("message1")!=null) {--%>
+<%--            session.removeAttribute("message1");--%>
+<%--        }--%>
+<%--    %>--%>
 </div>
 
 
