@@ -33,7 +33,7 @@ public class UpdateUserServlet extends HttpServlet {
             s.update(user);
             tx.commit();
             s.close();
-            httpSession.setAttribute("message","User Updated Successfully");
+            httpSession.setAttribute("message1","User Updated Successfully");
             response.sendRedirect("editUser.jsp?user_id="+user.getUserId());
         }
         catch (Exception e){

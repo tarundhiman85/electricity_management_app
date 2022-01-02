@@ -1,3 +1,5 @@
+<%@ page import="project.Helper.FactoryProvider" %>
+<%@ page import="org.hibernate.Session" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -10,8 +12,9 @@
 </video>
 <%@include file="navbar.jsp"%>
 <%
-    HttpSession httpSession = request.getSession();
-        User user = (User) session.getAttribute("message");
+    int userId=Integer.parseInt(request.getParameter("user_id").trim());
+    Session s= FactoryProvider.getFactory().openSession();
+    User user = s.get(User.class,userId);
 %>
 
 

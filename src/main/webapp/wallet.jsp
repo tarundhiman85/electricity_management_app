@@ -9,7 +9,7 @@
     User user=(User)httpSession.getAttribute("current-User");
     if(user==null)
     {
-        httpSession.setAttribute("message","You are not logged in Login first");
+        httpSession.setAttribute("message1","You are not logged in Login first");
         response.sendRedirect("login.jsp");
         return;
     }

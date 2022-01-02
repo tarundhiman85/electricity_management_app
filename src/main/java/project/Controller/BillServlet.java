@@ -21,8 +21,8 @@ public class BillServlet extends HttpServlet {
             response.sendRedirect("calculateBill.jsp");
         }
         else{
-            httpSession.setAttribute("message", user);
-            response.sendRedirect("BillForm.jsp");
+//            httpSession.setAttribute("message", user);
+            response.sendRedirect("BillForm.jsp?user_id="+user.getUserId());
         }
     }
     @Override

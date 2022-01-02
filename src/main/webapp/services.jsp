@@ -14,7 +14,9 @@
 </video>
 <%@include file="navbar.jsp"%>
 
-
+<%
+    session.setAttribute("message",null);
+%>
 <div style="top:10rem" class="serviceheader">
     <h1>Our Services</h1>
 </div>
