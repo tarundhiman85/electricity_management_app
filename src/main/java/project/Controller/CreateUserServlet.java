@@ -27,12 +27,14 @@ public class CreateUserServlet extends HttpServlet {
             String userPhone = request.getParameter("user_phone");
             String userAddress = request.getParameter("user_address");
             String boardType = request.getParameter("board");
+            String connType = request.getParameter("conn_type");
             int id=Integer.parseInt(request.getParameter("connId"));
             ConnRequest connRequest = new UserDao(FactoryProvider.getFactory()).getConnectionRequestByReferenceN(id);
             connRequest.setStatus("Approved");
             HttpSession httpSession = request.getSession();
             User user = new User(userEmail, userName, userPassword, userAddress, userPhone, 2);
             user.setBoardType(boardType);
+            user.setConnType(connType);
             Session session = FactoryProvider.getFactory().openSession();
             Transaction transaction = session.beginTransaction();
             session.save(user);

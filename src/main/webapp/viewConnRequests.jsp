@@ -36,6 +36,7 @@
             <th scope="col">User Address</th>
             <th scope="col">Phone No</th>
             <th scope="col">User Board Type</th>
+            <th scope="col">Connection Type</th>
             <th scope="col">Status</th>
             <th scope="col">Action</th>
         </tr>
@@ -48,6 +49,7 @@
             <td><%=connRequest.getAddress()%></td>
             <td><%=connRequest.getPhone()%></td>
             <td><%=connRequest.getBoardType()%></td>
+            <td><%=connRequest.getConnType()%></td>
             <td><%=connRequest.getStatus()%></td>
             <td>
                 <%
@@ -62,6 +64,7 @@
                     <input type="hidden" name="user_address" value="<%=connRequest.getAddress()%>">
                     <input type="hidden" name="user_phone" value="<%=connRequest.getPhone()%>">
                     <input type="hidden" name="board" value="<%=connRequest.getBoardType()%>">
+                    <input type="hidden" name="conn_type" value="<%=connRequest.getConnType()%>">
                     <input type="hidden" name="connId" value="<%=connRequest.getRequestNumber()%>">
                     <div style="display: flex; " class="formsectionbtn">
                         <button style="top:0rem; padding: 3px 15px" type="submit">

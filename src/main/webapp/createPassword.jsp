@@ -27,23 +27,23 @@
         </symbol>
     </svg>
 
-    <div style="width: 75%; border: 1px solid red " class="alert alert-warning d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-        <div>
-            <strong>*Password </strong> must have atleast 1 capital letter and number and small case letter
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<%--    <div style="width: 75%; border: 1px solid red " class="alert alert-warning d-flex align-items-center" role="alert">--%>
+<%--        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>--%>
+<%--        <div>--%>
+<%--            <strong>*Password </strong> must have atleast 1 capital letter and number and small case letter--%>
+<%--            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>--%>
 
-        </div>
-    </div>
+<%--        </div>--%>
+<%--    </div>--%>
 
     <form style="width: 75%;" action="CreatePasswordServlet" method="post">
+        <%@include file="message.jsp"%>
+        <h5><strong>*Password </strong> must have atleast 1 capital letter and number and small case letter</h5>
         <div class="formcol">
             <div class="formlevel">
                 <img style="width: 2rem; margin-right:1rem ;" src="./img/lock (1).png" alt="" srcset="">
                 <label>Enter Password</label>
             </div>
-            <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" required class="form-control" placeholder="Enter Your Password">
-
         </div>
         <div class="formcol">
             <div class="formlevel">

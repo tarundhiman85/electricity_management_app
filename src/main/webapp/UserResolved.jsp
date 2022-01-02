@@ -24,18 +24,11 @@
         <thead>
         <tr>
             <th scope="col">Query ID</th>
-            <th scope="col">Action</th>
+            <th scope="col">Status</th>
         </tr>
         </thead>
         <tbody>
-        <%
-            List<Query> queryList = new QueryDao().getAllQueries();
-            for (Query q : queryList){
-                if(q.getResolve().equals("No")){
-        %>
-
         <tr>
-
             <%
                 List<Query> queryList = new QueryDao(FactoryProvider.getFactory()).getAllQueries();
                 User current = (User)request.getSession().getAttribute("current-User");
@@ -44,13 +37,14 @@
             %>
             <th scope="row"><%=q.getQueryId()%></th>
             <td>"<%=q.getMsg()%>" Your Query is Resolved by Admin</td>
-            <%}else{
+            <%
+                    }else{
             %>
             <th scope="row"><%=q.getQueryId()%></th>
             <td>"<%=q.getMsg()%>" is not resolved Yet Wait for Admin Reply</td>
-            <%}}%>
+            <%}
+                }%>
         </tr>
-
         </tbody>
     </table>
 </div>

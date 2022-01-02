@@ -19,7 +19,7 @@
 <div style="top:10rem" class="tablesection">
 
     <div class="tableform">
-        <h2>Search the Transaction by Id</h2>
+        <h2>Search the Status by Request Number</h2>
         <form style="display: flex; margin: 1rem;" action="RequestServlet" method="post">
             <div style="margin-right:1rem" class="searchform">
                 <div  class="boximage">
@@ -79,11 +79,11 @@
             <td><%=connRequest1.getStatus()%></td>
             <td>
                 <%
-                    if(connRequest1.getStatus()!=null && connRequest1.getStatus().equals("Pending")){
+                    if(connRequest1!=null && connRequest1.getStatus().equals("Pending")){
                 %>
                 Please Wait
                 <%
-                }else if(connRequest.getStatus()!=null && connRequest1.getStatus().equals("Disapproved")){
+                }else if(connRequest1!=null && connRequest1.getStatus().equals("Disapproved")){
                 %>
                 Sorry your Request is Disapproved Make Another Request
                 <%}else{
@@ -108,8 +108,8 @@
         <tr>
             <th scope="col">User Name</th>
             <th scope="col">Request Reference Number</th>
-            <th scope="col">Reqested Board </th>
-            <th scope="col">Reqest Status </th>
+            <th scope="col">Requested Board </th>
+            <th scope="col">Request Status </th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -121,11 +121,11 @@
             <td><%=connRequest.getStatus()%></td>
             <td>
                 <%
-                    if(connRequest.getStatus().equals("Pending")){
+                    if(connRequest!=null && connRequest.getStatus().equals("Pending")){
                 %>
                 Please Wait
                 <%
-                }else if(connRequest.getStatus().equals("Disapproved")){
+                }else if(connRequest!=null && connRequest.getStatus().equals("Disapproved")){
                 %>
                 Sorry your Request is Disapproved Make Another Request
                 <%}
