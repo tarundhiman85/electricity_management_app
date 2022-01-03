@@ -26,9 +26,8 @@
             <h1 style="color: white">Hi, We can Help You?</h1>
             <hr>
             <div class="form-floating col-12 my-2">
-                <%--@declare id="inputquery"--%><label for="inputQuery" class="form-label">Query</label>
                 <textarea name="query" class="form-control" placeholder="Say Your Query Here" id="floatingTextarea2"
-                          style="height: 100px; background: transparent; color: white"></textarea>
+                          style="color:white;height: 100px; background: transparent;"></textarea>
             </div>
             <div class="col-12 my-2">
                 <div class="formsectionbtn">

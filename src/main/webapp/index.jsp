@@ -114,5 +114,11 @@
     }
 %>
 
+<script>
+    let video=document.getElementsByClassName("myVideo");
+    video.playbackRate=1;
+
+</script>
+
 </body>
 </html>

@@ -74,6 +74,11 @@
 
 </div>
 
+<script>
+    let video=document.getElementsByClassName("myVideo");
+    video.playbackRate=0.1;
+
+</script>
 
 </body>
 </html>

@@ -22,7 +22,7 @@
 
 <div class="headersection">
     <div class="headertitle">
-        <h1>Welcome in ElectroBill Limited</h1>
+        <h1>Welcome to ElectroBill Limited</h1>
     </div>
     <div class="headerpara">
         <div class="col1">
@@ -40,8 +40,8 @@
     </div>
     <div class="headerbutton">
         <a href="services.jsp" style="text-decoration: none"><div style="display: flex; align-items: center;" class="connectionbtn">
-            <img style="padding-right: 0.6rem; width: 2rem" src="img/customer-service.png" alt="" srcset="">
-            <h4  style="color: skyblue; font-size: 1rem;">Our Services</h4>
+            <img style="padding-right: 0.6rem; width: 2.5rem" src="img/customer-service.png" alt="" srcset="">
+            <h4  style="margin-left:1.5rem;color: skyblue; font-size: 1rem;">Our Services</h4>
         </div></a>
     </div>
 
@@ -71,7 +71,7 @@
 
     <div class="headerbutton">
     <div style="display: flex; align-items: center;" class="connectionbtn">
-        <img style="padding-right: 0.6rem; width: 2rem" src="img/community.png" alt="" srcset="">
+        <img style="padding-right: 0.6rem; width: 2.5rem" src="img/community.png" alt="" srcset="">
         <a href="user.jsp"> <h4  style="color: skyblue; font-size: 1rem;">Go for User Services</h4></a>
     </div>
     </div>
@@ -104,7 +104,7 @@
 
     <div class="headerbutton">
         <div style="display: flex; align-items: center;" class="connectionbtn">
-            <img style="padding-right: 0.6rem; width: 2rem" src="img/admin.png" alt="" srcset="">
+            <img style="padding-right: 0.6rem; width: 2.5rem" src="img/admin.png" alt="" srcset="">
           <a href="admin.jsp">  <h4  style="color: skyblue; font-size: 1rem;">Go To Admin Services</h4></a>
         </div>
     </div>
@@ -113,6 +113,12 @@
 <%
     }
 %>
+
+<script>
+    let video=document.getElementsByClassName("myVideo");
+    video.playbackRate=1;
+
+</script>
 
 </body>
 </html>

@@ -49,21 +49,29 @@
             <a href="viewUser.jsp"> <button class="cardbtn">View User</button></a>
         </div>
     </div>
+
     <div id="cardthird" class="card1">
+        <img  src="./img/user%20(1).png" alt="" srcset="">
+        <div class="cardbody">
+            <a href="editUser.jsp?user_id=<%=user1.getUserId()%>"> <button class="cardbtn">Update Profile</button></a>
+        </div>
+    </div>
+
+    <div id="cardfourth" class="card1">
         <img src="./img/bill.png" alt="" srcset="">
         <div class="cardbody">
             <a href="calculateBill.jsp"> <button class="cardbtn">Calculate Bill</button></a>
         </div>
 
     </div>
-    <div id="cardfourth" class="card1">
+    <div id="cardfive" class="card1">
         <img  src="./img/solved.png" alt="" srcset="">
         <div class="cardbody">
           <a href="ResolveIsue.jsp">  <button class="cardbtn">View & Resolve Issue</button></a>
         </div>
 
     </div>
-    <div id="cardfive" class="card1">
+    <div id="cardsix" class="card1">
         <img src="./img/friend-request.png" alt="Resolve User Issues">
         <div class="cardbody">
             <a href="viewConnRequests.jsp"><button style="width: 16rem" class="cardbtn">View Connection Requests</button></a>
@@ -72,50 +80,6 @@
 
 </div>
 
-
-<%--
-
-<div class="container">
-    <div class="rowindex">
-        <div class="colindex spcol">
-            <div class="card">
-                <img class="card-img-top" src="img/user.png" alt="Users">
-            </div>
-            <br><br><strong class="link">Number of Users : <%=count%></strong>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/profile.png" alt="View Bill & Profile">
-            </div>
-            <a class="link" href="viewUser.jsp"><br><br><strong>View User</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="img/bill.png" alt="Calculate Bill">
-            </div>
-            <a class="link" href="calculateBill.jsp"><br><br><strong>Calculate Bill</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/add-friend.png" alt="Add User">
-            </div>
-            <a class="link" href="register.jsp"><br><br><strong>Add User</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/resolve.png" alt="Resolve User Issues">
-            </div>
-            <a class="link" href="ResolveIsue.jsp"><br><br><strong>Resolve User Issues</strong></a>
-        </div>
-        <div class="colindex">
-            <div class="card">
-                <img class="card-img-top" src="./img/resolve.png" alt="Resolve User Issues">
-            </div>
-            <a class="link" href="viewConnRequests.jsp"><br><br><strong>View Connection Requests</strong></a>
-        </div>
-    </div>
-</div>
---%>
 
 </body>
 </html>

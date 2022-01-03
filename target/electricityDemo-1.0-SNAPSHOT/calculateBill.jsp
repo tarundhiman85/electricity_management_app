@@ -28,7 +28,7 @@
             <div  class="boximage">
                 <img style="width:2rem" src="./img/loupe.png" alt="" srcset="">
             </div>
-            <input type="text" placeholder="Enter User ID" name="usId">
+            <input style="color:white;" type="text" placeholder="Enter User ID" name="usId">
         </div>
 
         <input style="color: white; background-color: rgb(155, 216, 216); border-radius: 0.6rem; width: 6rem;" type="submit" value="Search">
