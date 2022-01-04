@@ -39,33 +39,40 @@
     </div>
 
     <div id="cardsecond" class="card1">
+        <img  src="./img/user-profile.png" alt="" srcset="">
+        <div class="cardbody">
+            <a href="editUser.jsp?user_id=<%=user1.getUserId()%>"> <button class="cardbtn">Update Profile</button></a>
+        </div>
+    </div>
+
+    <div id="cardthird" class="card1">
         <img  src="./img/money-transfer.png" alt="" srcset="">
         <div class="cardbody">
           <a href="viewTransaction.jsp"> <button class="cardbtn">Transaction History</button></a>
         </div>
     </div>
 
-    <div  id="cardthird" class="card1">
+    <div  id="cardfourth" class="card1">
         <img  src="./img/wallet.png" alt="" srcset="">
         <div class="cardbody">
             <a href="wallet.jsp"><button class="cardbtn">Wallet Money</button></a>
         </div>
 
     </div>
-    <div id="cardfourth" class="card1">
+    <div id="cardfive" class="card1">
         <img  src="./img/cashless-payment.png" alt="" srcset="">
         <div class="cardbody">
             <a href="PayBill.jsp"> <button class="cardbtn"> Bill Payment</button></a>
         </div>
     </div>
 
-    <div id="cardfive" class="card1">
+    <div id="cardsix" class="card1">
         <img  src="./img/check.png" alt="" srcset="">
         <div class="cardbody">
             <a href="UserResolved.jsp"><button class="cardbtn">Check Issue Status</button></a>
         </div>
     </div>
-    <div id="cardsix" class="card1">
+    <div id="cardseven" class="card1">
         <img  src="./img/help (1).png" alt="" srcset="">
         <div class="cardbody">
             <a href="help.jsp">  <button class="cardbtn">Need Help?</button></a>

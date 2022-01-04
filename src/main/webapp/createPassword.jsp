@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Tarun Dhiman
-  Date: 28-12-2021
-  Time: 04:34 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -27,14 +20,6 @@
         </symbol>
     </svg>
 
-<%--    <div style="width: 75%; border: 1px solid red " class="alert alert-warning d-flex align-items-center" role="alert">--%>
-<%--        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>--%>
-<%--        <div>--%>
-<%--            <strong>*Password </strong> must have atleast 1 capital letter and number and small case letter--%>
-<%--            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>--%>
-
-<%--        </div>--%>
-<%--    </div>--%>
 
     <form style="width: 75%;" action="CreatePasswordServlet" method="post">
         <%@include file="message.jsp"%>
@@ -68,21 +53,5 @@
     </form>
 </div>
 
-
-
-
-<%--
-<form action="CreatePasswordServlet" method="post">
-    <%@include file="message.jsp"%>
-    <div class="form-group">
-        <h6 style="font-size: xx-small;">Password must have atleast 1 capital letter and number and small case letter</h6>
-        <input name="user_password" type="password" required class="form-control"  placeholder="Enter your password" aria-describedby="emailHelp" >
-    </div>
-    <div class="form-group">
-        <h6 style="font-size: xx-small;">Password must have atleast 1 capital letter and number and small case letter</h6>
-        <input name="confirm_password" type="password" required class="form-control" placeholder="Enter your password again" aria-describedby="emailHelp" >
-    </div>
-    <input type="submit" value="Create Password">
-</form>--%>
 </body>
 </html>

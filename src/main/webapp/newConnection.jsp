@@ -84,7 +84,7 @@
     </div>
 
 
-<%--    <a style="text-decoration: none" href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>--%>
+
         <div style="display: flex; justify-content: center;" class="formsectionbtn">
             <button style="margin:1rem ;" type="submit">
                 <span></span>
@@ -104,61 +104,5 @@
 
     </form>
 </div>
-
-
-
-
-<%--
-<div class="container">
-    <%@include file="message.jsp"%>
-    <div class="row mt-5">
-        <div class="col">
-            <div class="card formcard">
-                <div class="card-body cardbody px-5">
-
-                    <h3 style="color: #312d62; font-weight: bolder; font-size: 2.2rem" class="text-center my-3">New Connection Request Form</h3>
-                    <form class="formbody" action="ConnRequestServlet" method="post">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input name="user_name" required type="text" class="form-control"  id="name" placeholder="Enter your name here" aria-describedby="emailHelp" >
-                        </div>
-                        <div class="form-group">
-                            <label for="name">User Email</label>
-                            <input name="user_email" required type="email" class="form-control" placeholder="Enter your Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Enter Phone Number</label>
-                            <input name="user_phone" required class="form-control" type="text" placeholder="Enter Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Enter Residential/Office Address</label>
-                            <input name="user_address" required class="form-control" type="text" placeholder="Enter Address">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Choose Connection Type</label>
-                            <select name="conn_Type">
-                                <option value="domestic">Domestic</option>
-                                <option value="commercial">Commercial</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="board">Choose a Electricity Board</label>
-                            <select name="board" id="board">
-                                <option value="derc">Delhi Electricity Regulatory Commission</option>
-                                <option value="uhbvn">Uttar Haryana Bijli Vitran Nigam</option>
-                                <option value="dhbvn">Dakshin Haryana Bijli Vitran Nigam</option>
-                                <option value="pspcl">Punjab State Power Corporation Limited</option>
-                            </select>
-                        </div>
-                        <div class="container formbtn text-center">
-                            <button id="register">Registration</button>
-                            <button type="reset" id="reset">Reset</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>--%>
 </body>
 </html>

@@ -43,7 +43,17 @@
             <td><%=q.getMsg()%></td>
             <td>
                 <form action="ResolveServlet" method="post">
-                    <input type="submit" value="Resolve">
+                    <div style="display: flex; " class="formsectionbtn">
+                        <button style="margin-top:0rem; padding:3px 15px;" type="submit">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Resolve
+                        </button>
+
+                    </div>
+
                     <input type="hidden" name="qId" value="<%=q.getQueryId()%>">
                 </form>
             </td>

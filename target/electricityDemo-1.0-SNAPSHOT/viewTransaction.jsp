@@ -24,7 +24,7 @@
                 <div  class="boximage">
                     <img style="width:2rem" src="./img/loupe.png" alt="" srcset="">
                 </div>
-                <input style="background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the ID" name="trans">
+                <input style="color:white; background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the ID" name="trans">
             </div>
 
             <input style="color: white; background-color: rgb(155, 216, 216); border-radius: 0.6rem; width: 6rem;" type="submit" value="Search">

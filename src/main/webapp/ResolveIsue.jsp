@@ -62,50 +62,5 @@
         </tbody>
     </table>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--
-
-<div class="card-body mt-5 container">
-    <%@include file="message.jsp"%>
-    <table>
-        <tr class="top">
-            <td>User Id</td>
-            <td>Query Id</td>
-            <td>Query</td>
-            <td>Action</td>
-        </tr>
-        <%
-            List<Query> queryList = new QueryDao().getAllQueries();
-            for (Query q : queryList){
-                if(q.getResolve().equals("No")){
-        %>
-        <tr class="top">
-            <td><%=q.getUser().getUserId()%></td>
-            <td><%=q.getQueryId()%></td>
-            <td><%=q.getMsg()%></td>
-            <td>
-                <form action="ResolveServlet" method="post">
-                    <input id="register" type="submit" value="Resolve">
-                    <input type="hidden" name="qId" value="<%=q.getQueryId()%>">
-                </form>
-            </td>
-        </tr>
-            <%}}%>
-    </table>
-</div>--%>
 </body>
 </html>
