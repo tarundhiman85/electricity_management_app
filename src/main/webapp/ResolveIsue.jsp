@@ -12,14 +12,10 @@
     <source src="./img/World - 1992.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
-
-
 <div style="top:10rem" class="tablesection">
     <div class="tableform">
         <h2>Users Query</h2>
     </div>
-
     <table style="background:linear-gradient(45deg, black, transparent) " class="table">
         <thead>
         <tr>
@@ -35,9 +31,7 @@
             for (Query q : queryList){
                 if(q.getResolve().equals("No")){
         %>
-
         <tr>
-
             <th scope="row"><%=q.getUser().getUserId()%></th>
             <td><%=q.getQueryId()%></td>
             <td><%=q.getMsg()%></td>
@@ -51,9 +45,7 @@
                             <span></span>
                             Resolve
                         </button>
-
                     </div>
-
                     <input type="hidden" name="qId" value="<%=q.getQueryId()%>">
                 </form>
             </td>

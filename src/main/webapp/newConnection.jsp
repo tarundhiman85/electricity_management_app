@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -10,10 +9,7 @@
     <source src="./img/World - 1992.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
-
 <div style="height: 55rem; width: 40rem " class="formsection">
-
 <h1>Request for New Connection</h1>
 <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
 <%@include file="message.jsp"%>
@@ -25,7 +21,6 @@
                 <label>Name</label>
             </div>
             <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_name" type="text" class="form-control" placeholder="Enter Name">
-
         </div>
         <div style="width: 40%; margin: auto;" class="formcol">
             <div class="formlevel">
@@ -33,8 +28,6 @@
                 <label>Email Address</label>
             </div>
             <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_email" type="email" class="form-control" placeholder="Enter Email">
-
-
         </div>
     </div>
     <div class="formrows">
@@ -50,17 +43,14 @@
                 <option value="pspcl">Punjab State Power Corporation Limited</option>
             </select>
         </div>
-
         <div style="width: 40%; margin: auto;" class="formcol">
             <div class="formlevel">
                 <img style="width: 2rem; margin-right:1rem ;" src="./img/call.png" alt="" srcset="">
                 <label>Phone Number</label>
             </div>
             <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_phone" type="text" class="form-control" placeholder="Enter PhoneNo">
-
         </div>
     </div>
-
     <div class="formrows" style="margin-bottom: 1rem">
         <div style="width: 90%; margin: auto;" class="formcol">
             <div class="formlevel">
@@ -72,7 +62,6 @@
             <option value="commercial">Commercial</option>
         </select>
     </div>
-
     </div>
     <div style="width: 90%; margin: auto;" class="formcol">
         <div class="formlevel">
@@ -80,11 +69,7 @@
             <label>Residential Address</label>
         </div>
         <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" class="form-control" placeholder="Residential Address">
-
     </div>
-
-
-
         <div style="display: flex; justify-content: center;" class="formsectionbtn">
             <button style="margin:1rem ;" type="submit">
                 <span></span>
@@ -101,7 +86,6 @@
                 Reset
             </button>
         </div>
-
     </form>
 </div>
 </body>

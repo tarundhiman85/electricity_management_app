@@ -13,7 +13,6 @@
     <source src="./img/World - 1992.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
 <div style="top:10rem" class="tablesection">
     <div class="tableform">
         <h2>New Connection Requests</h2>
@@ -43,7 +42,6 @@
         </thead>
         <tbody>
         <tr>
-
             <th scope="row"><%=connRequest.getName()%></th>
             <td><%=connRequest.getEmail()%></td>
             <td><%=connRequest.getAddress()%></td>
@@ -94,7 +92,6 @@
         </tbody>
     </table>
         <%}}%>
-
 </div>
 </body>
 </html>

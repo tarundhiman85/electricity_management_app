@@ -15,9 +15,7 @@
     <source src="./img/Angel - 26277.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
 <div style="top:10rem" class="tablesection">
-
     <div class="tableform">
         <h2>Search the Status by Request Number</h2>
         <form style="display: flex; margin: 1rem;" action="RequestServlet" method="post">
@@ -27,11 +25,9 @@
                 </div>
                 <input style="background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the Request No" name="referenceN">
             </div>
-
             <input style="color: white; background-color: rgb(155, 216, 216); border-radius: 0.6rem; width: 6rem;" type="submit" value="Search">
         </form>
     </div>
-
     <%
         if(session.getAttribute("message1")!=null){
             HttpSession httpSession = request.getSession();
@@ -47,16 +43,12 @@
                 HttpSession httpSession = request.getSession();
                 httpSession.setAttribute("message1", "No Record Found");
     %>
-
     <div>
         <%@include file="message.jsp"%>
     </div>
-
     <%
     }else{
     %>
-
-
     <table style="background:linear-gradient(45deg, black, transparent) " class="table">
         <thead>
         <tr>
@@ -71,7 +63,6 @@
         <%
             for (ConnRequest connRequest1 : connRequestList){
         %>
-
         <tr>
             <th scope="row"><%=connRequest1.getName()%></th>
             <td><%=connRequest1.getRequestNumber()%></td>
@@ -143,9 +134,6 @@
     <%
         }
     %>
-
-
 </div>
 </body>
 </html>
-

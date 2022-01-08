@@ -14,30 +14,21 @@
         return;
     }
     Balance balance = new UserDao(FactoryProvider.getFactory()).getBalanceByUserId(user.getUserId(), user);
-
     Bill bill = new UserDao(FactoryProvider.getFactory()).getBillByUserId(user.getUserId());
     %>
-
 <head>
     <title>My Wallet</title>
     <%@include file="/common_css_js1.jsp"%>
 </head>
 <body>
-
 <video autoplay muted loop class="myVideo">
     <source src="./img/Atoms - 8579.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
-
 <div style="top:10rem" class="serviceheader">
     <%@include file="message.jsp"%>
-
 </div>
 <div style="top:18rem" class="servicesection">
-
-
-
     <div style="width:18rem; height: 16rem;" class="card1 cardouter">
         <div class="cardinner" >
             <img style="width: 8rem; margin-top: 1rem; margin-bottom: 1rem;" src="./img/balance.png" alt="" srcset="">
@@ -46,22 +37,14 @@
                 <h2><%=balance.getAvailBalance()%></h2>
             </div>
         </div>
-
-
-
     </div>
-
     <div style="width:18rem; height: 16rem;" class="card1 cardouter">
         <div class="cardinner "  data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img style="width: 8rem; margin-top: 1rem; margin-bottom: 1rem;" src="./img/addBalance.png" alt="" srcset="">
             <div style="text-align: center;" class="cardbody">
                 <h2 style="font-size: 1.3rem;">Add Balance</h2>
-
             </div>
         </div>
-
-
-
     </div>
     <div style="width:18rem; height: 16rem;" class="card1 cardouter" >
         <div class="cardinner " data-bs-toggle="modal" data-bs-target="#exampleModal1" >
@@ -70,17 +53,8 @@
                 <h2 style="font-size: 1.3rem;">Pay Bill with Wallet</h2>
             </div>
         </div>
-
-
-
     </div>
-
 </div>
-
-
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -98,7 +72,6 @@
                         <label style="font-size: 1rem">Card Number</label>
                     </div>
                     <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required type="text" class="form-control" placeholder="Enter Card Number">
-
                 </div>
                 <div class="formcol">
                     <div  style="margin: 0.3rem"class="formlevel">
@@ -106,7 +79,6 @@
                         <label style="font-size: 1rem">CVV Number</label>
                     </div>
                     <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required type="text" class="form-control" placeholder="Enter CVV Number">
-
                 </div>
                 <div class="formcol">
                     <div  style="margin: 0.3rem"class="formlevel">
@@ -114,7 +86,6 @@
                         <label style="font-size: 1rem">Balance</label>
                     </div>
                     <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="balance" required type="text" class="form-control" placeholder="Enter Balance">
-
                 </div>
                 <div class="formsectionbtn">
                     <button type="submit"  style="margin-right:1rem ;" >
@@ -124,21 +95,12 @@
                         <span></span>
                         Add Balance
                     </button>
-
                 </div>
-
-
-
             </form>
-
         </div>
         </div>
     </div>
 </div>
-
-
-
-
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -159,7 +121,6 @@
                             <label style="font-size: 1rem">Bill Dues Ammount </label>
                         </div>
                         <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required name="due" type="text" class="form-control" placeholder="Dues Ammount  RS.<%=bill.getDues()%>">
-
                     </div>
                     <div class="formcol">
                         <div  style="margin: 0.3rem"class="formlevel">
@@ -167,9 +128,7 @@
                             <label style="font-size: 1rem">Bill Pay Ammount</label>
                         </div>
                         <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" required name="billA" type="text" class="form-control" placeholder="Pay Ammount  RS.<%=bill.getAmount()%>">
-
                     </div>
-
                     <div class="formsectionbtn">
                         <button type="submit"  style="margin-right:1rem ;" >
                             <span></span>
@@ -178,11 +137,7 @@
                             <span></span>
                             Pay Bill
                         </button>
-
                     </div>
-
-
-
                 </form>
                 <%}else{
                 %>

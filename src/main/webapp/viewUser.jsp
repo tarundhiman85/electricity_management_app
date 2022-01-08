@@ -11,7 +11,6 @@
 <video autoplay muted loop class="myVideo">
     <source src="./img/Atoms - 8579.mp4" type="video/mp4">
 </video>
-
 <%@include file="navbar.jsp"%>
 <%
     //getting total users
@@ -19,7 +18,6 @@
     List<User> allUsers = userDao.getAllUsers();
 %>
 <div style="top:8rem" class="servicesection">
-
     <div style="width:18rem; height: 16rem;" class="card1 cardouter">
         <div class="cardinner">
             <img style="width: 8rem; margin-top: 1rem; margin-bottom: 1rem;" src="./img/teamwork.png" alt="" srcset="">
@@ -28,11 +26,9 @@
                 <h2 style="font-size: 1.3rem;"><%=allUsers.size()%></h2>
             </div>
         </div>
-
     </div>
 </div>
 <div class="tablesection">
-
     <div class="tableform">
         <h2>Search the User by Id</h2>
         <form style="display: flex; margin: 1rem;" action="SearchServlet" method="post">
@@ -42,11 +38,9 @@
                 </div>
                 <input style="color:white;background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the User ID" name="id">
             </div>
-
             <input style="color: white; background-color: rgb(155, 216, 216); border-radius: 0.6rem; width: 6rem;" type="submit" value="Search">
         </form>
     </div>
-
     <%
         if(session.getAttribute("message1")!=null){
             HttpSession httpSession = request.getSession();
@@ -64,15 +58,12 @@
                 HttpSession httpSession = request.getSession();
                 httpSession.setAttribute("message1","No Record Found");
     %>
-
     <div>
         <%@include file="message.jsp"%>
     </div>
     <%
     }else{
     %>
-
-
     <table style="background:linear-gradient(45deg, black, transparent) " class="table">
         <thead>
         <tr>
@@ -90,7 +81,6 @@
             for (User users : userList){
                 if(users.getRoll_id()!=1 ){
         %>
-
         <tr>
             <th scope="row"><%=users.getUserId()%></th>
             <td><%=users.getUserName()%></td>
@@ -141,7 +131,6 @@
     }
     }
 %>
-
 </div>
 </body>
 </html>

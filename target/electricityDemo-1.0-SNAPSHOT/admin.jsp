@@ -25,7 +25,7 @@
 
 
 <video autoplay muted loop class="myVideo">
-    <source src="./img/Electricity - 11578.mp4" type="video/mp4">
+    <source src="./img/Light - 5164.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
 
@@ -51,7 +51,7 @@
     </div>
 
     <div id="cardthird" class="card1">
-        <img  src="./img/user%20(1).png" alt="" srcset="">
+        <img  src="./img/user-profile.png" alt="" srcset="">
         <div class="cardbody">
             <a href="editUser.jsp?user_id=<%=user1.getUserId()%>"> <button class="cardbtn">Update Profile</button></a>
         </div>

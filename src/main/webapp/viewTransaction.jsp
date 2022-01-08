@@ -14,9 +14,7 @@
     <source src="./img/Analysis - 31251.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
 <div style="top:10rem" class="tablesection">
-
     <div class="tableform">
         <h2>Search the Transaction by Id</h2>
         <form style="display: flex; margin: 1rem;" action="TransactionServlet" method="post">
@@ -26,11 +24,9 @@
                 </div>
                 <input style="color:white; background:linear-gradient(45deg, black, transparent); border-color: transparent; color:white "  type="text" placeholder="Enter the ID" name="trans">
             </div>
-
             <input style="color: white; background-color: rgb(155, 216, 216); border-radius: 0.6rem; width: 6rem;" type="submit" value="Search">
         </form>
     </div>
-
     <%
         if(session.getAttribute("message1")!=null){
             HttpSession httpSession = request.getSession();
@@ -46,16 +42,12 @@
                 HttpSession httpSession = request.getSession();
                 httpSession.setAttribute("message1", "No Record Found");
     %>
-
     <div>
         <%@include file="message.jsp"%>
     </div>
-
     <%
     }else{
     %>
-
-
     <table style="background:linear-gradient(45deg, black, transparent) " class="table">
         <thead>
         <tr>
@@ -69,8 +61,6 @@
         <%
             for (Transactions t : transactionList){
         %>
-
-
         <tr>
             <th scope="row"><%=t.getTransId()%></th>
             <td><%=t.getAmount()%></td>
@@ -95,7 +85,6 @@
         </tr>
         </thead>
         <tbody>
-
         <tr>
             <th scope="row"><%=transactions.getTransId()%></th>
             <td><%=transactions.getAmount()%></td>
