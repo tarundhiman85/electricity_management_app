@@ -6,7 +6,7 @@
 </head>
 <body>
 <video autoplay muted loop class="myVideo">
-    <source src="./img/Atoms - 8579.mp4" type="video/mp4">
+    <source src="./img/atoms2.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
 <%

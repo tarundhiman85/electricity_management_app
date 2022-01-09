@@ -1,5 +1,4 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Dao.UserDao;
@@ -15,9 +14,7 @@ import java.io.IOException;
 public class DisapproveServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int getConnId = Integer.parseInt(request.getParameter("connId"));

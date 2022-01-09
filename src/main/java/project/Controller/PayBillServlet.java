@@ -1,5 +1,4 @@
 package project.Controller;
-
 import org.hibernate.Session;
 
 import org.hibernate.Transaction;
@@ -18,17 +17,13 @@ import java.io.PrintWriter;
 @WebServlet(name = "PayBillServlet", value = "/PayBillServlet")
 public class PayBillServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         response.setContentType("text/html");
         try (PrintWriter out = response.getWriter()) {
-
             int due = Integer.parseInt(request.getParameter("due"));
             int billA = Integer.parseInt(request.getParameter("billA"));
-
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("current-User");
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
-
             //getting the bill
             Bill billByUserId = userDao.getBillByUserId(user.getUserId());
             HttpSession httpSession = request.getSession();
@@ -39,7 +34,6 @@ public class PayBillServlet extends HttpServlet {
             if(currentAmount==billA && currentDue==due)
             {
                 billByUserId.setUnits(billByUserId.getAmount()/10);
-
                 //Saving to the database
                 Session session1 = FactoryProvider.getFactory().openSession();
                 Transaction tx= session1.beginTransaction();
@@ -63,12 +57,10 @@ public class PayBillServlet extends HttpServlet {
             session1.close();
         }
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);

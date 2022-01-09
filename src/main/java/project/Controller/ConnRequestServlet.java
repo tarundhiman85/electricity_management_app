@@ -1,5 +1,4 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Dao.UserDao;
@@ -23,7 +22,6 @@ public class ConnRequestServlet extends HttpServlet {
             String userAddress = request.getParameter("user_address");
             String connType = request.getParameter("conn_Type");
             String board = request.getParameter("board");
-
             //validation
             HttpSession httpSession = request.getSession();
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
@@ -40,8 +38,6 @@ public class ConnRequestServlet extends HttpServlet {
                 httpSession.setAttribute("message1","This UserName is already available choose another");
                 response.sendRedirect("newConnection.jsp");
             }
-
-
             int randomNumber = (int)(Math.random()*1000);
             //db logic
             ConnRequest connRequest = new ConnRequest(userName,userEmail,userAddress,userPhone,connType);
@@ -59,12 +55,10 @@ public class ConnRequestServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
