@@ -14,12 +14,10 @@
     <source src="./img/World - 1992.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
-
 <div style="top:10rem" class="tablesection">
     <div class="tableform">
         <h2>User Query Status</h2>
     </div>
-
     <table style="background:linear-gradient(45deg, black, transparent) " class="table">
         <thead>
         <tr>
@@ -48,6 +46,5 @@
         </tbody>
     </table>
 </div>
-
 </body>
 </html>

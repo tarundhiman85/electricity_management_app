@@ -39,7 +39,7 @@
     </div>
 
     <div id="cardsecond" class="card1">
-        <img  src="./img/user%20(1).png" alt="" srcset="">
+        <img  src="./img/user-profile.png" alt="" srcset="">
         <div class="cardbody">
             <a href="editUser.jsp?user_id=<%=user1.getUserId()%>"> <button class="cardbtn">Update Profile</button></a>
         </div>

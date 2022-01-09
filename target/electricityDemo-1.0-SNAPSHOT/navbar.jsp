@@ -36,11 +36,10 @@
         <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
         <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
         <li class="navitem"><a href="viewInfo.jsp">Profile</a></li>
-        <li class="navitem"><a href="editUser.jsp?user_id=<%=user1.getUserId()%>">Update Profile</a></li>
         <li class="navitem"><a href="help.jsp">Help</a></li>
-        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user (5).png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="user.jsp">Welcome <%=user1.getUserName()%></a> </li>
-        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/logout (4).png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="LogoutServlet">Logout</a> </li>
 
     </ul>
@@ -54,10 +53,9 @@
     <ul>
         <li style="padding-right:0px ;" class="navitem"><img style="width: 1.5rem" src="./img/home (1).png" alt="" srcset=""> </li>
         <li style="border-bottom:1px solid gold ;" class="navitem"> <a href="index.jsp">Home</a></li>
-        <li class="navitem"><a href="editUser.jsp?user_id=<%=user1.getUserId()%>">Update Profile</a></li>
-        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user (5).png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="admin.jsp">Welcome <%=user1.getUserName()%></a> </li>
-        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/user.png" alt="" srcset=""><a href=""></a> </li>
+        <li style="padding-right:0px" class="navitem"><img style="width: 1.5rem" src="./img/logout (4).png" alt="" srcset=""><a href=""></a> </li>
         <li class="navitem"><a href="LogoutServlet">Logout</a> </li>
 
     </ul>

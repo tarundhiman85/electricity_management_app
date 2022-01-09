@@ -17,8 +17,6 @@
 <%
     }
 %>
-
-
 <div  style="top:12rem" class="tablesection">
 <div  class="tableform">
     <h2>Enter the User Id to Search</h2>
@@ -35,6 +33,5 @@
     </form>
 </div>
 </div>
-
 </body>
 </html>

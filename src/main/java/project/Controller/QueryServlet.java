@@ -1,5 +1,4 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Helper.FactoryProvider;
@@ -26,13 +25,11 @@ public class QueryServlet extends HttpServlet {
             session.close();
             httpSession.setAttribute("message1", "Your query is sent to admin and Your Query Id is " + q.getQueryId());
             response.sendRedirect("help.jsp");
-
     }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);

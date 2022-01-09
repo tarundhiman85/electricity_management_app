@@ -78,7 +78,7 @@
 
             </div>
         </div>
-<%--        <a style="text-decoration: none" href="login.jsp" class="text-center d-block mb-2 link">If Already a User Click Here</a>--%>
+
         <div style="display: flex; justify-content: center" class="formsectionbtn">
             <button type="submit"  style="margin-right:1rem ;" >
                 <span></span>

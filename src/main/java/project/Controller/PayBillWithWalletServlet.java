@@ -1,5 +1,4 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Dao.UserDao;
@@ -20,10 +19,8 @@ public class PayBillWithWalletServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         try (PrintWriter out = response.getWriter()) {
-
             int due = Integer.parseInt(request.getParameter("due"));
             int billA = Integer.parseInt(request.getParameter("billA"));
-
             HttpSession session = request.getSession();
             User user = (User) session.getAttribute("current-User");
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
@@ -40,20 +37,15 @@ public class PayBillWithWalletServlet extends HttpServlet {
             if (currentAmount == billA && currentDue == due )
             {
                 if((billA+due)<=walletBalance){
-
                     //updating balance
                     balance.setAvailBalance(balance.getAvailBalance()-(billA+due));
-
                     //Saving to the database
                     Session session1 = FactoryProvider.getFactory().openSession();
                     Transaction tx= session1.beginTransaction();
-
                     session1.delete(billByUserId);
                     session1.update(balance);
-
                     tx.commit();
                     session1.close();
-
 
                     Transactions transactions = new Transactions(billA,userDao.getUserById(user.getUserId()));
                     transactions.setActionDone("Paid Bill");

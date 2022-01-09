@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,7 +6,7 @@
 </head>
 <body>
 <video autoplay muted loop class="myVideo">
-    <source src="./img/Electricity - 11578.mp4" type="video/mp4">
+    <source src="./img/Light - 5164.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
 <%
@@ -48,6 +47,5 @@
 </div>
 <hr>
 <%}%>
-
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 <video autoplay muted loop class="myVideo">
-    <source src="./img/Electricity - 11578.mp4" type="video/mp4">
+    <source src="./img/Light - 5164.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp"%>
 <%
@@ -16,9 +16,7 @@
     Session s= FactoryProvider.getFactory().openSession();
     User user = s.get(User.class,userId);
 %>
-
 <div style="height: 40rem; width: 40rem " class="formsection">
-
     <h2 style="margin-top:1rem">Update User Profile</h2>
     <img id="formimg" style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
     <%@include file="message.jsp"%>
@@ -30,7 +28,6 @@
                     <label>Name</label>
                 </div>
                 <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_name" type="text" value="<%=user.getUserName()%>" class="form-control" placeholder="Enter Name">
-
             </div>
             <div style="width: 40%; margin: auto;" class="formcol">
                 <div class="formlevel">
@@ -38,8 +35,6 @@
                     <label>Email Address</label>
                 </div>
                 <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_email" type="email" value="<%=user.getUserEmail()%>" class="form-control" placeholder="Enter Email">
-
-
             </div>
         </div>
         <div class="formrows">
@@ -49,16 +44,13 @@
                     <label>Password</label>
                 </div>
                 <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_password" type="password" value="<%=user.getUserPassword()%>" class="form-control" placeholder="Enter Password">
-
             </div>
-
             <div style="width: 40%; margin: auto;" class="formcol">
                 <div class="formlevel">
                     <img style="width: 2rem; margin-right:1rem ;" src="./img/call.png" alt="" srcset="">
                     <label>Phone Number</label>
                 </div>
                 <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_phone" type="text" value="<%=user.getUserPhone()%>" class="form-control" placeholder="Enter PhoneNo">
-
             </div>
         </div>
         <input type="hidden" name="user_id" value="<%=userId%>">
@@ -68,11 +60,7 @@
                 <label>Residential Address</label>
             </div>
             <input style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="user_address" type="text" value="<%=user.getUserAddress()%>" class="form-control" placeholder="Residential Address">
-
         </div>
-
-
-
         <div style="display: flex; justify-content: center;" class="formsectionbtn">
             <button style="margin:1rem ;" type="submit">
                 <span></span>
@@ -89,7 +77,6 @@
                 Reset
             </button>
         </div>
-
     </form>
 </div>
 </body>

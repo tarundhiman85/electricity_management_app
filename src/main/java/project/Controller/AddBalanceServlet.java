@@ -22,7 +22,6 @@ public class AddBalanceServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
             int balanceToAdd = Integer.parseInt(request.getParameter("balance"));
-
             //db logic
             HttpSession httpSession = request.getSession();
             User user = (User) httpSession.getAttribute("current-User");

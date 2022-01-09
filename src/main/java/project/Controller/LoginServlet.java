@@ -1,5 +1,4 @@
 package project.Controller;
-
 import project.Helper.FactoryProvider;
 import project.Model.User;
 import project.Dao.UserDao;
@@ -42,12 +41,10 @@ public class LoginServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request,response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request,response);
