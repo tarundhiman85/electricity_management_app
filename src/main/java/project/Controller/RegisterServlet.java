@@ -1,5 +1,4 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Dao.UserDao;
@@ -17,7 +16,6 @@ public class RegisterServlet extends HttpServlet {
 
     protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         response.setContentType("text/html");
-
         try (PrintWriter out = response.getWriter()) {
             try {
                 String userName=request.getParameter("user_name");

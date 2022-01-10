@@ -6,6 +6,7 @@ import org.hibernate.query.Query;
 import project.Helper.FactoryProvider;
 import project.Model.*;
 
+import java.util.Date;
 import java.util.List;
 
 public class UserDao {
@@ -17,6 +18,24 @@ public class UserDao {
     }
 
     public UserDao() {
+    }
+    public boolean checkReminder(int userId, Date date) {
+        String q = "FROM Bill where user.userId=:e";
+        Session session = this.factory.openSession();
+        Query query = (Query) session.createQuery(q);
+        query.setParameter("e",userId);
+        Bill bill = (Bill) query.uniqueResult();
+        session.close();
+        if(bill==null)  return false;
+        else {
+            String reminder = bill.getReminder();
+            if(date.getMonth()+1==Integer.parseInt(reminder.substring(3,5))){
+                if(date.getDate()+1>Integer.parseInt(reminder.substring(0,2))){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public User getUserByEmailandPassword(String email, String password) {

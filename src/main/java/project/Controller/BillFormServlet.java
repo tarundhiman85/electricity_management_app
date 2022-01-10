@@ -1,13 +1,10 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Helper.FactoryProvider;
 import project.Model.Bill;
-import project.Model.Transactions;
 import project.Model.User;
 import project.Dao.UserDao;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -17,14 +14,11 @@ import java.text.ParseException;
 @WebServlet(name = "BillFormServlet", value = "/BillFormServlet")
 public class BillFormServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException {
-
         int units = Integer.parseInt(request.getParameter("units"));
         int dues = Integer.parseInt(request.getParameter("dues"));
         int id = Integer.parseInt(request.getParameter("uid"));
-
         HttpSession httpSession = request.getSession();
         UserDao userDao = new UserDao(FactoryProvider.getFactory());
-
         if(userDao.getBillByUserId(id)!=null){
             //means we have the bill
             Session session = FactoryProvider.factory.openSession();
@@ -37,7 +31,7 @@ public class BillFormServlet extends HttpServlet {
             tx.commit();
             session.close();
             httpSession.setAttribute("message1","Bill Updated Successfully");
-            response.sendRedirect("BillForm.jsp");
+            response.sendRedirect("admin.jsp");
         }
         else {
             Session session = FactoryProvider.factory.openSession();
@@ -48,7 +42,7 @@ public class BillFormServlet extends HttpServlet {
             tx.commit();
             session.close();
             httpSession.setAttribute("message1","Bill Added Successfully");
-            response.sendRedirect("BillForm.jsp");
+            response.sendRedirect("admin.jsp");
         }
     }
     @Override
@@ -59,7 +53,6 @@ public class BillFormServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

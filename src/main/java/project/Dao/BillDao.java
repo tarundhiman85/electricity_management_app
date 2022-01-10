@@ -4,7 +4,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import project.Model.Bill;
-import project.Model.User;
 
 import java.util.Date;
 
