@@ -1,11 +1,13 @@
-<%@ page import="project.Dao.BillDao" %>
+
 <%@ page import="project.Helper.FactoryProvider" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="project.Dao.UserDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>User</title>
     <%@include file="/common_css_js1.jsp"%>
+
 </head>
 <%
     //check reminder of bill
@@ -16,6 +18,7 @@
         response.sendRedirect("login.jsp");
         return;
     }
+
     else {%>
 <body>
 <video autoplay muted loop class="myVideo">
@@ -70,7 +73,7 @@
     </div>
 </div>
 <%
-    if(new BillDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
+    if(new UserDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
 %>
 <p id="checkReminder" hidden>1</p>
 <%

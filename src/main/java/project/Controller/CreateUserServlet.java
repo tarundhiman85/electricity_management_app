@@ -1,12 +1,10 @@
 package project.Controller;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import project.Dao.UserDao;
 import project.Helper.FactoryProvider;
 import project.Model.ConnRequest;
 import project.Model.User;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -18,7 +16,6 @@ public class CreateUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
     }
-
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {
             String userName = request.getParameter("user_name");
@@ -48,7 +45,6 @@ public class CreateUserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest(request, response);
