@@ -25,6 +25,7 @@
     <source src="./img/Light - 5164.mp4" type="video/mp4">
 </video>
 <%@include file="navbar.jsp" %>
+<%@include file="message.jsp"%>
 <div style="top:10rem" class="serviceheader">
     <h1>Admin Authenticate Services</h1>
 </div>

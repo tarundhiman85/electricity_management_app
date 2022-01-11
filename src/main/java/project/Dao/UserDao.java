@@ -239,4 +239,20 @@ public class UserDao {
         }
         return user;
     }
+
+    public boolean ifBillExistsByUserId(int userId) {
+        Bill bill = null;
+        try {
+            //validation if the user exists
+            Session session = this.factory.openSession();
+            String q = "from Bill where user.userId=:i";
+            Query query = (Query) session.createQuery(q);
+            query.setParameter("i", userId);
+            bill = (Bill) query.uniqueResult();
+            session.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bill==null;
+    }
 }

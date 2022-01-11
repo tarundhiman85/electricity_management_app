@@ -1,5 +1,6 @@
 <%@ page import="project.Helper.FactoryProvider" %>
 <%@ page import="org.hibernate.Session" %>
+<%@ page import="project.Dao.UserDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,6 +14,15 @@
 <%@include file="navbar.jsp"%>
 <%
     int userId=Integer.parseInt(request.getParameter("user_id").trim());
+    boolean b= new UserDao(FactoryProvider.getFactory()).ifBillExistsByUserId(userId);
+    HttpSession httpSession = request.getSession();
+    if(!b){
+        httpSession.setAttribute("message1","Bill Already Calculated");
+        %>
+<%@include file="message.jsp"%>
+   <%
+    }
+    else{
     Session s= FactoryProvider.getFactory().openSession();
     User user = s.get(User.class,userId);
 %>
@@ -72,10 +82,8 @@
                 Reset
             </button>
         </div>
-
-
-
     </form>
 </div>
+<%}%>
 </body>
 </html>
