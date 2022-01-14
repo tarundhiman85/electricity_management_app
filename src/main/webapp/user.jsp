@@ -71,7 +71,34 @@
             <a href="help.jsp">  <button class="cardbtn">Need Help?</button></a>
         </div>
     </div>
+    </div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div style="transform: skew(0deg); height: 25rem; width:31rem; left:0rem; top:10rem" class="formsection">
+
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModal2Label">Payment Alert</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <img style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
+                <p>Dear <%=user1.getUserName()%> Please Pay Your Pending Bill</p>
+                <p>Your Bill Payment Date is </p>
+                <div style="display: flex; justify-content: center; width: 35%" class="formsectionbtn">
+                    <a style="text-decoration: none" href="PayBill.jsp"><button style="margin:1rem ;" type="submit">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Pay Bill
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <%
     if(new UserDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
 %>
@@ -80,6 +107,10 @@
 }else{
 %>
 <p id="checkReminder" hidden>0</p>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </body>
 <%
         }
@@ -89,8 +120,11 @@
     $(function(){
         let val = parseInt(document.getElementById("checkReminder").innerText);
         if(val===1) {
-            alert("You Have to Pay the Bill Now")
+
+            $('#exampleModal2').modal('show');
+
         }
     })
 </script>
+
 </html>
