@@ -74,17 +74,33 @@ public class Bill {
         StringBuilder stringBuilder = new StringBuilder();
         if(date.getDate()+20>number_Of_DaysInMonth){
 
-            stringBuilder.append(((date.getDate()+20)%number_Of_DaysInMonth)+1);
+            int date1=((date.getDate()+20)%number_Of_DaysInMonth)+1;
+
+            if(date1<10){
+                stringBuilder.append('0');
+                stringBuilder.append(String.valueOf(date1));
+            }
+            else {
+                stringBuilder.append(String.valueOf(date1));
+            }
+
             int next_month = ((date.getMonth()+1)%12)+1;
             if(next_month<date.getMonth()+1){
                 int next_year = (date.getYear()+1900)+1;
-
                 stringBuilder.append('-');
                 String nextMonthIfLess = '0'+String.valueOf(next_month);
                 if(next_month<10) stringBuilder.append(nextMonthIfLess);
                 else stringBuilder.append(String.valueOf(next_month));
                 stringBuilder.append('-');
                 stringBuilder.append(String.valueOf(next_year));
+            }
+            else{
+                stringBuilder.append('-');
+                String nextMonthIfLess = '0'+(String.valueOf(next_month));
+                if(next_month<10) stringBuilder.append(nextMonthIfLess);
+                else stringBuilder.append(String.valueOf(next_month));
+                stringBuilder.append('-');
+                stringBuilder.append(String.valueOf(date.getYear()+1900));
             }
         }
         else{

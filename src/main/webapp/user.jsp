@@ -2,6 +2,7 @@
 <%@ page import="project.Helper.FactoryProvider" %>
 <%@ page import="java.util.Date" %>
 <%@ page import="project.Dao.UserDao" %>
+<%@ page import="project.Model.Bill" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -19,7 +20,9 @@
         return;
     }
 
-    else {%>
+    else {
+        Bill bill = new UserDao(FactoryProvider.getFactory()).getBillByUserId(user.getUserId());
+%>
 <body>
 <video autoplay muted loop class="myVideo">
     <source src="./img/Electricity - 11578.mp4" type="video/mp4">
@@ -83,7 +86,7 @@
                 </div>
                 <img style="width: 3rem; padding:2rem; box-sizing: content-box;" src="./img/hand (1).png" alt="" srcset="">
                 <p>Dear <%=user1.getUserName()%> Please Pay Your Pending Bill</p>
-                <p>Your Bill Payment Date is </p>
+                <p>Your Bill Payment Date is <%=bill.getReminder()%></p>
                 <div style="display: flex; justify-content: center; width: 35%" class="formsectionbtn">
                     <a style="text-decoration: none" href="PayBill.jsp"><button style="margin:1rem ;" type="submit">
                         <span></span>
