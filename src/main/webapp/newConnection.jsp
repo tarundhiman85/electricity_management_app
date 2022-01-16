@@ -37,10 +37,10 @@
                 <label>Choose Electricity Board</label>
             </div>
             <select style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="board" id="board">
-                <option value="derc">Delhi Electricity Regulatory Commission</option>
-                <option value="uhbvn">Uttar Haryana Bijli Vitran Nigam</option>
-                <option value="dhbvn">Dakshin Haryana Bijli Vitran Nigam</option>
-                <option value="pspcl">Punjab State Power Corporation Limited</option>
+                <option style="background-color: black" value="derc">Delhi Electricity Regulatory Commission</option>
+                <option style="background-color: black" value="uhbvn">Uttar Haryana Bijli Vitran Nigam</option>
+                <option style="background-color: black" value="dhbvn">Dakshin Haryana Bijli Vitran Nigam</option>
+                <option style="background-color: black" value="pspcl">Punjab State Power Corporation Limited</option>
             </select>
         </div>
         <div style="width: 40%; margin: auto;" class="formcol">
@@ -58,8 +58,8 @@
             <label>Choose Connection Type</label>
         </div>
         <select style="color:white;padding: 0.3rem; margin-bottom: 1rem; border-radius: 0.4rem;" name="conn_Type">
-            <option value="domestic">Domestic</option>
-            <option value="commercial">Commercial</option>
+            <option style="background-color: black" value="domestic">Domestic</option>
+            <option style="background-color: black" value="commercial">Commercial</option>
         </select>
     </div>
     </div>
