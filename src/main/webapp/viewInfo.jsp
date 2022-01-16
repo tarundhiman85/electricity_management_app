@@ -45,6 +45,9 @@
     <div class="servicecard">
         <h4><strong>Address:</strong>  <%=bill.getUser().getUserAddress()%></h4>
     </div>
+    <div class="servicecard">
+        <h4><strong>Payment Date:</strong>  <%=bill.getReminder()%></h4>
+    </div>
 </div>
 </div>
 <div style="top:38rem" class="serviceheader">
