@@ -26,13 +26,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
             <%
                 List<Query> queryList = new QueryDao(FactoryProvider.getFactory()).getAllQueries();
                 User current = (User)request.getSession().getAttribute("current-User");
                 for (Query q : queryList){
-                    if (q.getUser().getUserId()==current.getUserId() && q.getResolve().equals("Yes")){
             %>
+            <tr>
+                <%
+                    if (q.getUser().getUserId()==current.getUserId() && q.getResolve().equals("Yes")){
+                %>
             <th scope="row"><%=q.getQueryId()%></th>
             <td>"<%=q.getMsg()%>" Your Query is Resolved by Admin</td>
             <%

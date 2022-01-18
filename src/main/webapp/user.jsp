@@ -75,6 +75,10 @@
         </div>
     </div>
     </div>
+<%--model to show and compiled if their is a bill--%>
+<%
+    if(bill!=null){
+%>
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -103,6 +107,10 @@
 </div>
 
 <%
+    }
+%>
+
+<%
     if(new UserDao(FactoryProvider.getFactory()).checkReminder(user.getUserId(), new Date())){
 %>
 <p id="checkReminder" hidden>1</p>
@@ -123,9 +131,7 @@
     $(function(){
         let val = parseInt(document.getElementById("checkReminder").innerText);
         if(val===1) {
-
             $('#exampleModal2').modal('show');
-
         }
     })
 </script>
