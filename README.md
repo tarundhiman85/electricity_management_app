@@ -10,59 +10,34 @@ This is a Web app developed in Java using technologies like Servelt, Jsp, Hibern
 
 
 ### Home Page
-![image](https://user-images.githubusercontent.com/53346586/135748512-0b0c57dd-ffdf-499a-b5a4-a4ac7bd37a18.png)
+![image](https://user-images.githubusercontent.com/53346586/150304862-7da63713-6bc4-4f5f-8364-5ff87e2649b8.png)
 
 ### Login Page
-![image](https://user-images.githubusercontent.com/53346586/135725779-8f9c536b-8ac5-478a-884d-869b5ff81ab1.png)
+![image](https://user-images.githubusercontent.com/53346586/150304935-45c28ea1-f709-41c6-a340-ef9a23679203.png)
 
 ### Admin Panel
-![image](https://user-images.githubusercontent.com/53346586/135725801-126d6485-685e-44b4-9209-aac4894146e8.png)
+![image](https://user-images.githubusercontent.com/53346586/150305369-a0c05725-4620-4bd2-92b6-f7e5736256b4.png)
 
 ### View Users
-![image](https://user-images.githubusercontent.com/53346586/135725808-6dff6a9a-1cba-4a6e-8d15-222a870bc3e7.png)
+![image](https://user-images.githubusercontent.com/53346586/150306501-8a3ebd0c-077a-4ad9-b52f-8276079af6e3.png)
 
-### Add Users
-![image](https://user-images.githubusercontent.com/53346586/135725823-bf53c957-2a8b-4daa-b988-ef53dfd8bea0.png)
+### New Connections Request
+![image](https://user-images.githubusercontent.com/53346586/150309239-f8c179cd-554c-4b52-aa70-e9fd01292f71.png)
 
 ### Bill Info Add
-![image](https://user-images.githubusercontent.com/53346586/135725841-0a1dea28-7cc7-4a69-8506-762f326972cc.png)
+![image](https://user-images.githubusercontent.com/53346586/150308806-328a7c87-98a4-4c01-9cac-ff69a249c068.png)
 
 ### User Panel
-![image](https://user-images.githubusercontent.com/53346586/135761007-84bae17e-b973-4cec-a6e2-633969f56752.png)
+![image](https://user-images.githubusercontent.com/53346586/150309563-ce5f273c-699d-4903-a4ce-4da7845ffe28.png)
 
 ### User Info
-![image](https://user-images.githubusercontent.com/53346586/135725892-954a3ea7-9a7c-46ce-9a3d-210cc9658ede.png)
-
+![image](https://user-images.githubusercontent.com/53346586/150309602-e9568d60-ae08-448a-a785-65515281f96a.png)
 
 ### Paybill
-![image](https://user-images.githubusercontent.com/53346586/135725897-ea626501-2c62-4359-aa06-3235f8a55345.png)
-
-### Entity Relationship Diagram
-![image](https://user-images.githubusercontent.com/53346586/135761136-fff2f3e1-2382-4d0a-880e-5464545021dd.png)
+![image](https://user-images.githubusercontent.com/53346586/150310035-6de3c126-8ac8-41db-8088-1ab2d3c7f6f2.png)
 
 
 ### Transactions
-![image](https://user-images.githubusercontent.com/53346586/135760987-c07b9d98-7681-471b-b6f1-c9cadeb0f218.png)
-
-
-help section --> navbar element
-
-how to pay bill
-how to see pending bills
-how to see bill slip
-
-request for new connection -->navbar
-
-Name
-Phone
-Email
-Applied Load Details	capacity
-address proof
-* other coonection with same nam
-*  type of connection
-
--->update neccessary in future   -->documents upload
-
--->complaints section navbar
+![image](https://user-images.githubusercontent.com/53346586/150307279-181de124-9ccb-4759-a8b0-9149c0fceaea.png)
 
 
