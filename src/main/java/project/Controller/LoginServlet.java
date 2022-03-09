@@ -14,21 +14,33 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         try(PrintWriter out = response.getWriter()){
+
             String email = request.getParameter("email");
             String password = request.getParameter("password");
+
+            String op = request.getParameter("op");
+
+
+
             UserDao userDao = new UserDao(FactoryProvider.getFactory());
             User user=userDao.getUserByEmailandPassword(email,password);  //this is returning basically user object
             HttpSession httpSession=request.getSession();
+
             if(user == null){
                 //user does not exist
                 out.println("<h1>Invalid Details</h1>");
                 httpSession.setAttribute("message1", "Invalid User Try Again");
                 response.sendRedirect("login.jsp");
-                return;
+//                return;
             }
             else if(user.getRoll_id()==2){
                 httpSession.setAttribute("current-User", user);
-                response.sendRedirect("user.jsp");
+                if(op.equals("dashboard")){
+                    response.sendRedirect("user.jsp");
+                }
+                else{
+                    response.sendRedirect("wallet.jsp");
+                }
             }
             else {
                 //user exists
